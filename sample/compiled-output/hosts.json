@@ -1,0 +1,32 @@
+[
+	{
+		"host": "angel",
+		"ip": "140.109.22.53",
+		"port": 6006,
+		"pubkeys": [
+			"ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOfv54/YUfv1DOX571l9y9xiw5pKjuKwFGmRU+0Fx0arkq5KQGeCyK5QnJGVRU/9XQoiaTndOOh3RQItJVcHo3Q=",
+			"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGUTom2f2Scrr9ncWWDEFNjVfzveLocZt6qOPNxBzGrH",
+			"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDijoH3iRr6RRtjuVmsccj+SdKMJoka7wQSoE9ORz+da+K1+xafWN/f3ggC1C0dJgHdXY71/67TAvAfAmVX3SNNWyHdJe44RcXgcGv8VxkVHiGoeCxx3/dT3xWnTNStxsdai8OEHXmLuLhpvAMyMNvm2Nd0MJFXJ6WM6n38mOAT+sbuktyXIGf9CARAasMpscTwDZQriQPPTu35i7EgBCZKmK4Ms4loeQlhPvwL9hCCTgX6bSzz/NwqFxX2f2somHEcDxzI7iQojVCi8w/elXiHAD/ZeW5tOkRtt+9qgbdc01DLL0SS0PD/0O+zxquKYUfGgU3LwnCrFZS+oX/M2j7h"
+		]
+	},
+	{
+		"host": "behemoth",
+		"ip": "140.109.22.53",
+		"port": 6007,
+		"pubkeys": [
+			"ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMB+hjkRgjPJtpXaVj/jY7GfRzdYvJbE7BEIH0f3x2hwCh9Jmx9bBJoyiGtgRxigHQ1640iu6ktwCDdOkzfXpiQ=",
+			"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICiLfvqv8HHm2X5ehaSenA8R2ZQ9T9LzuUJymdQxfyhZ",
+			"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPQRd3UWNMV+NPTAV4RewPsc9cbfxxSd6k/ckjUqPrvspkGEMF4Eu02a8+d2y+dXLZIhe2cecVPiODpZmQRb197QRsDyFCnJYnCXgHLMtCC3yB43OnQ/mo7JMJCX2uDwLuMafK8Gyc0C6Ae4TiZe9tmuyjGxAG8LDkHSoQv9PvePfDq9VfRNzQXFo2kJghKLI/gigpRXxoMMtd/KTyy1lb/o9B6kPEqxjq2mzwgs0CBhG4jiJekSb602L6TCitpLMI7VVDV1aJ/AtckGFh2KeBBdLkvBEXe04OQhIVCJZmDNaVtfRgTxbtgOfq3C6yuTUwzB8wK9M0RbbKzMwT2SxH"
+		]
+	},
+	{
+		"host": "cerberus",
+		"ip": "140.112.42.198",
+		"port": 22,
+		"pubkeys": [
+			"ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE+3JGloeLDmhz7h17+JwbavzAFBYeGzAj9OFdMJzMOKoqeyPfn34GU5nGSDG21bGLA/8SVhDTd4MOPHhwBAvp8=",
+			"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGOY9KOBpuCOXg04XUYWIj5Kbwfilzkn3VskoweA0rpc",
+			"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCp5i2vnCW0Bx1/c57yztidAIYuQyDAZdieyAUEQRfdGGBfICBtA5bFpqkMelJjDCK1IXMRFv4NM9xwZbvEyyvXm0O38hktpQbmW3+Ec9/hp3N4tGOH573WV0/1xskQ7RoF0IebPz4ly8myAoa+kpl/pT8AhschsmCCOvVwztbb3Qs7861Mh3rozdbTdIYWoAWDRJys3e1N+sW5sWEByvkILjqEjUyWoxpnFdw2k0RUt1hvYGTPZYfAGOjy1GmsBKcciuG2v90h1DndXCwR/Yy6HTMMd5wBs2vyKehs4IP01tGsj5EOE3kDG598G1yyzTVKk4c3VmPPvoNWMLGQwpTF"
+		]
+	}
+]
