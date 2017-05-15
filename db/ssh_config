@@ -5,8 +5,6 @@ ChallengeResponseAuthentication no
 PubkeyAuthentication yes
 HostbasedAuthentication yes
 PreferredAuthentications publickey,hostbased
-RequestTTY no
-EscapeChar none
 ConnectTimeout 5
 CheckHostIP no
 HashKnownHosts no
