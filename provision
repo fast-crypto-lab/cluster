@@ -33,7 +33,6 @@ if ./workstation_routines.py lock
 then
     echo 'Trying to acquire a lock...  DONE'
 else
-    echo
     >&2 echo 'Error: Failed to acquire a lock, the file /fcl-cluster-maintenance.lock already exists'
     exit 1
 fi
@@ -45,7 +44,6 @@ if ./workstation_routines.py check-this-host-in-json
 then
     echo 'Checking whether this host is already listed in fcl.json...  DONE'
 else
-    echo
     >&2 echo 'Error: the command `./workstation_routines.py check-this-host-in-json` failed'
     ./workstation_routines.py unlock
     exit 1
@@ -58,7 +56,6 @@ if ./workstation_routines.py check-json-applicability
 then
     echo 'Checking whether fcl.json is applicable for this host...  DONE'
 else
-    echo
     >&2 echo 'Error: the command `./workstation_routines.py check-json-applicability` failed'
     ./workstation_routines.py unlock
     exit 1
@@ -71,7 +68,6 @@ if ./workstation_routines.py apply-json
 then
     echo 'Applying fcl.json to this host...  DONE'
 else
-    echo
     >&2 echo 'Error: the command `./workstation_routines.py apply-json` failed'
     ./workstation_routines.py unlock
     exit 1
