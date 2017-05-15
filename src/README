@@ -1,5 +1,6 @@
 Put a host file under hosts/ for each Ubuntu 16.04 server
 
+
     The filename of a host file is just the hostname
 
     A host file should look like this:
@@ -10,12 +11,14 @@ Put a host file under hosts/ for each Ubuntu 16.04 server
             ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHA...
             ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpybp47VL...
 
-    If it does not have an 10.3.2.* address, the private-ip line should be
+    If the host does not have an 10.3.2.* address, the private-ip line should be
 
             private-ip none
 
 
+
 Put a user file under users/ for each fast crypto lab cluster user
+
 
     The filename of a user file is just the userid and the username
 
@@ -24,6 +27,6 @@ Put a user file under users/ for each fast crypto lab cluster user
             permit-sudo no
             ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOQrdUdgaIc...
 
-    If you permit the user to do sudo, the permit-sudo line should be
+    If the user is permitted to run sudo, the permit-sudo line should be
 
             permit-sudo yes

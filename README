@@ -1,0 +1,13 @@
+For admins:
+
+Q:  How to provision a new Ubuntu 16.04 server in our cluster?
+
+    1.  log in as a user that has sudo permission
+
+    2.  download the script
+
+            wget https://fast-crypto-lab.github.io/cluster/provision
+
+    3.  run the script
+
+            sudo bash provision
