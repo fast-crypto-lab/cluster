@@ -660,7 +660,7 @@ def read_fcl_json(filename='fcl.json'):
         return hosts_and_users
     except:
         pass
-    raise SyntaxError('the content of {} is invalid'.format(filename))
+    raise ValueError('the content of {} is invalid'.format(filename))
 
 
 ##############################################################################
