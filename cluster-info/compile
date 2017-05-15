@@ -209,31 +209,36 @@ def main():
     # build ssh_config
     SSH_CONFIG_FILENAME = DIR + '/ssh_config'
     with open(SSH_CONFIG_FILENAME, 'wb') as f:
-        lines = [
-            'GSSAPIAuthentication no\n',
-            'PasswordAuthentication no\n',
-            'KbdInteractiveAuthentication no\n',
-            'ChallengeResponseAuthentication no\n',
-            'PubkeyAuthentication yes\n',
-            'HostbasedAuthentication yes\n',
-            'PreferredAuthentications publickey,hostbased\n',
-            'ConnectTimeout 5\n',
-            'CheckHostIP no\n',
-            'HashKnownHosts no\n',
-            'UserKnownHostsFile /dev/null\n',
-            'GlobalKnownHostsFile /dev/null\n',
-            'StrictHostKeyChecking yes\n',
-        ]
+        lines = []
+        names = []
         for h in FCL['hosts']:
             name = h['name']
             addr = h['public-ip-port'].split(':')[0]
             port = h['public-ip-port'].split(':')[1]
             lines += [
-                '\n',
                 'Match originalhost {}\n'.format(name),
                 '    HostKeyAlias {}\n'.format(name),
                 '    HostName {}\n'.format(addr),
                 '    Port {}\n'.format(port),
+                '\n',
+            ]
+            names.append(name)
+        if names:
+            lines += [
+                'Match originalhost {}\n'.format(','.join(names)),
+                '    UserKnownHostsFile /dev/null\n',
+                '    GlobalKnownHostsFile /dev/null\n',
+                '    StrictHostKeyChecking yes\n',
+                '    CheckHostIP no\n',
+                '    ConnectTimeout 5\n',
+                '    HashKnownHosts no\n',
+                '    PubkeyAuthentication yes\n',
+                '    HostbasedAuthentication yes\n',
+                '    GSSAPIAuthentication no\n',
+                '    PasswordAuthentication no\n',
+                '    KbdInteractiveAuthentication no\n',
+                '    ChallengeResponseAuthentication no\n',
+                '    PreferredAuthentications publickey,hostbased\n',
             ]
         f.write(''.join(lines).encode())
 
