@@ -1,0 +1,10 @@
+#!/bin/bash
+
+>&2 echo 'Error: This script is not finished yet.'
+>&2 echo
+>&2 echo 'Eventually, when this script is executed,'
+>&2 echo 'it will broadcast the latest state on GitHub'
+>&2 echo 'to all hosts declared in db/fcl.json'
+>&2 echo
+
+exit 1
