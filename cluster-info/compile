@@ -204,6 +204,9 @@ def main():
                 '{name} {k}\n'.format(k=k, name=h['name'])
                 for k in h['public-keys']
             ]
+            lines.append('\n')
+        if lines:
+            lines.pop(-1)
         f.write(''.join(lines).encode())
 
     # build ssh_config
