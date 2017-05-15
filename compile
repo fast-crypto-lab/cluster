@@ -217,8 +217,6 @@ def main():
             'PubkeyAuthentication yes\n',
             'HostbasedAuthentication yes\n',
             'PreferredAuthentications publickey,hostbased\n',
-            'RequestTTY no\n',
-            'EscapeChar none\n',
             'ConnectTimeout 5\n',
             'CheckHostIP no\n',
             'HashKnownHosts no\n',
