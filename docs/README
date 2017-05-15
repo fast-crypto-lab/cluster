@@ -14,7 +14,7 @@ Q:  How to bootstrap a new Ubuntu 16.04 server in our cluster?
 
 Q:  How to generate fcl.json, ssh_config, and ssh_known_hosts?
 
-    1.  update the content of db/hosts/ and db/users/
+    1.  update the content of cluster-info/hosts/ and cluster-info/users/
 
     2.  run the compile script
 

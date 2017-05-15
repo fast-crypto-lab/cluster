@@ -56,7 +56,7 @@ def assert_good_environment():
 
 def load_fcl_json_to_global():
     global FCL
-    FCL = read_fcl_json(dirname(realpath(sys.argv[0])) + '/db/fcl.json')
+    FCL = read_fcl_json(dirname(realpath(sys.argv[0])) + '/cluster-info/fcl.json')
 
 
 ##############################################################################

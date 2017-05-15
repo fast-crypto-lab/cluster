@@ -32,7 +32,7 @@ cd "$TEMP_DIR/cluster"
 # ----------------------------------------------------------------------------
 
 echo 'Trying to acquire a lock...'
-if ./manage-this-machine lock
+if ./_update_settings_on_this_machine.py lock
 then
     echo 'Trying to acquire a lock...  DONE'
 else
@@ -43,43 +43,43 @@ fi
 # ----------------------------------------------------------------------------
 
 echo 'Checking whether this host is already listed in fcl.json...'
-if ./manage-this-machine check-this-host-in-json
+if ./_update_settings_on_this_machine.py check-this-host-in-json
 then
     echo 'Checking whether this host is already listed in fcl.json...  DONE'
 else
-    >&2 echo 'Error: the command `./manage-this-machine check-this-host-in-json` failed'
-    ./manage-this-machine unlock
+    >&2 echo 'Error: the command `./_update_settings_on_this_machine.py check-this-host-in-json` failed'
+    ./_update_settings_on_this_machine.py unlock
     exit 1
 fi
 
 # ----------------------------------------------------------------------------
 
 echo 'Checking whether fcl.json is applicable for this host...'
-if ./manage-this-machine check-json-applicability
+if ./_update_settings_on_this_machine.py check-json-applicability
 then
     echo 'Checking whether fcl.json is applicable for this host...  DONE'
 else
-    >&2 echo 'Error: the command `./manage-this-machine check-json-applicability` failed'
-    ./manage-this-machine unlock
+    >&2 echo 'Error: the command `./_update_settings_on_this_machine.py check-json-applicability` failed'
+    ./_update_settings_on_this_machine.py unlock
     exit 1
 fi
 
 # ----------------------------------------------------------------------------
 
 echo 'Applying fcl.json to this host...'
-if ./manage-this-machine apply-json
+if ./_update_settings_on_this_machine.py apply-json
 then
     echo 'Applying fcl.json to this host...  DONE'
 else
-    >&2 echo 'Error: the command `./manage-this-machine apply-json` failed'
-    ./manage-this-machine unlock
+    >&2 echo 'Error: the command `./_update_settings_on_this_machine.py apply-json` failed'
+    ./_update_settings_on_this_machine.py unlock
     exit 1
 fi
 
 # ----------------------------------------------------------------------------
 
 echo 'Releasing the lock...'
-./manage-this-machine unlock
+./_update_settings_on_this_machine.py unlock
 echo 'Releasing the lock...  DONE'
 
 # ----------------------------------------------------------------------------
