@@ -1,3 +1,7 @@
+Compile from hosts/ and users/ into fcl.json, ssh_config, and ssh_known_hosts.
+
+
+
 Put a host file under hosts/ for each Ubuntu 16.04 server
 
 

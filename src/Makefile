@@ -1,2 +1,0 @@
-fcl-json:
-	./compile

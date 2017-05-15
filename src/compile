@@ -189,11 +189,55 @@ def main():
         'users': [parse_user(n,h) for n,h in users]
     }
     assert is_good_hosts_and_users(FCL), 'invalid hosts/ or users/'
-    json_file_content = json.dumps(FCL, indent='  ', sort_keys=True) + '\n'
-    with open(DIR + '/../fcl.json', 'wb') as f:
+
+    # build fcl.json
+    with open(DIR + '/fcl.json', 'wb') as f:
+        json_file_content = json.dumps(FCL, indent='  ', sort_keys=True) + '\n'
         f.write(json_file_content.encode())
-    #SSH_CONFIG_FILENAME      = DIR + '/../ssh_config'
-    #SSH_KNOWN_HOSTS_FILENAME = DIR + '/../ssh_known_hosts'
+
+    # build ssh_known_hosts
+    SSH_KNOWN_HOSTS_FILENAME = DIR + '/ssh_known_hosts'
+    with open(SSH_KNOWN_HOSTS_FILENAME, 'wb') as f:
+        lines = []
+        for h in FCL['hosts']:
+            lines += [
+                '{name} {k}\n'.format(k=k, name=h['name'])
+                for k in h['public-keys']
+            ]
+        f.write(''.join(lines).encode())
+
+    # build ssh_config
+    SSH_CONFIG_FILENAME = DIR + '/ssh_config'
+    with open(SSH_CONFIG_FILENAME, 'wb') as f:
+        lines = [
+            'GSSAPIAuthentication no\n',
+            'PasswordAuthentication no\n',
+            'KbdInteractiveAuthentication no\n',
+            'ChallengeResponseAuthentication no\n',
+            'PubkeyAuthentication yes\n',
+            'HostbasedAuthentication yes\n',
+            'PreferredAuthentications publickey,hostbased\n',
+            'RequestTTY no\n',
+            'EscapeChar none\n',
+            'ConnectTimeout 5\n',
+            'CheckHostIP no\n',
+            'HashKnownHosts no\n',
+            'UserKnownHostsFile /dev/null\n',
+            'GlobalKnownHostsFile /dev/null\n',
+            'StrictHostKeyChecking yes\n',
+        ]
+        for h in FCL['hosts']:
+            name = h['name']
+            addr = h['public-ip-port'].split(':')[0]
+            port = h['public-ip-port'].split(':')[1]
+            lines += [
+                '\n',
+                'Match originalhost {}\n'.format(name),
+                '    HostKeyAlias {}\n'.format(name),
+                '    HostName {}\n'.format(addr),
+                '    Port {}\n'.format(port),
+            ]
+        f.write(''.join(lines).encode())
 
 
 if __name__ == '__main__':

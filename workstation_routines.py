@@ -56,7 +56,7 @@ def assert_good_environment():
 
 def load_fcl_json_to_global():
     global FCL
-    FCL = read_fcl_json(dirname(realpath(sys.argv[0])) + '/fcl.json')
+    FCL = read_fcl_json(dirname(realpath(sys.argv[0])) + '/src/fcl.json')
 
 
 ##############################################################################
@@ -574,7 +574,7 @@ def put_file(filename, content):
 ##############################################################################
 
 
-def read_fcl_json(filename='fcl.json'):
+def read_fcl_json(filename):
     import json
     import re
     NAME = 'name'           # host/user, name

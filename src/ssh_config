@@ -1,0 +1,95 @@
+GSSAPIAuthentication no
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+ChallengeResponseAuthentication no
+PubkeyAuthentication yes
+HostbasedAuthentication yes
+PreferredAuthentications publickey,hostbased
+RequestTTY no
+EscapeChar none
+ConnectTimeout 5
+CheckHostIP no
+HashKnownHosts no
+UserKnownHostsFile /dev/null
+GlobalKnownHostsFile /dev/null
+StrictHostKeyChecking yes
+
+Match originalhost angel0
+    HostKeyAlias angel0
+    HostName 140.109.22.53
+    Port 6010
+
+Match originalhost angel1
+    HostKeyAlias angel1
+    HostName 140.109.22.53
+    Port 6011
+
+Match originalhost angel2
+    HostKeyAlias angel2
+    HostName 140.109.22.53
+    Port 6012
+
+Match originalhost angel3
+    HostKeyAlias angel3
+    HostName 140.109.22.53
+    Port 6013
+
+Match originalhost colossus0
+    HostKeyAlias colossus0
+    HostName 140.109.22.53
+    Port 6014
+
+Match originalhost colossus3
+    HostKeyAlias colossus3
+    HostName 140.109.22.53
+    Port 6017
+
+Match originalhost dragon2
+    HostKeyAlias dragon2
+    HostName 140.109.22.53
+    Port 6020
+
+Match originalhost gaia
+    HostKeyAlias gaia
+    HostName 140.109.22.53
+    Port 6000
+
+Match originalhost giant0
+    HostKeyAlias giant0
+    HostName 140.109.22.53
+    Port 6002
+
+Match originalhost giant1
+    HostKeyAlias giant1
+    HostName 140.109.22.53
+    Port 6003
+
+Match originalhost giant2
+    HostKeyAlias giant2
+    HostName 140.109.22.53
+    Port 6004
+
+Match originalhost giant3
+    HostKeyAlias giant3
+    HostName 140.109.22.53
+    Port 6005
+
+Match originalhost giant4
+    HostKeyAlias giant4
+    HostName 140.109.22.53
+    Port 6006
+
+Match originalhost giant5
+    HostKeyAlias giant5
+    HostName 140.109.22.53
+    Port 6007
+
+Match originalhost giant6
+    HostKeyAlias giant6
+    HostName 140.109.22.53
+    Port 6008
+
+Match originalhost uranus
+    HostKeyAlias uranus
+    HostName 140.109.22.53
+    Port 6001
