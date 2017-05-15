@@ -1,16 +1,16 @@
 For admins:
 
-Q:  How to provision a new Ubuntu 16.04 server in our cluster?
+Q:  How to bootstrap a new Ubuntu 16.04 server in our cluster?
 
     1.  log in as a user that has sudo permission
 
-    2.  download the provision script
+    2.  download the bootstrap script
 
-            wget https://fast-crypto-lab.github.io/cluster/provision
+            wget https://fast-crypto-lab.github.io/cluster/bootstrap
 
-    3.  run the provision script
+    3.  run the bootstrap script
 
-            sudo bash provision
+            sudo bash bootstrap
 
 Q:  How to generate fcl.json, ssh_config, and ssh_known_hosts?
 
