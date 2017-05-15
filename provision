@@ -1,0 +1,84 @@
+#!/bin/bash
+
+grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null || { >&2 echo 'Error: This is not Ubuntu 16.04'; exit 1; }
+test "$( id -u )" = 0 || { >&2 echo 'Error: You are not root, please use "sudo" to run the script'; exit 1; }
+command -v sshd > /dev/null || { >&2 echo 'Error: The package "openssh-server" is not installed'; exit 1; }
+command -v git > /dev/null || { >&2 echo 'Error: The package "git" is not installed'; exit 1; }
+
+# ----------------------------------------------------------------------------
+
+ORIG_DIR=$PWD
+TEMP_DIR=$( mktemp -d )
+
+test -n "$TEMP_DIR" && cd "$TEMP_DIR" || { >&2 echo 'Error: Failed to enter a temporary directory'; exit 1; }
+
+_clean_up_tmp_files () { echo 'Deleting temporary files...'; cd "$ORIG_DIR"; rm -rf "$TEMP_DIR"; echo 'Deleting temporary files...  DONE'; }
+trap _clean_up_tmp_files EXIT
+
+# ----------------------------------------------------------------------------
+
+cd "$TEMP_DIR"
+echo 'Downloading the latest snapshot from the GitHub git repository...'
+git clone --quiet --depth 1 https://github.com/fast-crypto-lab/cluster
+echo 'Downloading the latest snapshot from the GitHub git repository...  DONE'
+
+# ----------------------------------------------------------------------------
+
+cd "$TEMP_DIR/cluster"
+
+# ----------------------------------------------------------------------------
+
+echo 'Trying to acquire a lock...'
+if ./workstation_routines.py lock
+then
+    echo 'Trying to acquire a lock...  DONE'
+else
+    echo
+    >&2 echo 'Error: Failed to acquire a lock, the file /fcl-cluster-maintenance.lock already exists'
+    exit 1
+fi
+
+# ----------------------------------------------------------------------------
+
+echo 'Checking whether this host is already listed in fcl.json...'
+if ./workstation_routines.py check-this-host-in-json
+then
+    echo 'Checking whether this host is already listed in fcl.json...  DONE'
+else
+    echo
+    >&2 echo 'Error: the command `./workstation_routines.py check-this-host-in-json` failed'
+    ./workstation_routines.py unlock
+    exit 1
+fi
+
+# ----------------------------------------------------------------------------
+
+echo 'Checking whether fcl.json is applicable for this host...'
+if ./workstation_routines.py check-json-applicability
+then
+    echo 'Checking whether fcl.json is applicable for this host...  DONE'
+else
+    echo
+    >&2 echo 'Error: the command `./workstation_routines.py check-json-applicability` failed'
+    ./workstation_routines.py unlock
+    exit 1
+fi
+
+# ----------------------------------------------------------------------------
+
+echo 'Applying fcl.json to this host...'
+if ./workstation_routines.py apply-json
+then
+    echo 'Applying fcl.json to this host...  DONE'
+else
+    echo
+    >&2 echo 'Error: the command `./workstation_routines.py apply-json` failed'
+    ./workstation_routines.py unlock
+    exit 1
+fi
+
+# ----------------------------------------------------------------------------
+
+echo 'Releasing the lock...'
+./workstation_routines.py unlock
+echo 'Releasing the lock...  DONE'
