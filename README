@@ -4,10 +4,20 @@ Q:  How to provision a new Ubuntu 16.04 server in our cluster?
 
     1.  log in as a user that has sudo permission
 
-    2.  download the script
+    2.  download the provision script
 
             wget https://fast-crypto-lab.github.io/cluster/provision
 
-    3.  run the script
+    3.  run the provision script
 
             sudo bash provision
+
+Q:  How to generate fcl.json, ssh_config, and ssh_known_hosts?
+
+    1.  update the content of db/hosts/ and db/users/
+
+    2.  run the compile script
+
+            ./compile
+
+    3.  check the resulting fcl.json, ssh_config, and ssh_known_hosts files

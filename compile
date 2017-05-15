@@ -181,7 +181,7 @@ def is_good_hosts_and_users(dd):
 
 
 def main():
-    DIR = os.path.dirname(os.path.realpath(sys.argv[0]))
+    DIR = os.path.dirname(os.path.realpath(sys.argv[0])) + '/db'
     hosts = read_all_hosts(DIR)
     users = read_all_users(DIR)
     FCL = {
