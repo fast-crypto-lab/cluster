@@ -41,6 +41,16 @@
       ]
     },
     {
+      "name": "colossus0",
+      "private-ip": "10.3.2.70",
+      "public-ip-port": "140.109.22.53:6014",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN2NImG6QW5Mm0Lg949IewYW7rMc5RT/Y+z6rrbgIiDP",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEOXTtH71hl6aJ79yRQW/wVqHHhtrrnTN/h0SRBLkMIfnmBgY1rkxRfrGsP8Wfftx2exPI54Z/qIqWqrwEGMqGc=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6GLdqGnZWFE/UrpjFf7JFQd5jQ8d37NeYeezf6KPdUVS5tm7cD8ubNltHC6oYgofPwNAwjQzqn9bvK122VjpiOnlJcgcOoxfkmrfVSeZ7zLhsrq/2e3YvVkIPuH91uzh7cQ8WGBss/pp36GN3nJrVmmqLL0uRbOWmfECwt74x/jSxKCYDmLTL9bJ0EtUiogCCl9Yj5PZLarc2ezQpQvN4w7YhVFLYp7d9ENdcbJ5SltL6BK/y4jtzmDAH7nbPb5T87zcfuENlBV4OOBnvoyuJXPmo/y3p5+rNo/LgGKYLbq9ulBmhRUlc6YtzW+AE4zDatdsfb0MuVA+20WWs2KZj"
+      ]
+    },
+    {
       "name": "colossus3",
       "private-ip": "10.3.2.73",
       "public-ip-port": "140.109.22.53:6017",
