@@ -1,4 +1,7 @@
 #!/bin/bash
+_main_(){
+
+# ----------------------------------------------------------------------------
 
 grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null || { >&2 echo 'Error: This is not Ubuntu 16.04'; exit 1; }
 test "$( id -u )" = 0 || { >&2 echo 'Error: You are not root, please use "sudo" to run the script'; exit 1; }
@@ -78,3 +81,7 @@ fi
 echo 'Releasing the lock...'
 ./manage-this-machine unlock
 echo 'Releasing the lock...  DONE'
+
+# ----------------------------------------------------------------------------
+
+};_main_
