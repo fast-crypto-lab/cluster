@@ -1,5 +1,4 @@
-Put a host file under hosts/ for each Ubuntu 16.04 server
-
+For each Ubuntu 16.04 server, put a host file in the hosts/ directory
 
     The filename of a host file is just the hostname
 
@@ -17,10 +16,9 @@ Put a host file under hosts/ for each Ubuntu 16.04 server
 
 
 
-Put a user file under users/ for each fast crypto lab cluster user
+For each cluster user, put a user file in the users/ directory
 
-
-    The filename of a user file is just the userid and the username
+    The filename of a user file is just the uid and the username separated by a dash character
 
     A user file should look like this:
 
