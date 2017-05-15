@@ -1,1 +1,2 @@
-permit-sudo no
+permit-sudo yes
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICtRn9R8F9AZISZNx+w4im/9xUUz3fwCJaiM6LX9y4sU
