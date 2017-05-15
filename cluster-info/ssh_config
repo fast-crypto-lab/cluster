@@ -1,42 +1,12 @@
-Match originalhost angel0
-    HostKeyAlias angel0
-    HostName 140.109.22.53
-    Port 6010
-
-Match originalhost angel1
-    HostKeyAlias angel1
-    HostName 140.109.22.53
-    Port 6011
-
-Match originalhost angel2
-    HostKeyAlias angel2
-    HostName 140.109.22.53
-    Port 6012
-
-Match originalhost angel3
-    HostKeyAlias angel3
-    HostName 140.109.22.53
-    Port 6013
-
-Match originalhost colossus0
-    HostKeyAlias colossus0
-    HostName 140.109.22.53
-    Port 6014
-
-Match originalhost colossus3
-    HostKeyAlias colossus3
-    HostName 140.109.22.53
-    Port 6017
-
-Match originalhost dragon2
-    HostKeyAlias dragon2
-    HostName 140.109.22.53
-    Port 6020
-
 Match originalhost gaia
     HostKeyAlias gaia
     HostName 140.109.22.53
     Port 6000
+
+Match originalhost uranus
+    HostKeyAlias uranus
+    HostName 140.109.22.53
+    Port 6001
 
 Match originalhost giant0
     HostKeyAlias giant0
@@ -73,12 +43,42 @@ Match originalhost giant6
     HostName 140.109.22.53
     Port 6008
 
-Match originalhost uranus
-    HostKeyAlias uranus
+Match originalhost angel0
+    HostKeyAlias angel0
     HostName 140.109.22.53
-    Port 6001
+    Port 6010
 
-Match originalhost angel0,angel1,angel2,angel3,colossus0,colossus3,dragon2,gaia,giant0,giant1,giant2,giant3,giant4,giant5,giant6,uranus
+Match originalhost angel1
+    HostKeyAlias angel1
+    HostName 140.109.22.53
+    Port 6011
+
+Match originalhost angel2
+    HostKeyAlias angel2
+    HostName 140.109.22.53
+    Port 6012
+
+Match originalhost angel3
+    HostKeyAlias angel3
+    HostName 140.109.22.53
+    Port 6013
+
+Match originalhost colossus0
+    HostKeyAlias colossus0
+    HostName 140.109.22.53
+    Port 6014
+
+Match originalhost colossus3
+    HostKeyAlias colossus3
+    HostName 140.109.22.53
+    Port 6017
+
+Match originalhost dragon2
+    HostKeyAlias dragon2
+    HostName 140.109.22.53
+    Port 6020
+
+Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,angel0,angel1,angel2,angel3,colossus0,colossus3,dragon2
     UserKnownHostsFile /dev/null
     GlobalKnownHostsFile /dev/null
     StrictHostKeyChecking yes

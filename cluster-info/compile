@@ -71,7 +71,10 @@ def parse_host(filename, filecontent):
             'name': filename,
             'private-ip': none_to_null(lines[0].split(' ')[1]),
             'public-ip-port': lines[1].split(' ')[1],
-            'public-keys': lines[2:2+3]
+            'public-keys': sorted(lines[2:2+3], key=lambda s: (
+                ['ssh-ed25519', 'ecdsa-sha2-nistp256', 'ssh-rsa']
+                .index(s.split(' ')[0])
+            ))
         }
     except AssertionError:
         raise SyntaxError
@@ -189,6 +192,17 @@ def main():
         'users': [parse_user(n,h) for n,h in users]
     }
     assert is_good_hosts_and_users(FCL), 'invalid hosts/ or users/'
+
+    def sort_criteria(d):
+        ip_str = d['public-ip-port'].split(':')[0]
+        ip_oct = bytes([int(o) for o in ip_str.split('.')])
+        ip_int = int.from_bytes(ip_oct, 'big'),
+        port = int(d['public-ip-port'].split(':')[1])
+        if ip_str == '140.109.22.53':
+            return -65536 + port
+        return ip_int * 65536 + port
+
+    FCL['hosts'].sort(key=sort_criteria)
 
     # build fcl.json
     with open(DIR + '/fcl.json', 'wb') as f:
