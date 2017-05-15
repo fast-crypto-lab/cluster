@@ -563,7 +563,7 @@
     {
       "id": 10068,
       "name": "bypeng",
-      "permit-sudo": false,
+      "permit-sudo": true,
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPtQ9yxCjuLzuRKRnmHnLZ8i5M4xE6t6FqzTFo5FkDLP",
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtIVr94JiDfMLwHgbZg6Qc+9f1p1iNZO/TtLOVb5OkWVxX9BAr9YeCm5BKcoZyM7F9cWFEBhAROl8lYPE/rOcIu1Usr20zeQgZrsOVaFJAD34l6SUGCtA2IOrHXIHpV3xnXxa92BiFxqfp3x3kstm+ClpXkTRNLDoeVGUcH1wTc9xW9zgQ7cJA4rOaf24j6chaC+Z/WjagEcO8iuqaNvdLJIgRDVFSVvkBcvFhptPoFVjPvlqgcF9lUKInMwCt+juun0eS5Kwa78ntSk3Cpw7hObUKv4nopdtGqcu1AID3XByIM7W3xjpdJy6AAykzU87afOpMEZvbwKbpMAovM//9"
