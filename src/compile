@@ -108,6 +108,78 @@ def parse_user(filename, filecontent):
         raise SyntaxError
 
 
+def is_good_hosts_and_users(dd):
+    import json
+    import re
+    NAME = 'name'           # host/user, name
+    KEYS = 'public-keys'    # host/user, public keys
+    PRIP = 'private-ip'     # host, null if this machine is not in 302
+    PUBA = 'public-ip-port' # host, public tcp port for ssh connection
+    NUID = 'id'             # user, numeric uid
+    SUDO = 'permit-sudo'    # user, sudo permission
+    RE_PUBKEY = (
+        '^ssh-ed25519 [A-Za-z0-9+/]{68}$|'
+        '^ecdsa-sha2-nistp256 [A-Za-z0-9+/]{139}=$|'
+        '^ssh-rsa [A-Za-z0-9+/=]{372,}$')
+    ################################################################
+    def is_good_hosts(hh):
+        return (type(hh) is list
+            and all(is_good_host(h) for h in hh)
+            and contains_no_duplicates(h[NAME] for h in hh)
+            and contains_no_duplicates(h[PRIP] for h in hh if h[PRIP])
+            and contains_no_duplicates(h[PUBA] for h in hh))
+    def is_good_users(uu):
+        return (type(uu) is list
+            and all(is_good_user(u) for u in uu)
+            and contains_no_duplicates(u[NUID] for u in uu)
+            and contains_no_duplicates(u[NAME] for u in uu)
+            and any(u[SUDO] and u[KEYS] for u in uu))
+    def contains_no_duplicates(it):
+        vals = list(it)
+        return len(vals) == len(set(vals))
+    def is_good_host(h):
+        return (type(h) is dict and h.keys() >= {NAME, PRIP, PUBA, KEYS}
+            and type(h[NAME]) is str
+            and type(h[PRIP]) in {str, type(None)}
+            and type(h[PUBA]) is str
+            and type(h[KEYS]) is list and all(type(k) is str for k in h[KEYS])
+            and re.fullmatch('^[a-z][a-z0-9]{1,30}$', h[NAME])
+            and is_good_private_ip_address(h[PRIP])
+            and is_good_public_ip_address_and_port(h[PUBA])
+            and all(re.fullmatch(RE_PUBKEY, k) for k in h[KEYS]))
+    def is_good_user(u):
+        return (type(u) is dict and u.keys() >= {NUID, NAME, KEYS, SUDO}
+            and type(u[NUID]) is int
+            and type(u[NAME]) is str
+            and type(u[SUDO]) is bool
+            and type(u[KEYS]) is list and all(type(k) is str for k in u[KEYS])
+            and 10000 <= u[NUID] <= 19999
+            and re.fullmatch('^[a-z][a-z0-9]{1,30}$', u[NAME])
+            and all(re.fullmatch(RE_PUBKEY, k) for k in u[KEYS]))
+    def is_good_private_ip_address(addr):
+        PAT = '^10\.3\.2\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-4])$'
+        return addr is None or re.fullmatch(PAT, addr)
+    def is_good_public_ip_address_and_port(ss):
+        PAT = (
+            '^'
+            '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+            '\.'
+            '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+            '\.'
+            '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+            '\.'
+            '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+            ':'
+            '([0-9]|[1-9][0-9]{1,4})'
+            '$')
+        return re.fullmatch(PAT, ss) and int(ss.split(':')[1]) < 65536
+    ################################################################
+    return (type(dd) is dict
+        and dd.keys() >= {'hosts', 'users'}
+        and is_good_hosts(dd['hosts'])
+        and is_good_users(dd['users']))
+
+
 def main():
     DIR = os.path.dirname(os.path.realpath(sys.argv[0]))
     hosts = read_all_hosts(DIR)
@@ -116,10 +188,10 @@ def main():
         'hosts': [parse_host(n,h) for n,h in hosts],
         'users': [parse_user(n,h) for n,h in users]
     }
+    assert is_good_hosts_and_users(FCL), 'invalid hosts/ or users/'
     json_file_content = json.dumps(FCL, indent='  ', sort_keys=True) + '\n'
     with open(DIR + '/../fcl.json', 'wb') as f:
         f.write(json_file_content.encode())
-
     #SSH_CONFIG_FILENAME      = DIR + '/../ssh_config'
     #SSH_KNOWN_HOSTS_FILENAME = DIR + '/../ssh_known_hosts'
 
