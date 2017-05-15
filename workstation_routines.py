@@ -57,10 +57,6 @@ def assert_good_environment():
 def load_fcl_json_to_global():
     global FCL
     FCL = read_fcl_json(dirname(realpath(sys.argv[0])) + '/fcl.json')
-    assert any(u['permit-sudo'] and u['public-keys'] for u in FCL['users']), (
-            'There must be at least one sudoer account'
-            ' with at least one public key'
-            )
 
 
 ##############################################################################
@@ -607,7 +603,8 @@ def read_fcl_json(filename='fcl.json'):
         return (type(uu) is list
             and all(is_good_user(u) for u in uu)
             and contains_no_duplicates(u[NUID] for u in uu)
-            and contains_no_duplicates(u[NAME] for u in uu))
+            and contains_no_duplicates(u[NAME] for u in uu)
+            and any(u[SUDO] and u[KEYS] for u in uu))
     def contains_no_duplicates(it):
         vals = list(it)
         return len(vals) == len(set(vals))

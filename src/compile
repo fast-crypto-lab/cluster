@@ -112,12 +112,16 @@ def main():
     DIR = os.path.dirname(os.path.realpath(sys.argv[0]))
     hosts = read_all_hosts(DIR)
     users = read_all_users(DIR)
-    json_file_content = json.dumps({
+    FCL = {
         'hosts': [parse_host(n,h) for n,h in hosts],
         'users': [parse_user(n,h) for n,h in users]
-    }, indent='  ', sort_keys=True) + '\n'
+    }
+    json_file_content = json.dumps(FCL, indent='  ', sort_keys=True) + '\n'
     with open(DIR + '/../fcl.json', 'wb') as f:
         f.write(json_file_content.encode())
+
+    #SSH_CONFIG_FILENAME      = DIR + '/../ssh_config'
+    #SSH_KNOWN_HOSTS_FILENAME = DIR + '/../ssh_known_hosts'
 
 
 if __name__ == '__main__':
