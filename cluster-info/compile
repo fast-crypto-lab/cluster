@@ -209,8 +209,8 @@ def main():
         json_file_content = json.dumps(FCL, indent='  ', sort_keys=True) + '\n'
         f.write(json_file_content.encode())
 
-    # build ssh_known_hosts
-    SSH_KNOWN_HOSTS_FILENAME = DIR + '/ssh_known_hosts'
+    # build ssh_known_hosts.txt
+    SSH_KNOWN_HOSTS_FILENAME = DIR + '/ssh_known_hosts.txt'
     with open(SSH_KNOWN_HOSTS_FILENAME, 'wb') as f:
         lines = []
         for h in FCL['hosts']:
@@ -223,8 +223,8 @@ def main():
             lines.pop(-1)
         f.write(''.join(lines).encode())
 
-    # build ssh_config
-    SSH_CONFIG_FILENAME = DIR + '/ssh_config'
+    # build ssh_config.txt
+    SSH_CONFIG_FILENAME = DIR + '/ssh_config.txt'
     with open(SSH_CONFIG_FILENAME, 'wb') as f:
         lines = []
         names = []
