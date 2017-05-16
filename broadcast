@@ -1,10 +1,218 @@
-#!/bin/bash
+#!/usr/bin/env python3
 
->&2 echo 'Error: This script is not finished yet.'
->&2 echo
->&2 echo 'Eventually, when this script is executed,'
->&2 echo 'it will broadcast the latest state on GitHub'
->&2 echo 'to all hosts declared in cluster-info/fcl.json'
->&2 echo
 
-exit 1
+TEST_SUDO_COMMAND = ' sudo -n true ; '
+REMOTE_BASH_COMMAND = ' set -o pipefail ; curl -fsLm8 https://fast-crypto-lab.github.io/cluster/bootstrap | sudo -n bash ; '
+#REMOTE_BASH_COMMAND = ' sleep 10; echo hi; '
+
+
+def proc(args):
+    from subprocess import DEVNULL
+    from subprocess import Popen
+    assert type(args) is list and args and all(type(a) is str for a in args)
+    return Popen(args, stdin=DEVNULL, stdout=DEVNULL, stderr=DEVNULL)
+
+
+def wait_all_procs(procs, timeout, show_progress=False):
+    from subprocess import Popen
+    from time import sleep
+
+    import sys
+    sys.stdout.flush()
+    sys.stderr.flush()
+
+    total_number = len(procs)
+    num_complete = 0
+
+    assert type(procs) is list and all(type(p) is Popen for p in procs)
+    assert type(timeout) in {int, float} and timeout >= 0
+
+    counter = 0
+    while timeout >= 0:
+        num_complete = len([None for p in procs if p.poll() is not None])
+        if num_complete == total_number:
+            print('\r', flush=True)
+            return
+        print('\r{} {}/{} completed'.format('|/-\\'[counter], num_complete, total_number), flush=True, end='')
+        sleep(0.25)
+        timeout -= 0.25
+        counter = (counter + 1) % 4
+    for p in procs:
+        if p.poll() is None:
+            p.terminate()
+            p.wait()
+
+
+def load_fcl_json_to_global():
+    import os
+    import sys
+    global FCL
+    FCL = read_fcl_json(os.path.dirname(os.path.realpath(sys.argv[0])) + '/cluster-info/fcl.json')
+
+
+def read_fcl_json(filename):
+    import json
+    import re
+    NAME = 'name'           # host/user, name
+    KEYS = 'public-keys'    # host/user, public keys
+    PRIP = 'private-ip'     # host, null if this machine is not in 302
+    PUBA = 'public-ip-port' # host, public tcp port for ssh connection
+    NUID = 'id'             # user, numeric uid
+    SUDO = 'permit-sudo'    # user, sudo permission
+    RE_PUBKEY = (
+        '^ssh-ed25519 [A-Za-z0-9+/]{68}$|'
+        '^ecdsa-sha2-nistp256 [A-Za-z0-9+/]{139}=$|'
+        '^ssh-rsa [A-Za-z0-9+/=]{372,}$')
+    ################################################################
+    def is_good_hosts_and_users(dd):
+        return (type(dd) is dict
+            and dd.keys() >= {'hosts', 'users'}
+            and is_good_hosts(dd['hosts'])
+            and is_good_users(dd['users']))
+    def is_good_hosts(hh):
+        return (type(hh) is list
+            and all(is_good_host(h) for h in hh)
+            and contains_no_duplicates(h[NAME] for h in hh)
+            and contains_no_duplicates(h[PRIP] for h in hh if h[PRIP])
+            and contains_no_duplicates(h[PUBA] for h in hh))
+    def is_good_users(uu):
+        return (type(uu) is list
+            and all(is_good_user(u) for u in uu)
+            and contains_no_duplicates(u[NUID] for u in uu)
+            and contains_no_duplicates(u[NAME] for u in uu)
+            and any(u[SUDO] and u[KEYS] for u in uu))
+    def contains_no_duplicates(it):
+        vals = list(it)
+        return len(vals) == len(set(vals))
+    def is_good_host(h):
+        return (type(h) is dict and h.keys() >= {NAME, PRIP, PUBA, KEYS}
+            and type(h[NAME]) is str
+            and type(h[PRIP]) in {str, type(None)}
+            and type(h[PUBA]) is str
+            and type(h[KEYS]) is list and all(type(k) is str for k in h[KEYS])
+            and re.fullmatch('^[a-z][a-z0-9]{1,30}$', h[NAME])
+            and is_good_private_ip_address(h[PRIP])
+            and is_good_public_ip_address_and_port(h[PUBA])
+            and all(re.fullmatch(RE_PUBKEY, k) for k in h[KEYS]))
+    def is_good_user(u):
+        return (type(u) is dict and u.keys() >= {NUID, NAME, KEYS, SUDO}
+            and type(u[NUID]) is int
+            and type(u[NAME]) is str
+            and type(u[SUDO]) is bool
+            and type(u[KEYS]) is list and all(type(k) is str for k in u[KEYS])
+            and 10000 <= u[NUID] <= 19999
+            and re.fullmatch('^[a-z][a-z0-9]{1,30}$', u[NAME])
+            and all(re.fullmatch(RE_PUBKEY, k) for k in u[KEYS]))
+    def is_good_private_ip_address(addr):
+        PAT = '^10\.3\.2\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-4])$'
+        return addr is None or re.fullmatch(PAT, addr)
+    def is_good_public_ip_address_and_port(ss):
+        PAT = (
+            '^'
+            '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+            '\.'
+            '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+            '\.'
+            '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+            '\.'
+            '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+            ':'
+            '([0-9]|[1-9][0-9]{1,4})'
+            '$')
+        return re.fullmatch(PAT, ss) and int(ss.split(':')[1]) < 65536
+    ################################################################
+    with open(filename, 'rb') as f:
+        raw_bytes = f.read()
+    try:
+        raw_str = raw_bytes.decode()
+        hosts_and_users = json.loads(raw_str)
+        assert is_good_hosts_and_users(hosts_and_users)
+        for h in hosts_and_users['hosts']:
+            h['public-keys'].sort(key=(
+                lambda s:
+                    ['ssh-ed25519', 'ecdsa-sha2-nistp256', 'ssh-rsa']
+                    .index(s.split(' ')[0])
+            ))
+        return hosts_and_users
+    except:
+        pass
+    raise ValueError('the content of {} is invalid'.format(filename))
+
+
+def parse_cmdline_args():
+    from getpass import getuser
+    DEFAULT_USERNAME = getuser()
+    import argparse
+    parser = argparse.ArgumentParser(allow_abbrev=False)
+    parser.add_argument('-l', '--login', metavar='<name>', default=DEFAULT_USERNAME,
+            help='specify the user to log in as on the remote machine; the default is your current username ('+DEFAULT_USERNAME+')')
+    parser.add_argument('-i', '--identity', metavar='<identity>',
+            help='specify the private key for public key authentication instead of ssh defaults')
+    return parser.parse_args()
+
+
+def build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, remote_command):
+    args = [
+        'ssh',
+        '-F', CONFIG,
+        '-o', 'GlobalKnownHostsFile {}'.format(KNOWNH),
+        '-o', 'UserKnownHostsFile /dev/null',
+        '-o', 'ConnectTimeout 8',
+    ]
+    args += ['-l', username]
+    if identity is not None:
+        args += ['-i', identity]
+    args += [hostname]
+    args += [remote_command]
+    return args
+
+
+def main():
+    import os
+    import sys
+    CONFIG = os.path.dirname(os.path.realpath(sys.argv[0])) + '/cluster-info/ssh_config.txt'
+    KNOWNH = os.path.dirname(os.path.realpath(sys.argv[0])) + '/cluster-info/ssh_known_hosts.txt'
+    assert os.path.isfile(CONFIG)
+    assert os.path.isfile(KNOWNH)
+
+    load_fcl_json_to_global()
+
+    parsed_opt = parse_cmdline_args()
+    identity = parsed_opt.identity
+    username = parsed_opt.login
+
+    hostnames = [h['name'] for h in FCL['hosts']]
+
+    print('The username we will use to log in the cluster is: "{}"'.format(username))
+    print()
+
+    print('The cluster currently contains these hosts:')
+    print(' '.join(hostnames))
+    print()
+
+    print('Trying to connect to all hosts and run "sudo -n true"...')
+    all_procs = [proc(build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, TEST_SUDO_COMMAND)) for hostname in hostnames]
+    wait_all_procs(all_procs, 12)
+    result_codes = [p.returncode for p in all_procs]
+
+    if any(c != 0 for c in result_codes):
+        print('Error: Failed to run "sudo -n true" on these hosts:')
+        print(' '.join([hostnames[idx] for idx, val in enumerate(result_codes) if val != 0]))
+        sys.exit(1)
+
+    print('Trying to run bootstrap command on all hosts...')
+    all_procs = [proc(build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, REMOTE_BASH_COMMAND)) for hostname in hostnames]
+    print('Waiting {} ssh processes to complete for at most 180 seconds...'.format(len(all_procs)))
+    wait_all_procs(all_procs, 180, show_progress=True)
+    result_codes = [p.returncode for p in all_procs]
+
+    if any(c != 0 for c in result_codes):
+        print('Error: Failed to run bootstrap procedure on these hosts:')
+        print(' '.join([hostnames[idx] for idx, val in enumerate(result_codes) if val != 0]))
+        sys.exit(1)
+
+    print('broadcast completed')
+
+
+if __name__ == '__main__':
+    main()
