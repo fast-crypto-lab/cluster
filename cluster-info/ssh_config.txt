@@ -78,7 +78,12 @@ Match originalhost dragon2
     HostName 140.109.22.53
     Port 6020
 
-Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,angel0,angel1,angel2,angel3,colossus0,colossus3,dragon2
+Match originalhost hydra1
+    HostKeyAlias hydra1
+    HostName 140.109.22.53
+    Port 6022
+
+Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,angel0,angel1,angel2,angel3,colossus0,colossus3,dragon2,hydra1
     StrictHostKeyChecking yes
     HashKnownHosts no
     CheckHostIP no
