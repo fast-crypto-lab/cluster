@@ -243,12 +243,9 @@ def main():
         if names:
             lines += [
                 'Match originalhost {}\n'.format(','.join(names)),
-                '    UserKnownHostsFile /dev/null\n',
-                '    GlobalKnownHostsFile /dev/null\n',
                 '    StrictHostKeyChecking yes\n',
-                '    CheckHostIP no\n',
-                '    ConnectTimeout 5\n',
                 '    HashKnownHosts no\n',
+                '    CheckHostIP no\n',
                 '    PubkeyAuthentication yes\n',
                 '    HostbasedAuthentication yes\n',
                 '    GSSAPIAuthentication no\n',

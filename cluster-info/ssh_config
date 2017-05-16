@@ -79,12 +79,9 @@ Match originalhost dragon2
     Port 6020
 
 Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,angel0,angel1,angel2,angel3,colossus0,colossus3,dragon2
-    UserKnownHostsFile /dev/null
-    GlobalKnownHostsFile /dev/null
     StrictHostKeyChecking yes
-    CheckHostIP no
-    ConnectTimeout 5
     HashKnownHosts no
+    CheckHostIP no
     PubkeyAuthentication yes
     HostbasedAuthentication yes
     GSSAPIAuthentication no
