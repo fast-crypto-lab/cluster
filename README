@@ -2,7 +2,7 @@ No-brainers
 
     Do this on new machine
 
-        curl -sL https://fast-crypto-lab.github.io/cluster/bootstrap | sudo bash
+        curl -fsL https://fast-crypto-lab.github.io/cluster/bootstrap | sudo bash
 
     Do this when you update cluster-info/hosts/ or cluster-info/users/
 
