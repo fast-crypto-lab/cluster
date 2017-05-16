@@ -204,6 +204,12 @@ def main():
 
     FCL['hosts'].sort(key=sort_criteria)
 
+    # build _hostnames
+    with open(DIR + '/_hostnames', 'wb') as f:
+        f.write(''.join(
+            '{}\n'.format(h['name']) for h in FCL['hosts']
+        ).encode())
+
     # build fcl.json
     with open(DIR + '/fcl.json', 'wb') as f:
         json_file_content = json.dumps(FCL, indent='  ', sort_keys=True) + '\n'
