@@ -181,8 +181,10 @@
     {
       "id": 10001,
       "name": "doug",
-      "permit-sudo": false,
-      "public-keys": []
+      "permit-sudo": true,
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtb+blfvVnF84Gd+kQMQC1JUdZAhw0NersYwmFHUg6zzq5fE9LLpLzLF83KJrxNkirNKtplgK2+zQ7t1gIyEk411mq6dYbHS3UnsXmJAwaJCU7Q/qyj2ivCrY6VplqhGcE7Mo9JYbCF9SHu7ofR8RGHARatkawvwdRYzrtQ1bg5zUVShBw3OeV5p1rw7GvmPwaxqMlLk4CdU1SBBkTB3mN8hasbCWpMGjwQ0IhA47Eo3aaKkdeDv1wPOhLm9AVEHl5NlJ9aU6+FS793n22M3junYsyuKOBx8P4KWyPixOeAnexhZvKxj8rwaoKE+lsf21F136ny1cGVCQVkOEagdOp"
+      ]
     },
     {
       "id": 10002,
