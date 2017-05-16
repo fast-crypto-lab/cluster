@@ -30,10 +30,12 @@ def wait_all_procs(procs, timeout, show_progress=False):
     counter = 0
     while timeout >= 0:
         num_complete = len([None for p in procs if p.poll() is not None])
+        if show_progress:
+            print('\r{} {}/{} completed'.format('|/-\\'[counter], num_complete, total_number), flush=True, end='')
         if num_complete == total_number:
-            print('\r', flush=True)
+            if show_progress:
+                print('\r', flush=True)
             return
-        print('\r{} {}/{} completed'.format('|/-\\'[counter], num_complete, total_number), flush=True, end='')
         sleep(0.25)
         timeout -= 0.25
         counter = (counter + 1) % 4
@@ -192,21 +194,31 @@ def main():
 
     print('Trying to connect to all hosts and run "sudo -n true"...')
     all_procs = [proc(build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, TEST_SUDO_COMMAND)) for hostname in hostnames]
-    wait_all_procs(all_procs, 12)
+    print('Waiting {} ssh processes to complete for at most 12 seconds...'.format(len(all_procs)))
+    wait_all_procs(all_procs, 12, show_progress=True)
     result_codes = [p.returncode for p in all_procs]
+    print()
 
     if any(c != 0 for c in result_codes):
+        print(result_codes)
         print('Error: Failed to run "sudo -n true" on these hosts:')
         print(' '.join([hostnames[idx] for idx, val in enumerate(result_codes) if val != 0]))
         sys.exit(1)
 
     print('Trying to run bootstrap command on all hosts...')
     all_procs = [proc(build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, REMOTE_BASH_COMMAND)) for hostname in hostnames]
-    print('Waiting {} ssh processes to complete for at most 180 seconds...'.format(len(all_procs)))
-    wait_all_procs(all_procs, 180, show_progress=True)
+
+    from math import ceil
+    timeout_seconds = ceil(1.5 * len(FCL['users']))
+
+    print('Waiting {} ssh processes to complete for at most {} seconds...'.format(len(all_procs), timeout_seconds))
+    wait_all_procs(all_procs, timeout_seconds, show_progress=True)
+
     result_codes = [p.returncode for p in all_procs]
+    print()
 
     if any(c != 0 for c in result_codes):
+        print(result_codes)
         print('Error: Failed to run bootstrap procedure on these hosts:')
         print(' '.join([hostnames[idx] for idx, val in enumerate(result_codes) if val != 0]))
         sys.exit(1)
