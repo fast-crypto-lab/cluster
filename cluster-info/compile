@@ -221,6 +221,14 @@ def main():
             lines.append('\n')
         if lines:
             lines.pop(-1)
+        if lines:
+            lines = [
+                '########## BEGIN FCL CLUSTER ##########\n',
+                '\n',
+            ] + lines + [
+                '\n',
+                '########## END FCL CLUSTER ##########\n',
+            ]
         f.write(''.join(lines).encode())
 
     # build ssh_config.txt
@@ -253,6 +261,14 @@ def main():
                 '    KbdInteractiveAuthentication no\n',
                 '    ChallengeResponseAuthentication no\n',
                 '    PreferredAuthentications publickey,hostbased\n',
+            ]
+        if lines:
+            lines = [
+                '########## BEGIN FCL CLUSTER ##########\n',
+                '\n',
+            ] + lines + [
+                '\n',
+                '########## END FCL CLUSTER ##########\n',
             ]
         f.write(''.join(lines).encode())
 

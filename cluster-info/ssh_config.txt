@@ -1,3 +1,5 @@
+########## BEGIN FCL CLUSTER ##########
+
 Match originalhost gaia
     HostKeyAlias gaia
     HostName 140.109.22.53
@@ -94,3 +96,5 @@ Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,
     KbdInteractiveAuthentication no
     ChallengeResponseAuthentication no
     PreferredAuthentications publickey,hostbased
+
+########## END FCL CLUSTER ##########
