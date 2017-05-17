@@ -769,6 +769,14 @@
       "name": "yhtung",
       "permit-sudo": false,
       "public-keys": []
+    },
+    {
+      "id": 10097,
+      "name": "bobteng",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQmQKAdrZ2jijOofpL2yMmT6fdOliCSB4eKzJ5335emzTZEvwCi7L9Nq6vc8neu4OMxu4+bF+dewyqykDyWWFKe9QGTZXKicx4Y3RNE85qbYOgzObgv5b8lWldAa1qcvd+TGEuil2BHzKfroJ/c9GT3Z4TocIw+qX2XhziyZ/diM4pr85RfuxI2qThWjo00JJrtWwJtiO70/IBAqtH7u5U/eIP1tJKYhv/533qwwDQqtQssVpaBbTfv+4eQBjRY5l2bUIgU1C3xXcQHnJJcIFTC/9h9RVq6bsa2ujd6q5+/YiNS2/DxGFFb/MSa2Dcq/+n2mookrlhetNy79lOYHA/"
+      ]
     }
   ]
 }
