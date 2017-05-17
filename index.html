@@ -4,55 +4,21 @@
     <meta charset="utf-8">
     <title>FCL Cluster</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      code {
+        background-color: #eee;
+      }
+    </style>
   </head>
   <body>
 
-    <p>You may find these helpful:</p>
-    <ul>
-      <li><a href="cluster-info/ssh_config.txt">ssh_config.txt</a></li>
-      <li><a href="cluster-info/ssh_known_hosts.txt">ssh_known_hosts.txt</a></li>
-      <li><a href="cluster-info/fcl.json">fcl.json</a></li>
-    </ul>
-
-    <!--
-
-    <p>For cluster admins: Do this on a new server:</p>
-    <p><code>curl -fs https://fast-crypto-lab.github.io/cluster/bootstrap | sudo bash</code></p>
-
-    <h2>Cluster Users</h2>
-
-    <h3>How to generate an SSH key pair for yourself</h3>
-    <p>TODO</p>
-
-    <h3>How to register a new account</h3>
-    <p>TODO</p>
-
-    <h3>How to update your account information</h3>
-    <p>TODO</p>
-
-    <h3>How to use the fast crypto lab cluster</h3>
-    <p>TODO</p>
-
-    <h2>Cluster Admins</h2>
-
-    <h3>How to create a new user</h3>
-    <p>TODO</p>
-
-    <h3>How to update a user</h3>
-    <p>TODO</p>
-
-    <h3>How to create a host</h3>
-    <p>TODO</p>
-
-    <h3>How to update a host</h3>
-    <p>TODO</p>
-
-    <h3>How to remove a host</h3>
-    <p>TODO</p>
-
-    -->
-
-    <!-- consider providing a visualization of fcl.json -->
+    <ol>
+      <li>Check <a href="README.txt">README.txt</a> on how to register a new account.</li>
+      <li>Append <a href="cluster-info/ssh_known_hosts.txt">this</a> to your <code>~/.ssh/known_hosts</code> file.</li>
+      <li>Append <a href="cluster-info/ssh_config.txt">this</a> to your <code>~/.ssh/config</code> file.</li>
+      <li>If your username on FCL cluster is different from the one you are currently using, you can add a <code>User {{fcl-username}}</code> declaration in the last Match section.</li>
+      <li>If your SSH identity (private key) is different from the default, you can add an <code>IdentityFile {{private-key-path}}</code> declaration in the last Match section.</li>
+    </ol>
 
   </body>
 </html>
