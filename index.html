@@ -16,8 +16,8 @@
       <li>Check <a href="README.txt">README.txt</a> on how to register a new account.</li>
       <li>Append <a href="cluster-info/ssh_known_hosts.txt">this</a> to your <code>~/.ssh/known_hosts</code> file.</li>
       <li>Append <a href="cluster-info/ssh_config.txt">this</a> to your <code>~/.ssh/config</code> file.</li>
-      <li>If your username on FCL cluster is different from the one you are currently using, you can add a <code>User {{fcl-username}}</code> declaration in the last Match section.</li>
-      <li>If your SSH identity (private key) is different from the default, you can add an <code>IdentityFile {{private-key-path}}</code> declaration in the last Match section.</li>
+      <li>You can add a line <code>User {{fcl-username}}</code> to the last Match originalhost section to specify a login username different than your current one.</li>
+      <li>You can add a line <code>IdentityFile {{private-key-path}}</code> to the last Match section to specify a private key different from the defaults for public key authentication.</li>
     </ol>
 
   </body>
