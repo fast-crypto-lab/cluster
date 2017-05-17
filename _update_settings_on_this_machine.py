@@ -249,6 +249,19 @@ def _shell_command_to_ensure_user(username, userid):
 
 
 def main_apply_json():
+    # Assuming no other processes is making changes to:
+    #   /etc/group
+    #   /etc/gshadow
+    #   /etc/passwd
+    #   /etc/shadow
+    #   /home/$USER for each $USER
+    #   /etc/ssh/user_authorized_keys/$USER for each $USER
+    #   /etc/sudoers.d/fcladmins
+    #   /etc/hosts
+    #   /etc/ssh/shosts.equiv
+    #   /etc/ssh/ssh_config
+    #   /etc/ssh/ssh_known_hosts
+    #   /etc/ssh/sshd_config
     users = FCL['users']
 
     # ensure group fclusers (10000)

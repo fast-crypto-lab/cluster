@@ -1,4 +1,21 @@
 #!/usr/bin/env python3
+#
+# TODO show detailed progress during long running procedure
+# TODO it may be better to just launch a remote background process (or a
+#      systemd service?) to perform "the task" and do periodic polling to see
+#      the current status (the progress and if it is finished) of the task
+#
+# ssh remote true
+# ssh remote sudo -n true
+# ssh remote curl -fsL -m 8 -o /tmp/bootstrap https://fast-crypto-lab.github.io/cluster/bootstrap
+# ssh remote sudo -n bash /tmp/bootstrap
+#
+# if the following command keep reporting its progress (using its stdout)
+#
+#       _update_settings_on_this_machine.py apply-json
+#
+# then /tmp/bootstrap could show the detailed progress
+#
 
 
 TEST_SUDO_COMMAND = ' sudo -n true ; '
