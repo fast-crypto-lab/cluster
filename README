@@ -1,3 +1,16 @@
+To register a new account, prove your identity and
+provide the following information to admin:
+
+    1.  your English full name
+    2.  your email address
+    3.  your username candidate(s)
+    4.  your OpenSSH public keys (one public key per line)
+
+To update your account information, prove your identity and
+your latest account information to admin.
+
+------------------------------------------------------------------------------
+
 No-brainers
 
     Do this on new machine
