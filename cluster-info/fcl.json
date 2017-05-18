@@ -169,6 +169,16 @@
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMFvY08t7NoQENRhDFxgJrIPkMvNgMfewoFBeMnxQcwLKT+IM6hv82UsdFDZfY4sRqXbTTcT35eKpUPd0ipD1Cs=",
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+q1qzuRvHD7VsHTf4oQSJ8xC6gKLywsVHDZ7RT1FRcwuUWzzboo6euQ3+CZu0SZQ9JQWEXTfacjXpqZwkdARnMtisoXhfF3/4SPuQKNP6xdi1hid3BRsdIlOQzE7u7UbAx9voYVAXqwIL5454l9ASRJXXHO6yYMg9PzZ7PXIPNtrRrjkQiMPkCyAYq+QLSAJZVE9onvFCycZIzNmtpJV6p+5/zjTu27YrkJLKxNqM4aW1yAhNn91+lkfS3CdB8HpfWjJiPHmaCUL7mfzDQylwakbkamoeYrvixq73DHRR5CgJkN1MrnNx/ylksWatDSazLRMNpQgLRXQnd2aF+cNz"
       ]
+    },
+    {
+      "name": "gargoyle1",
+      "private-ip": "10.3.2.86",
+      "public-ip-port": "140.109.22.53:6030",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB6WOtvv9jtYvhEn4xnmfM1I1Hm5K6jOLDYaRcbDzGGX",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLR9Y06TUmUGFDhJ9iJLjUqnGM+INLngqvQufkl+DXqZUwiPMqf06mg9ympRS01x3aRFth48xFwW6UZuGBFswrI=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQEaDVtvL0TtXcCkWdKAxyjBjufSuFaWawTqHAZX6c6qh9ucLSsk9R9rUw8g69KW0EIaeEIUHwWnyVoZe/sgGPu9/BbQk4Gtk+YmC79tP0LuNgmwnOrMOuP1U9bgDVs/DUvmQrEv57Jt4OrNZI32+e7dS9xzr7kAytoMcUatlntRr3xdW/VG4jqCvXBlaNXOuSbEVxqydemhkx0uITGManGJ72WdGoYR8OmeVrg4TUoJg08jj/LcZycrJIydrL3rESx60WbXR4YD00oomRhcUBY83jMyelqe4PRaXR+E/dVoxTG15fiwpuz2XO88kdB3Mm53KKA+XZOPY/Ckk2xvP1"
+      ]
     }
   ],
   "users": [
