@@ -342,7 +342,8 @@
       "name": "bobteng",
       "permit-sudo": false,
       "public-keys": [
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQmQKAdrZ2jijOofpL2yMmT6fdOliCSB4eKzJ5335emzTZEvwCi7L9Nq6vc8neu4OMxu4+bF+dewyqykDyWWFKe9QGTZXKicx4Y3RNE85qbYOgzObgv5b8lWldAa1qcvd+TGEuil2BHzKfroJ/c9GT3Z4TocIw+qX2XhziyZ/diM4pr85RfuxI2qThWjo00JJrtWwJtiO70/IBAqtH7u5U/eIP1tJKYhv/533qwwDQqtQssVpaBbTfv+4eQBjRY5l2bUIgU1C3xXcQHnJJcIFTC/9h9RVq6bsa2ujd6q5+/YiNS2/DxGFFb/MSa2Dcq/+n2mookrlhetNy79lOYHA/"
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQmQKAdrZ2jijOofpL2yMmT6fdOliCSB4eKzJ5335emzTZEvwCi7L9Nq6vc8neu4OMxu4+bF+dewyqykDyWWFKe9QGTZXKicx4Y3RNE85qbYOgzObgv5b8lWldAa1qcvd+TGEuil2BHzKfroJ/c9GT3Z4TocIw+qX2XhziyZ/diM4pr85RfuxI2qThWjo00JJrtWwJtiO70/IBAqtH7u5U/eIP1tJKYhv/533qwwDQqtQssVpaBbTfv+4eQBjRY5l2bUIgU1C3xXcQHnJJcIFTC/9h9RVq6bsa2ujd6q5+/YiNS2/DxGFFb/MSa2Dcq/+n2mookrlhetNy79lOYHA/",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDh0RgAewgtOiEKtVIdR0O33D9PcaJ2GDmSjOsuT2wIS2Njs8XMsUFRufbwC66aQoj7mRplsNudM2Lsik6cgIJXumNMMbJIJ6MVXiz8aECd5aj7RVN6RVGbWPwzvxBZ+Hr4mI85YDUuw3rnSyBAMgR+5ig4R5amG0zwEVUTEzzdAXxGSGB/G069Wm72hHELkMQc6DETuaWkTe7cFioaNlSwoa1gQ8QSX+CXfg0mJSHU4UCoSXOWOmQPJS0moDKk0U4QAFIrtQ0W46+IKgmbHH/rRW7NGbX7kcW8JTQgaQQk5JaENIPx/k/rl3mPdR2++kAao3TLpnROqRuFHAmhd6VF"
       ]
     },
     {
