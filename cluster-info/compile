@@ -204,6 +204,11 @@ def main():
 
     FCL['hosts'].sort(key=host_sort_criteria)
 
+    def user_sort_criteria(d):
+        return d['id']
+
+    FCL['users'].sort(key=user_sort_criteria)
+
     # build fcl.json
     with open(DIR + '/fcl.json', 'wb') as f:
         json_file_content = json.dumps(FCL, indent='  ', sort_keys=True) + '\n'
