@@ -193,7 +193,7 @@ def main():
     }
     assert is_good_hosts_and_users(FCL), 'invalid hosts/ or users/'
 
-    def sort_criteria(d):
+    def host_sort_criteria(d):
         ip_str = d['public-ip-port'].split(':')[0]
         ip_oct = bytes([int(o) for o in ip_str.split('.')])
         ip_int = int.from_bytes(ip_oct, 'big'),
@@ -202,7 +202,7 @@ def main():
             return -65536 + port
         return ip_int * 65536 + port
 
-    FCL['hosts'].sort(key=sort_criteria)
+    FCL['hosts'].sort(key=host_sort_criteria)
 
     # build fcl.json
     with open(DIR + '/fcl.json', 'wb') as f:
