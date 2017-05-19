@@ -171,6 +171,26 @@
       ]
     },
     {
+      "name": "gargoyle0",
+      "private-ip": "10.3.2.80",
+      "public-ip-port": "140.109.22.53:6024",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDv2DUiB9P5M3bBi3pq7Svg1Uz0CE7KD6zhTxYzE55+2",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN72AdyGd7REMwUakZZvQMXy/KTCCVzs+CDnz8D7jsGjfj1VPt92IlJ1h3gGYFkZELO+fCsRIASvJVE7CGwq1IE=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCW5va8Si3E7Hn0ka8OwQ8EOBqcDAhHX12ltTY7jfU1Q71FsDjljFs6pMJTZdhfnfzGeOnMz80qj80r2yNcjOiHiGVJueUTx2X+2CSCI3X79Y2+bwpKwJOESKafTIlT/v2d2L9N2iYZdmERlhOPUqmvQCrW3AsbhFkhC0xYMqB2Y+vRZsWtUD83D7JcGf4KC00Oajijdqs97uyamCslx+kaLLy5lBRaBUzoZ5lYy6gV68DlwmmekeK/qLNbk9nONsH2izXDBJIb1695khU5rat4hCLL7tBjrBow0zbVXZ8fLEul6SHKKDlGYIZisklKoR+ZzNBvvvCTduVK9wF0n84l"
+      ]
+    },
+    {
+      "name": "unicorn3",
+      "private-ip": "10.3.2.84",
+      "public-ip-port": "140.109.22.53:6028",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIETBuAlAxRM8HdX1MFcZMs8oOLpgVg+Zx2u0TWr7k9xN",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLRX9A6r+wmCVfQib4FotiWbqs+/1C/0nU3jbWqJLUD6yxPjigicbEUgYSep7wzZBvvys14SzqRQ5AGa/sgh3A0=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+5v0QzYPyWryC0dxiZBeitwVQ2eZ026OATnuGaWdb5GqlkxUDvKfLIG2H5l+qlMeFhRSE2Yi27ujukGX86ooa8/a8NPEH8BH0LyRRgXYFyAK4Flk38LnQgg56sBDDtdflenHoVZAELar0Abyru1eiGzRCcS8BeNqR+y18K7hTSxG9H0l4qLtzuHF76IzK4CbimvXHmMpDYAQhBnHrc58OWmdjIEcBmIpkcQKcVrFMEMGOYUoQRCbUM5ZhpRVY/Fa7D+8MsklrM8xTClhxMWFyvn0h0Vr1i5cYKH42mMtELbT+nvjiG7TxafIjdpz+9o3Kh2uX979GZ4tafILtyV+/"
+      ]
+    },
+    {
       "name": "gargoyle1",
       "private-ip": "10.3.2.86",
       "public-ip-port": "140.109.22.53:6030",
