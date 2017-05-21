@@ -1,1 +1,2 @@
 permit-sudo no
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIfieMwG+lXsk57tCrZtgGKWtSs0i11mshZtYTnedHL5Kt9/j3LKhH3yImBB9pIg/+uzTaKgkdue58pAuK1YpcM= ruben@noisy

@@ -465,7 +465,9 @@
       "id": 10042,
       "name": "ruben",
       "permit-sudo": false,
-      "public-keys": []
+      "public-keys": [
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIfieMwG+lXsk57tCrZtgGKWtSs0i11mshZtYTnedHL5Kt9/j3LKhH3yImBB9pIg/+uzTaKgkdue58pAuK1YpcM="
+      ]
     },
     {
       "id": 10043,
