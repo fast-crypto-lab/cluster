@@ -713,7 +713,8 @@
       "name": "thekev",
       "permit-sudo": true,
       "public-keys": [
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdHvpdyAPwjPuUXFNEuuvRD8woHRNooLr0wdRXttIVvk9FfL+Mso+7dQOffPws08W3dM7Ziypok56Uk5TWcPDMqAtmpcHV83g/+H75J0bcDKfb67c5D505nPEietH4DYm4lLGspE6PS0eJRdeYVwMP8npkmKIbWkXx/W7VFwbsQdl9VnZB3aN9QrNfFUKtoE1Fni5IkIkUcPHjeFf89heGmrnQ4+Wpgpfj7Dn0jJ+F9rTYAxELqYy0z6xKMxmLFLAGpt3J4VDuWtH3PQMJXMJHr9YrzjIM08Av6tw9tpyYUpX+FGQaemlGs0Y40ZuwDeaM2c0T/B62qZ0fWy0onqRl"
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdHvpdyAPwjPuUXFNEuuvRD8woHRNooLr0wdRXttIVvk9FfL+Mso+7dQOffPws08W3dM7Ziypok56Uk5TWcPDMqAtmpcHV83g/+H75J0bcDKfb67c5D505nPEietH4DYm4lLGspE6PS0eJRdeYVwMP8npkmKIbWkXx/W7VFwbsQdl9VnZB3aN9QrNfFUKtoE1Fni5IkIkUcPHjeFf89heGmrnQ4+Wpgpfj7Dn0jJ+F9rTYAxELqYy0z6xKMxmLFLAGpt3J4VDuWtH3PQMJXMJHr9YrzjIM08Av6tw9tpyYUpX+FGQaemlGs0Y40ZuwDeaM2c0T/B62qZ0fWy0onqRl",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKwA3Vs0oXI4DSRxMJzCkEr+vu0rnvuSq5olOi/8qPkiK1GWIVD8cirYxLraew8Nt57P5LAl2jSBvuckLDlsxTc="
       ]
     },
     {
