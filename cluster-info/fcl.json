@@ -201,6 +201,16 @@
       ]
     },
     {
+      "name": "unicorn3",
+      "private-ip": "10.3.2.84",
+      "public-ip-port": "140.109.22.53:6028",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJFJW1wE39Ll7cvKN0KCOhanY5xFTJDa4n4lDspYr9oX",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPMML9ZFiUb45YKyif6JF5xVOFeS5Zo6AAFD/CWvKFuu6hUNIhvrVGgsNwMOg3CzqX3Eyk3FC1JoDlAfz8t8jSY=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBCIHaKdb5z/F8FhYfvZnCqw1b6CjrYpR4hCr9OK3GD9V8sdE4PGqal0vYj2/pSoMnhCc3oRgMz1Rf9H891D4oc7oZ6o7DyVfOD2Us+DjkKg70YdU8gvI/S0BZqmMoylhHLAw+/Ldikm808WEpkzHJB1DPUfAK0+bIdp21Gs/1nJHRjQVZSlxpOwW3+5j4kgILTzfhfc7u9mECcuxnsqAeWIGh3F+H8g1OsLa4bwFP4NIM2iJaqpmBtAs6JkfwGIw/Qg/Gjq6365QnsMphcHNt9RK15eX5BRvDkGa9ngLljW9FfrV67mj4xybmEU0qDx5xD9KjMtYJVbxPx6YRrqJ1"
+      ]
+    },
+    {
       "name": "gargoyle1",
       "private-ip": "10.3.2.86",
       "public-ip-port": "140.109.22.53:6030",
