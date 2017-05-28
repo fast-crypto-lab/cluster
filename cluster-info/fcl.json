@@ -161,6 +161,16 @@
       ]
     },
     {
+      "name": "dragon1",
+      "private-ip": "10.3.2.75",
+      "public-ip-port": "140.109.22.53:6019",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDjHxD/towGEAuDfiKYE+y4byPTXYBmW3pKEleXjG1ox",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA+/QzWG/BPPZbOyn9B5+D5TnXqZrk6v13WpSabhznbUfvz/CbOXxpLDEYCUwhtHyjrP5yqB1RlfyTKFzJnxmtk=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC/lQQ17UoXPEugO+n79qdKhRhquQnsKgpEupTEzytvkIMxXlzU4QcxM5tsDokTi/YZgaksbdSp6reJFJvlJpTrCtJ7i9Cid3rB8oIukeGRs0cLzmlbkpFsMBcxo6PzVhWk3Wv7id3YFn0TTyPW9VleMB7TJTFbHPTRF1z2jqA97pDnUnnUaFJjcccIMsU8IF6iq1gKMh+8G8ecFr10VsgVLmLZfZwXoLc2bEb2pC4kElHtGNr/E3TyhIrsmGsuxFOi3s51seXT3bzgJR/U+7K1wAvlY+sN33oS7xAM/SxKkExLkapELEBW2wA1tjygs9JMxynRPWSoLK90AZidS0B"
+      ]
+    },
+    {
       "name": "dragon2",
       "private-ip": "10.3.2.76",
       "public-ip-port": "140.109.22.53:6020",
