@@ -95,6 +95,11 @@ Match originalhost hydra1
     HostName 140.109.22.53
     Port 6022
 
+Match originalhost hydra2
+    HostKeyAlias hydra2
+    HostName 140.109.22.53
+    Port 6023
+
 Match originalhost gargoyle0
     HostKeyAlias gargoyle0
     HostName 140.109.22.53
@@ -120,7 +125,7 @@ Match originalhost gargoyle1
     HostName 140.109.22.53
     Port 6030
 
-Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,angel0,angel1,angel2,angel3,colossus0,colossus3,dragon0,dragon1,dragon2,hydra1,gargoyle0,unicorn0,unicorn1,unicorn3,gargoyle1
+Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,angel0,angel1,angel2,angel3,colossus0,colossus3,dragon0,dragon1,dragon2,hydra1,hydra2,gargoyle0,unicorn0,unicorn1,unicorn3,gargoyle1
     StrictHostKeyChecking yes
     HashKnownHosts no
     CheckHostIP no
