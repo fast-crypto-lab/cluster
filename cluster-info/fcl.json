@@ -365,7 +365,9 @@
       "id": 10014,
       "name": "yamme",
       "permit-sudo": false,
-      "public-keys": []
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLW5vzf+YfSke2gBhEqC0Yput1lmiMUayb0/Ze6CM3zZTZEhtYut/r+0iobuVrXsCjGAdVMetgCkPaomirgN+DQai2AbWU0biwMPjIpX4p02kBSPi8ycjtW5rEzmtIm+HqKzqIAgJuLS+f+ZNsv97ywJrCr33+nsKhb+HdEtZYxXSgiikjb2JCJaQgUI7t0y6ANHCeFcv0jpzCPgWBGUUx9XXyKB3afaqxu/dL+3woOo1zlR8fzBnjfa1SGR4srbjPynOpLnLwHLtCmwgc4hXPcIXWbVugr8iCu4nRTB2yazb0xlc23M75+w8nmT1JW64on3qko4aWVqmc+BkUb1V9"
+      ]
     },
     {
       "id": 10015,
