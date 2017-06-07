@@ -764,7 +764,7 @@
     },
     {
       "id": 10079,
-      "name": "wjs",
+      "name": "js",
       "permit-sudo": true,
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILyB1gaNTMfu7odcHfzQSGNplAa6mbFWPbLNNFDnPgul"
