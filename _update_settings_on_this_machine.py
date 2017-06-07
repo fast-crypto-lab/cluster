@@ -300,6 +300,11 @@ def main_apply_json():
             os.fsync(f.fileno())
         os.rename(userkeys_tmp, userkeys)
 
+    # for each existing file under /etc/ssh/user_authorized_keys/
+    for filename in os.listdir('/etc/ssh/user_authorized_keys'):
+        if filename not in (u['name'] for u in users):
+            os.remove('/etc/ssh/user_authorized_keys/{}'.format(filename))
+
     # ensure sudo permission
     fcladmins_members = [user['name'] for user in users if user['permit-sudo']]
     assert sh(
