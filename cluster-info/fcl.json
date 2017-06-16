@@ -405,7 +405,9 @@
       "id": 10017,
       "name": "peter",
       "permit-sudo": false,
-      "public-keys": []
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAwjxm1uHJTTGT+BLqErbfsglfzJ98fSvf2Kb0XxWtbEXzp+NTKmdGIA+TKRxFuXoelr2LIn584GLg6EOG5p6RqQcdTmAPkReNGWPOC7v/kF/HYr+/t4VoNrd/vcjZSUYxOox3yyOkdRqgXZzVQ/KaX/BRFOIQPZoLC9HAoeDWjBlk/yyOLJgiKJu2DNyUsdkKztwvG+Uz7HIVex01GR4Fl9qhrXnVG/TV4IUQ+//THJLShVr9A3YocIQkZ4731yPdRDeMRko9hsUb3kRGysXEShLxFRh4qENfb5jnN1A3bFJCVJmCt1JftP7EYhT8ujUs0tmDlr1tjqg7A0I8o39i6Q=="
+      ]
     },
     {
       "id": 10018,
