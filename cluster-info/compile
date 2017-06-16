@@ -196,7 +196,7 @@ def main():
     def host_sort_criteria(d):
         ip_str = d['public-ip-port'].split(':')[0]
         ip_oct = bytes([int(o) for o in ip_str.split('.')])
-        ip_int = int.from_bytes(ip_oct, 'big'),
+        ip_int = int.from_bytes(ip_oct, 'big')
         port = int(d['public-ip-port'].split(':')[1])
         if ip_str == '140.109.22.53':
             return -65536 + port
