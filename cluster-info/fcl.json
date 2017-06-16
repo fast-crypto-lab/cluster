@@ -111,7 +111,7 @@
       ]
     },
     {
-      "name": "angel2",
+      "name": "troll",
       "private-ip": "10.3.2.68",
       "public-ip-port": "140.109.22.53:6012",
       "public-keys": [
