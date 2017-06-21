@@ -45,6 +45,11 @@ Match originalhost giant6
     HostName 140.109.22.53
     Port 6008
 
+Match originalhost giant7
+    HostKeyAlias giant7
+    HostName 140.109.22.53
+    Port 6009
+
 Match originalhost angel0
     HostKeyAlias angel0
     HostName 140.109.22.53
@@ -145,7 +150,7 @@ Match originalhost troll
     HostName 140.109.22.52
     Port 22
 
-Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,angel0,angel1,angel3,colossus0,colossus1,colossus2,colossus3,dragon0,dragon1,dragon2,dragon3,hydra1,hydra2,gargoyle0,unicorn0,unicorn1,unicorn2,unicorn3,gargoyle1,troll
+Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,giant7,angel0,angel1,angel3,colossus0,colossus1,colossus2,colossus3,dragon0,dragon1,dragon2,dragon3,hydra1,hydra2,gargoyle0,unicorn0,unicorn1,unicorn2,unicorn3,gargoyle1,troll
     StrictHostKeyChecking yes
     HashKnownHosts no
     CheckHostIP no
