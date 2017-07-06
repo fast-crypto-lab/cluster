@@ -1,16 +1,26 @@
 ########## BEGIN FCL CLUSTER ##########
 
 Host gaia uranus giant0 giant1 giant2 giant3 giant4 giant5 giant6 giant7 angel0 angel1 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 gargoyle0 unicorn0 unicorn1 unicorn2 unicorn3 gargoyle1 troll
-    StrictHostKeyChecking yes
     HashKnownHosts no
     CheckHostIP no
-    PubkeyAuthentication yes
-    HostbasedAuthentication yes
-    GSSAPIAuthentication no
-    PasswordAuthentication no
-    KbdInteractiveAuthentication no
-    ChallengeResponseAuthentication no
-    PreferredAuthentications publickey,hostbased
+
+    ###################################################
+    ### Specify your login username in FCL cluster  ###
+    ###################################################
+    #User YOUR_USERNAME
+
+    ###################################################
+    ### Specify the path to your private key        ###
+    ### if it cannot be found in standard locations ###
+    ###################################################
+    #IdentityFile ~/.ssh/id_rsa
+
+    ###################################################
+    ### Turn on strict host public key checking and ###
+    ### specify the location of host public keys    ###
+    ###################################################
+    #StrictHostKeyChecking yes
+    #UserKnownHostsFile ~/.ssh/fcl_known_hosts
 
 Host gaia
     HostKeyAlias gaia
