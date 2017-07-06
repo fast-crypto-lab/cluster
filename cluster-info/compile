@@ -246,7 +246,7 @@ def main():
             addr = h['public-ip-port'].split(':')[0]
             port = h['public-ip-port'].split(':')[1]
             lines += [
-                'Match originalhost {}\n'.format(name),
+                'Host {}\n'.format(name),
                 '    HostKeyAlias {}\n'.format(name),
                 '    HostName {}\n'.format(addr),
                 '    Port {}\n'.format(port),
@@ -254,8 +254,8 @@ def main():
             ]
             names.append(name)
         if names:
-            lines += [
-                'Match originalhost {}\n'.format(','.join(names)),
+            lines = [
+                'Host {}\n'.format(' '.join(names)),
                 '    StrictHostKeyChecking yes\n',
                 '    HashKnownHosts no\n',
                 '    CheckHostIP no\n',
@@ -266,13 +266,13 @@ def main():
                 '    KbdInteractiveAuthentication no\n',
                 '    ChallengeResponseAuthentication no\n',
                 '    PreferredAuthentications publickey,hostbased\n',
-            ]
+                '\n',
+            ] + lines
         if lines:
             lines = [
                 '########## BEGIN FCL CLUSTER ##########\n',
                 '\n',
             ] + lines + [
-                '\n',
                 '########## END FCL CLUSTER ##########\n',
             ]
         f.write(''.join(lines).encode())

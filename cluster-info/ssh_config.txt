@@ -1,156 +1,6 @@
 ########## BEGIN FCL CLUSTER ##########
 
-Match originalhost gaia
-    HostKeyAlias gaia
-    HostName 140.109.22.53
-    Port 6000
-
-Match originalhost uranus
-    HostKeyAlias uranus
-    HostName 140.109.22.53
-    Port 6001
-
-Match originalhost giant0
-    HostKeyAlias giant0
-    HostName 140.109.22.53
-    Port 6002
-
-Match originalhost giant1
-    HostKeyAlias giant1
-    HostName 140.109.22.53
-    Port 6003
-
-Match originalhost giant2
-    HostKeyAlias giant2
-    HostName 140.109.22.53
-    Port 6004
-
-Match originalhost giant3
-    HostKeyAlias giant3
-    HostName 140.109.22.53
-    Port 6005
-
-Match originalhost giant4
-    HostKeyAlias giant4
-    HostName 140.109.22.53
-    Port 6006
-
-Match originalhost giant5
-    HostKeyAlias giant5
-    HostName 140.109.22.53
-    Port 6007
-
-Match originalhost giant6
-    HostKeyAlias giant6
-    HostName 140.109.22.53
-    Port 6008
-
-Match originalhost giant7
-    HostKeyAlias giant7
-    HostName 140.109.22.53
-    Port 6009
-
-Match originalhost angel0
-    HostKeyAlias angel0
-    HostName 140.109.22.53
-    Port 6010
-
-Match originalhost angel1
-    HostKeyAlias angel1
-    HostName 140.109.22.53
-    Port 6011
-
-Match originalhost angel3
-    HostKeyAlias angel3
-    HostName 140.109.22.53
-    Port 6013
-
-Match originalhost colossus0
-    HostKeyAlias colossus0
-    HostName 140.109.22.53
-    Port 6014
-
-Match originalhost colossus1
-    HostKeyAlias colossus1
-    HostName 140.109.22.53
-    Port 6015
-
-Match originalhost colossus2
-    HostKeyAlias colossus2
-    HostName 140.109.22.53
-    Port 6016
-
-Match originalhost colossus3
-    HostKeyAlias colossus3
-    HostName 140.109.22.53
-    Port 6017
-
-Match originalhost dragon0
-    HostKeyAlias dragon0
-    HostName 140.109.22.53
-    Port 6018
-
-Match originalhost dragon1
-    HostKeyAlias dragon1
-    HostName 140.109.22.53
-    Port 6019
-
-Match originalhost dragon2
-    HostKeyAlias dragon2
-    HostName 140.109.22.53
-    Port 6020
-
-Match originalhost dragon3
-    HostKeyAlias dragon3
-    HostName 140.109.22.53
-    Port 6021
-
-Match originalhost hydra1
-    HostKeyAlias hydra1
-    HostName 140.109.22.53
-    Port 6022
-
-Match originalhost hydra2
-    HostKeyAlias hydra2
-    HostName 140.109.22.53
-    Port 6023
-
-Match originalhost gargoyle0
-    HostKeyAlias gargoyle0
-    HostName 140.109.22.53
-    Port 6024
-
-Match originalhost unicorn0
-    HostKeyAlias unicorn0
-    HostName 140.109.22.53
-    Port 6025
-
-Match originalhost unicorn1
-    HostKeyAlias unicorn1
-    HostName 140.109.22.53
-    Port 6026
-
-Match originalhost unicorn2
-    HostKeyAlias unicorn2
-    HostName 140.109.22.53
-    Port 6027
-
-Match originalhost unicorn3
-    HostKeyAlias unicorn3
-    HostName 140.109.22.53
-    Port 6028
-
-Match originalhost gargoyle1
-    HostKeyAlias gargoyle1
-    HostName 140.109.22.53
-    Port 6030
-
-Match originalhost troll
-    HostKeyAlias troll
-    HostName 140.109.22.52
-    Port 22
-
-Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,giant7,angel0,angel1,angel3,colossus0,colossus1,colossus2,colossus3,dragon0,dragon1,dragon2,dragon3,hydra1,hydra2,gargoyle0,unicorn0,unicorn1,unicorn2,unicorn3,gargoyle1,troll
+Host gaia uranus giant0 giant1 giant2 giant3 giant4 giant5 giant6 giant7 angel0 angel1 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 gargoyle0 unicorn0 unicorn1 unicorn2 unicorn3 gargoyle1 troll
     StrictHostKeyChecking yes
     HashKnownHosts no
     CheckHostIP no
@@ -161,5 +11,155 @@ Match originalhost gaia,uranus,giant0,giant1,giant2,giant3,giant4,giant5,giant6,
     KbdInteractiveAuthentication no
     ChallengeResponseAuthentication no
     PreferredAuthentications publickey,hostbased
+
+Host gaia
+    HostKeyAlias gaia
+    HostName 140.109.22.53
+    Port 6000
+
+Host uranus
+    HostKeyAlias uranus
+    HostName 140.109.22.53
+    Port 6001
+
+Host giant0
+    HostKeyAlias giant0
+    HostName 140.109.22.53
+    Port 6002
+
+Host giant1
+    HostKeyAlias giant1
+    HostName 140.109.22.53
+    Port 6003
+
+Host giant2
+    HostKeyAlias giant2
+    HostName 140.109.22.53
+    Port 6004
+
+Host giant3
+    HostKeyAlias giant3
+    HostName 140.109.22.53
+    Port 6005
+
+Host giant4
+    HostKeyAlias giant4
+    HostName 140.109.22.53
+    Port 6006
+
+Host giant5
+    HostKeyAlias giant5
+    HostName 140.109.22.53
+    Port 6007
+
+Host giant6
+    HostKeyAlias giant6
+    HostName 140.109.22.53
+    Port 6008
+
+Host giant7
+    HostKeyAlias giant7
+    HostName 140.109.22.53
+    Port 6009
+
+Host angel0
+    HostKeyAlias angel0
+    HostName 140.109.22.53
+    Port 6010
+
+Host angel1
+    HostKeyAlias angel1
+    HostName 140.109.22.53
+    Port 6011
+
+Host angel3
+    HostKeyAlias angel3
+    HostName 140.109.22.53
+    Port 6013
+
+Host colossus0
+    HostKeyAlias colossus0
+    HostName 140.109.22.53
+    Port 6014
+
+Host colossus1
+    HostKeyAlias colossus1
+    HostName 140.109.22.53
+    Port 6015
+
+Host colossus2
+    HostKeyAlias colossus2
+    HostName 140.109.22.53
+    Port 6016
+
+Host colossus3
+    HostKeyAlias colossus3
+    HostName 140.109.22.53
+    Port 6017
+
+Host dragon0
+    HostKeyAlias dragon0
+    HostName 140.109.22.53
+    Port 6018
+
+Host dragon1
+    HostKeyAlias dragon1
+    HostName 140.109.22.53
+    Port 6019
+
+Host dragon2
+    HostKeyAlias dragon2
+    HostName 140.109.22.53
+    Port 6020
+
+Host dragon3
+    HostKeyAlias dragon3
+    HostName 140.109.22.53
+    Port 6021
+
+Host hydra1
+    HostKeyAlias hydra1
+    HostName 140.109.22.53
+    Port 6022
+
+Host hydra2
+    HostKeyAlias hydra2
+    HostName 140.109.22.53
+    Port 6023
+
+Host gargoyle0
+    HostKeyAlias gargoyle0
+    HostName 140.109.22.53
+    Port 6024
+
+Host unicorn0
+    HostKeyAlias unicorn0
+    HostName 140.109.22.53
+    Port 6025
+
+Host unicorn1
+    HostKeyAlias unicorn1
+    HostName 140.109.22.53
+    Port 6026
+
+Host unicorn2
+    HostKeyAlias unicorn2
+    HostName 140.109.22.53
+    Port 6027
+
+Host unicorn3
+    HostKeyAlias unicorn3
+    HostName 140.109.22.53
+    Port 6028
+
+Host gargoyle1
+    HostKeyAlias gargoyle1
+    HostName 140.109.22.53
+    Port 6030
+
+Host troll
+    HostKeyAlias troll
+    HostName 140.109.22.52
+    Port 22
 
 ########## END FCL CLUSTER ##########
