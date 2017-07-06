@@ -8,16 +8,39 @@
       code {
         background-color: #eee;
       }
+      a,a:visited {
+        color: #33f;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
 
     <ol>
-      <li>Check <a href="README.txt">README.txt</a> on how to register a new account.</li>
-      <li>Append <a href="cluster-info/ssh_known_hosts.txt">this</a> to your <code>~/.ssh/known_hosts</code> file.</li>
-      <li>Append <a href="cluster-info/ssh_config.txt">this</a> to your <code>~/.ssh/config</code> file.</li>
-      <li>You can add a line <code>User {{fcl-username}}</code> to the last Match originalhost section to specify a login username different than your current one.</li>
-      <li>You can add a line <code>IdentityFile {{private-key-path}}</code> to the last Match section to specify a private key different from the defaults for public key authentication.</li>
+      <li>Check <a href="README.txt">README.txt</a> on how to register a new account</li>
+      <li>Download <a href="cluster-info/ssh_known_hosts.txt">FCL cluster host public keys</a> and save it as <code>~/.ssh/fcl_known_hosts</code></li>
+      <li>Download <a href="cluster-info/ssh_config.txt">this ssh configuration</a> and include it in your <code>~/.ssh/config</code></li>
+      <li>The ssh configuration contains some instructions; you might want to follow it to make your SSH life easier:<pre style="margin-left:60px;color:#888">###################################################
+### Specify your login username in FCL cluster  ###
+###################################################
+#User YOUR_USERNAME
+
+###################################################
+### Specify the path to your private key        ###
+### if it cannot be found in standard locations ###
+###################################################
+#IdentityFile ~/.ssh/id_rsa
+
+###################################################
+### Turn on strict host public key checking and ###
+### specify the location of host public keys    ###
+###################################################
+#StrictHostKeyChecking yes
+#UserKnownHostsFile ~/.ssh/fcl_known_hosts</pre></li>
+
     </ol>
 
   </body>
