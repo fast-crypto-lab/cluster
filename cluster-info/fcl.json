@@ -934,6 +934,14 @@
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBqfcBxNoBLjk1tPi4eXkSMygieqUShk17C2EBQS+Y8MYZun5KWhoc4rAafHlaNYWknGZ/zFdTeLQMMMyeaHfRbB2gHgDDgYdhIxr4wr9nzPIONaEx4mGecuaNylPyW2TgntnpSll38PzWpcrXjsYFLIJkWo+ytDlUnxZtfhKZql/lLt3hN/DF/dQEOyzhnB43L7Ahpfhj7Wq5QvMM0i9P+zssUP78XpGNvqsJVdrq7CX+5+2Lhk5ZkxlTZb9mhhm9MomtD8n+8kvAhWraOSU0T+7+n5PRtM7PTrbavdPgNbNtCz2yjJLlaMuC6JvbBTlFu034oN3IoQWEYJGN9eY5"
       ]
+    },
+    {
+      "id": 10100,
+      "name": "andersen1228",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDee4Ai4ZnYS5FX+Y89/vPAkmW4OGDLcCA8WWd1Nh/uys3zeLguHe6qgK+0AvarXYkOR70gtGsdiBMXNkvIHOGGIQYtiWhfN9eDTaPy18MjZ4bJtXu71/Ijj6Xwo/nS5NAgdy0IA07ZOet8OCOe4W9PjLldXjnp6uyd+SSGdmTVZe9IbgKHKeEw003rot0Dm3YwSB+QAwH2LGLFB7Q8wiFY1LQpcbS/cHIyl5SxdZ/ZjF75LUnZxNBAmKCpATaK+lKWqPr561PaqjSlootxPyP1wfFEyBXT/RR4zRyjZNYTBXyyZADInLk5YB7mvNpoGVUKmDL1edlNAWWbUKfDIyyR"
+      ]
     }
   ]
 }
