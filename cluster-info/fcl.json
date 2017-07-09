@@ -942,6 +942,14 @@
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDee4Ai4ZnYS5FX+Y89/vPAkmW4OGDLcCA8WWd1Nh/uys3zeLguHe6qgK+0AvarXYkOR70gtGsdiBMXNkvIHOGGIQYtiWhfN9eDTaPy18MjZ4bJtXu71/Ijj6Xwo/nS5NAgdy0IA07ZOet8OCOe4W9PjLldXjnp6uyd+SSGdmTVZe9IbgKHKeEw003rot0Dm3YwSB+QAwH2LGLFB7Q8wiFY1LQpcbS/cHIyl5SxdZ/ZjF75LUnZxNBAmKCpATaK+lKWqPr561PaqjSlootxPyP1wfFEyBXT/RR4zRyjZNYTBXyyZADInLk5YB7mvNpoGVUKmDL1edlNAWWbUKfDIyyR"
       ]
+    },
+    {
+      "id": 10101,
+      "name": "eric",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA0Kw78Tns6+d9aVvICBdjujvwiI+Db1l3rUHHIIMAgRS7G/Cz2gYfBZUuECssbYrkj7N5zGvqpkGHpzuCj7ScLLg11Nb7xkwn7Ga0CdROCaODvzx+UgDJGTR2yKQGfWgV4ne3gpRjiwisAshj+4WlyjjN0ouZWtI4T2yZJkR03M6ZemTPO3cqox637eZYuGheSVNxjdYzZAFUdwQktnSG2Z4/OnATRg/VSAU+5zjt5Hd3Rak1HVcAniz5WH+CLC+MCuKbuWXXr3HWBV2WmZArf9SXR7J6Zh2C3ZWUpzzlxKLpMA9MNEqqgqPRSn6uMwZQSp82RE5IKxR5vqYRJT6IVw=="
+      ]
     }
   ]
 }
