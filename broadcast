@@ -177,6 +177,7 @@ def build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, remote_comma
         '-o', 'GlobalKnownHostsFile {}'.format(KNOWNH),
         '-o', 'UserKnownHostsFile /dev/null',
         '-o', 'ConnectTimeout 8',
+        '-o', 'HostbasedAuthentication yes',
     ]
     args += ['-l', username]
     if identity is not None:
