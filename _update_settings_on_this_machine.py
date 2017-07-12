@@ -469,7 +469,16 @@ def generate_hosts(this_hostname, this_in302):
     ] + ([] if not this_in302 else ['\n'] + [
         entry(h['private-ip'], h['name'])
         for h in FCL['hosts'] if h['private-ip'] is not None
-    ])
+    ]) + [
+        '\n',
+        '# CIC License Servers\n',
+        '140.126.24.10      lscic\n',
+        '140.112.20.58      lsntu\n',
+        '140.115.71.66      lsncu\n',
+        '140.113.202.151    lsnctu\n',
+        '140.120.90.46      lsnchu\n',
+        '140.116.49.24      lsncku\n',
+    ]
     return ''.join(lines).encode()
 
 def generate_shosts_equiv():
