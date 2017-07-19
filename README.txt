@@ -1,15 +1,14 @@
 For all FCL members
 
-    To create an account, you provide the following info to admin
+    To create an account, you provide the following info to any one of the admins
 
-        1.  identity proof
-        2.  English full name
-        3.  email address
-        4.  one or more username candidates
-        5.  one or more SSH public keys
-        6.  whether you need sudo privilege
+        1.  English full name
+        2.  your contact email address
+        3.  one or more username candidates
+        4.  one or more SSH public keys
+        5.  whether you need sudo privilege
 
-    To update your account, you provide
+    To update your account, you provide the following info to any one of the admins
 
         1.  identity proof
         2.  what you want to change
