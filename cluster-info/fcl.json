@@ -363,7 +363,10 @@
       "id": 10007,
       "name": "daven",
       "permit-sudo": false,
-      "public-keys": []
+      "public-keys": [
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFqrLtWhzOMW1f6eyRYahpib68vpU5WCAq5+0Qz7oxwDhGDi8LCSkWp96lhwF0HgMU6Q7+X9UpAIdWIdtxdF+rc=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAoYPIDNsMLJRj8gf1kYtXNCdlmcQ1FWsbBZwzSn1rRnZRLJSn1fFI9nCWwMfuj0S2Q6D+HUhXY2uyelIFJsUNxgeAj9aET1XXAxu9TfbwMODmApdUZCUM6FkcrVPJmXpJk1c4Z8Oltj5eyatMbiYS84WfO9HdW23iyG7HM7hMDBuwW/Rkm11klNdkJOjZGI1iJg5DxY5ejaBktRIUXoxo1yPGKyxqHIVNYtg254A8Rb5mFwDybbtcANzrtDWSdZF/6S0xEg3VOXVJIM159tL0TDU18NbMFRU9yq8RdLcd3BArP9vuvZUCcyiQgQo4fr7YkS7RNv2McuBrkuDDHQP0VQ=="
+      ]
     },
     {
       "id": 10008,
