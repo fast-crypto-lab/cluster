@@ -167,6 +167,8 @@ def parse_cmdline_args():
             help='specify the user to log in as on the remote machine; the default is your current username ('+DEFAULT_USERNAME+')')
     parser.add_argument('-i', '--identity', metavar='<identity>',
             help='specify the private key for public key authentication instead of ssh defaults')
+    parser.add_argument('--ignore', metavar='<ignore>', default='',
+            help='specify a comma-separated list of host names to ignore')
     return parser.parse_args()
 
 
@@ -201,6 +203,17 @@ def main():
     identity = parsed_opt.identity
     username = parsed_opt.login
 
+    _ignore_str = parsed_opt.ignore
+    ignore_list_of_hostnames = (lambda x: [] if len(x) == 1 and x[0] == '' else x)(_ignore_str.split(','))
+    hostnames = [h['name'] for h in FCL['hosts']]
+
+    for ignored_hostname in ignore_list_of_hostnames:
+        if ignored_hostname not in hostnames:
+            print('Command-line argument error:')
+            print('You mentioned that you want to ignore the host `{}`, but there is no such host'.format(ignored_hostname))
+            sys.exit(1)
+
+    FCL['hosts'] = [h for h in FCL['hosts'] if h['name'] not in ignore_list_of_hostnames]
     hostnames = [h['name'] for h in FCL['hosts']]
 
     print('The username we will use to log in the cluster is: "{}"'.format(username))
