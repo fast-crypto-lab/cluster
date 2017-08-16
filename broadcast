@@ -7,7 +7,7 @@
 #
 # ssh remote true
 # ssh remote sudo -n true
-# ssh remote curl -fsL -m 8 -o /tmp/bootstrap https://fast-crypto-lab.github.io/cluster/bootstrap
+# ssh remote curl -fsL https://fast-crypto-lab.github.io/cluster/bootstrap
 # ssh remote sudo -n bash /tmp/bootstrap
 #
 # if the following command keep reporting its progress (using its stdout)
@@ -19,7 +19,7 @@
 
 
 TEST_SUDO_COMMAND = ' sudo -n true ; '
-REMOTE_BASH_COMMAND = ' set -o pipefail ; curl -fsLm8 https://fast-crypto-lab.github.io/cluster/bootstrap | sudo -n bash ; '
+REMOTE_BASH_COMMAND = ' set -o pipefail ; curl -fsL --retry 5 --connect-timeout 3 --max-time 4 --retry-delay 1 https://fast-crypto-lab.github.io/cluster/bootstrap | sudo -n bash ; '
 #REMOTE_BASH_COMMAND = ' sleep 10; echo hi; '
 
 
