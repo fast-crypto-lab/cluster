@@ -993,6 +993,14 @@
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILfbQIfI4LPPmzj9/46MYJAw5uSZoQx9ZIFsjoznwbkP",
         "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAmR5GLQCNShmVDuJ3WdyZQ082ZEbhaq/T+G06KtrRqg/efj7fQmkivBRY5Fl7CBREXMLucjdwAoCcmD1/HPFLrcVv3x9g9GGOJgHosBFrJIiaiC3S7wCLRHotmaxpJyvCuv9huMgW0pkhiDdnuDsb7lGRrLgBX4DRnNiWIUbIU12Jc9qsUjcsDV83f2cRd+PBiKy/KeYYXFIEwrIxH2JOyZp/1hpyej2y8muRG86v7dJ7ywSs7uzWSAiPlbOwaS6mvQuozOTF/8vuFsLdwfeHqCWr6e/JvYsLyjaJtiVt51wkHPsBcoI4IUUY0o7CYun5J8ChJ7aFrCfAFFsnYWEQGQ=="
       ]
+    },
+    {
+      "id": 10105,
+      "name": "leon900p",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPpJS6Q4UAZhSWBJyx4aBUHIOSHCJpME+94WwJl+Xcli"
+      ]
     }
   ]
 }
