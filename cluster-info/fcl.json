@@ -1001,6 +1001,14 @@
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPpJS6Q4UAZhSWBJyx4aBUHIOSHCJpME+94WwJl+Xcli"
       ]
+    },
+    {
+      "id": 10106,
+      "name": "magnidei",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICrDBv9RWfQ0O+erQdCIyvhGGA6VJUllVYOxZee20e89"
+      ]
     }
   ]
 }
