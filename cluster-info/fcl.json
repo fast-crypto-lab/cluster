@@ -1015,7 +1015,9 @@
       "id": 10107,
       "name": "ptrcmd",
       "permit-sudo": false,
-      "public-keys": []
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILB1FgpTevtDWb3X4loG5cMIb6AyPVVSwwhq3FrV78uS"
+      ]
     }
   ]
 }
