@@ -81,7 +81,7 @@ def upload_to_gist(content, *, filename='gistfile1.txt', shorten_url=False):
         '--data', '@-', '--output', '-', 'https://api.github.com/gists',
     ], shell=False, input=postbody)
     if curl_result.returncode != 0:
-        raise RuntimeError('fail to upload file to GitHub Gist: return code {0}'.format(curl_result.returncode))
+        raise RuntimeError('fail to upload file to GitHub Gist')
     gistid = json.loads(curl_result.stdout.decode())['id']
     file_url = ('https://gist.githubusercontent.com/raw/{gistid}/{filename}'
             .format(gistid=gistid, filename=filename))

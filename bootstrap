@@ -3,7 +3,15 @@ _main_(){
 
 # ----------------------------------------------------------------------------
 
-grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null || { >&2 echo 'Error: This is not Ubuntu 16.04'; exit 1; }
+#grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null || { >&2 echo 'Error: This is neither Ubuntu 16.04 nor 18.04'; exit 1; }
+if $(grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine.py'
+elif $(grep -q '^Ubuntu 18.04' /etc/issue 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine18.py'
+else
+    >&2 echo 'Error: This is neither Ubuntu 16.04 nor 18.04'
+    exit 1
+fi
 test "$( id -u )" = 0 || { >&2 echo 'Error: You are not root, please use "sudo" to run the script'; exit 1; }
 command -v sshd > /dev/null || { >&2 echo 'Error: The package "openssh-server" is not installed'; exit 1; }
 command -v git > /dev/null || { >&2 echo 'Error: The package "git" is not installed'; exit 1; }
@@ -32,7 +40,7 @@ cd "$TEMP_DIR/cluster"
 # ----------------------------------------------------------------------------
 
 echo 'Trying to acquire a lock...'
-if ./_update_settings_on_this_machine.py lock
+if bash -c "./${UPDATE_PY} lock"
 then
     echo 'Trying to acquire a lock...  DONE'
 else
@@ -43,43 +51,43 @@ fi
 # ----------------------------------------------------------------------------
 
 echo 'Checking whether this host is already listed in fcl.json...'
-if ./_update_settings_on_this_machine.py check-this-host-in-json
+if bash -c "./${UPDATE_PY} check-this-host-in-json"
 then
     echo 'Checking whether this host is already listed in fcl.json...  DONE'
 else
     >&2 echo 'Error: the command `./_update_settings_on_this_machine.py check-this-host-in-json` failed'
-    ./_update_settings_on_this_machine.py unlock
+    bash -c "./${UPDATE_PY} unlock"
     exit 1
 fi
 
 # ----------------------------------------------------------------------------
 
 echo 'Checking whether fcl.json is applicable for this host...'
-if ./_update_settings_on_this_machine.py check-json-applicability
+if bash -c "./${UPDATE_PY} check-json-applicability"
 then
     echo 'Checking whether fcl.json is applicable for this host...  DONE'
 else
     >&2 echo 'Error: the command `./_update_settings_on_this_machine.py check-json-applicability` failed'
-    ./_update_settings_on_this_machine.py unlock
+    bash -c "./${UPDATE_PY} unlock"
     exit 1
 fi
 
 # ----------------------------------------------------------------------------
 
 echo 'Applying fcl.json to this host...'
-if ./_update_settings_on_this_machine.py apply-json
+if bash -c "./${UPDATE_PY} apply-json"
 then
     echo 'Applying fcl.json to this host...  DONE'
 else
     >&2 echo 'Error: the command `./_update_settings_on_this_machine.py apply-json` failed'
-    ./_update_settings_on_this_machine.py unlock
+    bash -c "./${UPDATE_PY} unlock"
     exit 1
 fi
 
 # ----------------------------------------------------------------------------
 
 echo 'Releasing the lock...'
-./_update_settings_on_this_machine.py unlock
+bash -c "./${UPDATE_PY} unlock"
 echo 'Releasing the lock...  DONE'
 
 # ----------------------------------------------------------------------------
