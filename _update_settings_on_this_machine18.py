@@ -73,7 +73,7 @@ def upload_to_gist(content, *, filename='gistfile1.txt', shorten_url=False):
     assert type(filename) is str
     postbody = json.dumps(
         { "files": { filename: { "content": content } } } ).encode()
-    print postbody
+    print(postbody)
     curl_result = sh([
         'curl',
         '--fail', '--silent', '--show-error', '--location', '--max-time', '8',
