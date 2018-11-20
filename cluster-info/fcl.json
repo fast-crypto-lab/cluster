@@ -301,6 +301,16 @@
       ]
     },
     {
+      "name": "colossus4",
+      "private-ip": "10.3.2.90",
+      "public-ip-port": "140.109.22.53:6034",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDmx6sKa8z0t4GC0VIZbw9ZFQ+I8kWpgWHm44lUmIfH",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJD3iQozUopDJkWmzYDhydTd90zuR8BB7DqO1fkhxBjsTNAhvn3i+XSS6VoMHpYLT1UWgaZenEaOUiOwXBnVnBo=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZT5Q1X+MCsuLoFpohEVpctzQ/vSrFG3hVXRY5hPh8YS7e6OlnzMuaIQ9RCXNBILbeUyofEBgHnbJQa3pTowdXS+Tl/0UfNKhqaTWykKPdkddcgSFYR2x/KN5szKkmYixP6JGDdou4cjQ5bs79nBM0vJS2Qmbez+T3gzlnunF7fXlZhSBu68MkwO+HJiEJqk+o5jaIMrLvlrSNndWwx6Uy4/Ru+vH9Lt2WhHbrQVkDdbMSPyAL7gnMYGHRGzDhVgA4qoMbLRjQRkAxktn6XUq9Y6RP+GUOAu63Tias0l7NhHfviPQP6lf/3AZ8Ut3JJqoFV/3YQPzP8V8t0dYGadv3"
+      ]
+    },
+    {
       "name": "troll",
       "private-ip": "10.3.2.52",
       "public-ip-port": "140.109.22.52:22",
