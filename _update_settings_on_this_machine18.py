@@ -525,7 +525,7 @@ def generate_ssh_config(this_hostname, this_in302):
                 '    Port 22\n',
                 '    StrictHostKeyChecking yes\n',
                 '    HostbasedAuthentication yes\n',
-                '    HostbasedUsesNameFromPacketOnly yes\n', 
+                #'    HostbasedUsesNameFromPacketOnly yes\n', 
                 '\n',
             ]
         else:
