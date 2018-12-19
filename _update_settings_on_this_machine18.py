@@ -469,7 +469,7 @@ def generate_hosts(this_hostname, this_in302):
     ] + ([] if not this_in302 else ['\n'] + [
         entry(h['private-ip'], h['name'])
         for h in FCL['hosts'] if h['private-ip'] is not None
-    ]) + ([
+    ]) + (['\n'] + [
         entry(h['public-ip-port'].split(':')[0], h['name'])
         for h in FCL['hosts'] if (h['private-ip'] is None) and (h['public-ip-port'].split(':')[1] == '22')
     ]) + [
