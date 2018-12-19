@@ -1,6 +1,6 @@
 ########## BEGIN FCL CLUSTER ##########
 
-Host gaia uranus giant0 giant1 giant2 giant3 giant4 giant5 giant6 giant7 angel0 angel1 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 gargoyle0 unicorn0 unicorn1 unicorn2 unicorn3 gargoyle2 gargoyle1 colossus4 colossus5 wyvern0 troll
+Host gaia uranus giant0 giant1 giant2 giant3 giant4 giant5 giant6 giant7 angel0 angel1 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 gargoyle0 unicorn0 unicorn1 unicorn2 unicorn3 gargoyle2 gargoyle1 colossus4 colossus5 wyvern0 wyvern1 troll
     HashKnownHosts no
     CheckHostIP no
 
@@ -185,6 +185,11 @@ Host colossus5
 Host wyvern0
     HostKeyAlias wyvern0
     HostName 140.109.22.38
+    Port 22
+
+Host wyvern1
+    HostKeyAlias wyvern1
+    HostName 140.109.22.39
     Port 22
 
 Host troll
