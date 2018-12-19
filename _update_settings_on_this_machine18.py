@@ -73,7 +73,6 @@ def upload_to_gist(content, *, filename='gistfile1.txt', shorten_url=False):
     assert type(filename) is str
     postbody = json.dumps(
         { "files": { filename: { "content": content } } } ).encode()
-    print(postbody)
     curl_result = sh([
         'curl',
         '--fail', '--silent', '--show-error', '--location', '--max-time', '8',
@@ -470,6 +469,9 @@ def generate_hosts(this_hostname, this_in302):
     ] + ([] if not this_in302 else ['\n'] + [
         entry(h['private-ip'], h['name'])
         for h in FCL['hosts'] if h['private-ip'] is not None
+    ]) + ([
+        entry(h['public-ip-port'].split(':')[0], h['name'])
+        for h in FCL['hosts'] if (h['private-ip'] is None) and (h['public-ip-port'].split(':')[1] == '22')
     ]) + [
         '\n',
         '# CIC License Servers\n',
@@ -525,7 +527,6 @@ def generate_ssh_config(this_hostname, this_in302):
                 '    Port 22\n',
                 '    StrictHostKeyChecking yes\n',
                 '    HostbasedAuthentication yes\n',
-                #'    HostbasedUsesNameFromPacketOnly yes\n', 
                 '\n',
             ]
         else:
