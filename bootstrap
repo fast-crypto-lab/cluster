@@ -14,7 +14,7 @@ else
     >&2 echo 'Error: OS/Distribution not supported. Supported OS:'
     >&2 echo '       Ubuntu 16.04'
     >&2 echo '       Ubuntu 18.04'
-    >&2 echo '       openSUSE Tumbeweed'
+    >&2 echo '       openSUSE Tumbleweed'
     exit 1
 fi
 test "$( id -u )" = 0 || { >&2 echo 'Error: You are not root, please use "sudo" to run the script'; exit 1; }
