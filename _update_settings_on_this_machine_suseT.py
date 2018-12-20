@@ -17,7 +17,7 @@ from functools import lru_cache
 # Main entry point
 def main(argv):
     assert_good_environment()
-    #load_fcl_json_to_global()
+    load_fcl_json_to_global()
     if len(argv) != 2:
         error()
         error('Usage:')
