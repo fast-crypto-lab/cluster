@@ -30,8 +30,8 @@ def main(argv):
         sys.exit(1)
     elif argv[1] == 'lock':
         main_lock()
-    #elif argv[1] == 'check-this-host-in-json':
-    #    main_check_this_host_in_json()
+    elif argv[1] == 'check-this-host-in-json':
+        main_check_this_host_in_json()
     #elif argv[1] == 'check-json-applicability':
     #    main_check_json_applicability()
     #elif argv[1] == 'apply-json':
@@ -118,64 +118,64 @@ def main_lock():
 #        return matched.group(1)
 #    else:
 #        raise RuntimeError('fail to shorten a URL using git.io')
-#
-#
-#def main_check_this_host_in_json():
-#    hostname = get_this_hostname()
-#    if not re.fullmatch('^[a-z][a-z0-9]{1,30}$', hostname):
-#        error('the hostname of this machine is illegal')
-#        sys.exit(1)
-#    elif hostname not in (h['name'] for h in FCL['hosts']):
-#        conflicting_lan_addresses = [
-#            i for i in all_ipv4_addresses() if
-#            i.startswith('10.3.2.') and i in (
-#                h['private-ip'] for h in FCL['hosts']
-#            )
-#        ]
-#        assert (len(conflicting_lan_addresses) == 0), (
-#            'conflicting LAN IPv4 address: ' + conflicting_lan_addresses)
-#        new_host_file = '\n'.join(
-#            ['private-ip none', 'public-ip-port WWW.XXX.YYY.ZZZ:PPPPP']
-#            + all_host_public_keys('127.0.0.1', 22)
-#            + [''])
-#        print('')
-#        print('It seems that this machine is not declared in fcl.json yet...')
-#        print('You should recompile fcl.json after'
-#              ' putting a new host file "{}" like this:'
-#              .format(hostname))
-#        print()
-#        print('-----BEGIN SAMPLE FILE {}-----'.format(hostname))
-#        print(new_host_file, end='')
-#        print('-----END SAMPLE FILE {}-----'.format(hostname))
-#        print()
-#        #print('Uploading the above sample file...', flush=True, end='')
-#        #url = upload_to_gist(new_host_file, filename=hostname, shorten_url=True)
-#        #print('  DONE')
-#        #print('The URL for the above sample file is:')
-#        #print()
-#        #print('\t' + url)
-#        #print()
-#    else:
-#        record = next(h for h in FCL['hosts'] if h['name'] == hostname)
-#        name = record['name']
-#        pr_i = record['private-ip']
-#        pu_i = record['public-ip-port'].split(':')[0]
-#        pu_p = record['public-ip-port'].split(':')[1]
-#        keys = record['public-keys']
-#        assert (pr_i is None or has_ipv4_address(pr_i)), (
-#            'the host "{name}" must have an IPv4 address "{addr}"'
-#            ' according to fcl.json').format(name=name, addr=pr_i)
-#        assert matches_host_public_keys(keys), (
-#            'the host "{name}" must have the same sshd host public keys'
-#            ' as listed in fcl.json').format(name=name)
-#        assert (pr_i is None or sshd_is_reachable(keys, pr_i, 22)), (
-#            'the host "{name}" must be reachable at {addr}:22'
-#            ' according to fcl.json').format(name=name, addr=pr_i)
-#        assert sshd_is_reachable(keys, pu_i, pu_p), (
-#            'the host "{name}" must be reachable at {addr}:{port}'
-#            ' according to fcl.json').format(name=name, addr=pu_i, port=pu_p)
-#
-#
+
+
+def main_check_this_host_in_json():
+    hostname = get_this_hostname()
+    if not re.fullmatch('^[a-z][a-z0-9]{1,30}$', hostname):
+        error('the hostname of this machine is illegal')
+        sys.exit(1)
+    elif hostname not in (h['name'] for h in FCL['hosts']):
+        conflicting_lan_addresses = [
+            i for i in all_ipv4_addresses() if
+            i.startswith('10.3.2.') and i in (
+                h['private-ip'] for h in FCL['hosts']
+            )
+        ]
+        assert (len(conflicting_lan_addresses) == 0), (
+            'conflicting LAN IPv4 address: ' + conflicting_lan_addresses)
+        new_host_file = '\n'.join(
+            ['private-ip none', 'public-ip-port WWW.XXX.YYY.ZZZ:PPPPP']
+            + all_host_public_keys('127.0.0.1', 22)
+            + [''])
+        print('')
+        print('It seems that this machine is not declared in fcl.json yet...')
+        print('You should recompile fcl.json after'
+              ' putting a new host file "{}" like this:'
+              .format(hostname))
+        print()
+        print('-----BEGIN SAMPLE FILE {}-----'.format(hostname))
+        print(new_host_file, end='')
+        print('-----END SAMPLE FILE {}-----'.format(hostname))
+        print()
+        #print('Uploading the above sample file...', flush=True, end='')
+        #url = upload_to_gist(new_host_file, filename=hostname, shorten_url=True)
+        #print('  DONE')
+        #print('The URL for the above sample file is:')
+        #print()
+        #print('\t' + url)
+        #print()
+    else:
+        record = next(h for h in FCL['hosts'] if h['name'] == hostname)
+        name = record['name']
+        pr_i = record['private-ip']
+        pu_i = record['public-ip-port'].split(':')[0]
+        pu_p = record['public-ip-port'].split(':')[1]
+        keys = record['public-keys']
+        assert (pr_i is None or has_ipv4_address(pr_i)), (
+            'the host "{name}" must have an IPv4 address "{addr}"'
+            ' according to fcl.json').format(name=name, addr=pr_i)
+        assert matches_host_public_keys(keys), (
+            'the host "{name}" must have the same sshd host public keys'
+            ' as listed in fcl.json').format(name=name)
+        assert (pr_i is None or sshd_is_reachable(keys, pr_i, 22)), (
+            'the host "{name}" must be reachable at {addr}:22'
+            ' according to fcl.json').format(name=name, addr=pr_i)
+        assert sshd_is_reachable(keys, pu_i, pu_p), (
+            'the host "{name}" must be reachable at {addr}:{port}'
+            ' according to fcl.json').format(name=name, addr=pu_i, port=pu_p)
+
+
 #def main_check_json_applicability():
 #    assert group_exists_or_is_creatable('fclusers', 10000), (
 #            'cannot create group fclusers (gid=10000)')
