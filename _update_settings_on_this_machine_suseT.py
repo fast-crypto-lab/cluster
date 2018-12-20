@@ -24,7 +24,7 @@ def main(argv):
         error('\t{} lock'.format(sys.argv[0]))
         error('\t{} check-this-host-in-json'.format(sys.argv[0]))
         error('\t{} check-json-applicability'.format(sys.argv[0]))
-        #error('\t{} apply-json'.format(sys.argv[0]))
+        error('\t{} apply-json'.format(sys.argv[0]))
         error('\t{} unlock'.format(sys.argv[0]))
         error()
         sys.exit(1)
@@ -34,8 +34,8 @@ def main(argv):
         main_check_this_host_in_json()
     elif argv[1] == 'check-json-applicability':
         main_check_json_applicability()
-    #elif argv[1] == 'apply-json':
-    #    main_apply_json()
+    elif argv[1] == 'apply-json':
+        main_apply_json()
     elif argv[1] == 'unlock':
         main_unlock()
     else:
@@ -218,136 +218,136 @@ def main_check_json_applicability():
         ).format(name=name)
 
 
-#def _shell_command_to_ensure_group(groupname, groupid):
-#    assert type(groupname) is str
-#    assert re.fullmatch('^[a-z][a-z0-9]{1,30}$', groupname)
-#    assert type(groupid) is int
-#    assert 10000 <= groupid <= 19999
-#    pipeline_a = (
-#        'getent group | cut -d : -f 1,3 | grep -q ^{groupname}:{groupid}$'
-#        ).format(groupname=groupname, groupid=groupid)
-#    pipeline_b = (
-#        'groupadd -g {groupid} {groupname}'
-#        ).format(groupname=groupname, groupid=groupid)
-#    return '{a} || {b} || {a}'.format(a=pipeline_a, b=pipeline_b)
-#
-#
-#def _shell_command_to_ensure_user(username, userid):
-#    assert type(username) is str
-#    assert re.fullmatch('^[a-z][a-z0-9]{1,30}$', username)
-#    assert type(userid) is int
-#    assert 10000 <= userid <= 19999
-#    pipeline_a = (
-#        'getent passwd'
-#        ' | cut -d : -f 1,3,4,6'
-#        ' | grep -q ^{username}:{userid}:10000:/home/{username}$'
-#        ).format(username=username, userid=userid)
-#    pipeline_b = (
-#        'useradd -u {userid} -g 10000 -m -s /bin/bash {username}'
-#        ).format(username=username, userid=userid)
-#    return '{a} || {b} || {a}'.format(a=pipeline_a, b=pipeline_b)
-#
-#
-#def main_apply_json():
-#    # Assuming no other processes is making changes to:
-#    #   /etc/group
-#    #   /etc/gshadow
-#    #   /etc/passwd
-#    #   /etc/shadow
-#    #   /home/$USER for each $USER
-#    #   /etc/ssh/user_authorized_keys/$USER for each $USER
-#    #   /etc/sudoers.d/fcladmins
-#    #   /etc/hosts
-#    #   /etc/ssh/shosts.equiv
-#    #   /etc/ssh/ssh_config
-#    #   /etc/ssh/ssh_known_hosts
-#    #   /etc/ssh/sshd_config
-#    users = FCL['users']
-#
-#    # ensure group fclusers (10000)
-#    assert sh(
-#        _shell_command_to_ensure_group('fclusers', 10000)
-#    ).returncode == 0, 'failed to create group fclusers'
-#
-#    # ensure group fcladmins (19999)
-#    assert sh(
-#        _shell_command_to_ensure_group('fcladmins', 19999)
-#    ).returncode == 0, 'failed to create group fcladmins'
-#
-#    # ensure directory /etc/ssh/user_authorized_keys/
-#    assert sh(
-#        'mkdir -p /etc/ssh/user_authorized_keys'
-#    ).returncode == 0, 'failed to create /etc/ssh/user_authorized_keys/'
-#
-#    # for each user declared in fcl.json
-#    for user in users:
-#        user_id          = user['id']
-#        user_name        = user['name']
-#        user_permit_sudo = user['permit-sudo']
-#        user_public_keys = user['public-keys']
-#
-#        # ensure the user exists and is in good state on this machine
-#        cmd = _shell_command_to_ensure_user(user_name, user_id)
-#        user_created = sh(cmd).returncode == 0
-#        assert user_created, 'failed to create user {}'.format(user_name)
-#
-#        # put user public keys
-#        userkeys = '/etc/ssh/user_authorized_keys/{}'.format(user_name)
-#        userkeys_tmp = userkeys + '.swap'
-#        with open(userkeys_tmp, 'wb') as f:
-#            f.write('\n'.join(user_public_keys + ['']).encode())
-#            f.flush()
-#            os.fsync(f.fileno())
-#        os.rename(userkeys_tmp, userkeys)
-#
-#    # for each existing file under /etc/ssh/user_authorized_keys/
-#    for filename in os.listdir('/etc/ssh/user_authorized_keys'):
-#        if filename not in (u['name'] for u in users):
-#            os.remove('/etc/ssh/user_authorized_keys/{}'.format(filename))
-#
-#    # ensure sudo permission
-#    fcladmins_members = [user['name'] for user in users if user['permit-sudo']]
-#    assert sh(
-#        'gpasswd --members "' + ','.join(fcladmins_members) + '" fcladmins'
-#    ).returncode == 0, 'failed to update fcladmins member list'
-#    assert sh(
-#        'echo "%fcladmins ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/fcladmins'
-#        ' && chown -R 0:0 /etc/sudoers.d'
-#        ' && chmod -R 440 /etc/sudoers.d'
-#        ' && chmod    755 /etc/sudoers.d'
-#    ).returncode == 0, 'failed to update /etc/sudoers.d/fcladmins'
-#
-#
-#    hosts = FCL['hosts']
-#
-#    # What is the short hostname of this machine?
-#    this_hostname = get_this_hostname()
-#
-#    # Monkey patching... if this host is not declared in fcl.json yet...
-#    if this_hostname not in (h['name'] for h in hosts):
-#        # What IPv4 addresses does this machine currently have?
-#        this_addresses = all_ipv4_addresses()
-#        candidates = [a for a in this_addresses if a.startswith('10.3.2.')]
-#        private_ip = candidates[0] if len(candidates) == 1 else None
-#        # Append the entry for this host
-#        hosts.append({
-#            'name': this_hostname,
-#            'private-ip': private_ip,
-#            'public-ip-port': '127.0.0.1:22',
-#            'public-keys': all_host_public_keys('127.0.0.1', 22)
-#        })
-#
-#    # Is this host inside the 10.3.2.0/24 LAN?
-#    this_in302 = (
-#        next(h for h in hosts if h['name'] == this_hostname)
-#        )['private-ip'] is not None
-#
-#    put_file('/etc/hosts', generate_hosts(this_hostname, this_in302))
-#    put_file('/etc/ssh/shosts.equiv', generate_shosts_equiv())
-#    put_file('/etc/ssh/ssh_config', generate_ssh_config(this_hostname, this_in302))
-#    put_file('/etc/ssh/ssh_known_hosts', generate_ssh_known_hosts(this_hostname))
-#    put_file('/etc/ssh/sshd_config', generate_sshd_config())
-#    assert sh('systemctl restart ssh').returncode == 0, 'failed to restart ssh service'
+def _shell_command_to_ensure_group(groupname, groupid):
+    assert type(groupname) is str
+    assert re.fullmatch('^[a-z][a-z0-9]{1,30}$', groupname)
+    assert type(groupid) is int
+    assert 10000 <= groupid <= 19999
+    pipeline_a = (
+        'getent group | cut -d : -f 1,3 | grep -q ^{groupname}:{groupid}$'
+        ).format(groupname=groupname, groupid=groupid)
+    pipeline_b = (
+        'groupadd -g {groupid} {groupname}'
+        ).format(groupname=groupname, groupid=groupid)
+    return '{a} || {b} || {a}'.format(a=pipeline_a, b=pipeline_b)
+
+
+def _shell_command_to_ensure_user(username, userid):
+    assert type(username) is str
+    assert re.fullmatch('^[a-z][a-z0-9]{1,30}$', username)
+    assert type(userid) is int
+    assert 10000 <= userid <= 19999
+    pipeline_a = (
+        'getent passwd'
+        ' | cut -d : -f 1,3,4,6'
+        ' | grep -q ^{username}:{userid}:10000:/home/{username}$'
+        ).format(username=username, userid=userid)
+    pipeline_b = (
+        'useradd -u {userid} -g 10000 -m -s /bin/bash {username}'
+        ).format(username=username, userid=userid)
+    return '{a} || {b} || {a}'.format(a=pipeline_a, b=pipeline_b)
+
+
+def main_apply_json():
+    # Assuming no other processes is making changes to:
+    #   /etc/group
+    #   /etc/gshadow
+    #   /etc/passwd
+    #   /etc/shadow
+    #   /home/$USER for each $USER
+    #   /etc/ssh/user_authorized_keys/$USER for each $USER
+    #   /etc/sudoers.d/fcladmins
+    #   /etc/hosts
+    #   /etc/ssh/shosts.equiv
+    #   /etc/ssh/ssh_config
+    #   /etc/ssh/ssh_known_hosts
+    #   /etc/ssh/sshd_config
+    users = FCL['users']
+
+    # ensure group fclusers (10000)
+    assert sh(
+        _shell_command_to_ensure_group('fclusers', 10000)
+    ).returncode == 0, 'failed to create group fclusers'
+
+    # ensure group fcladmins (19999)
+    assert sh(
+        _shell_command_to_ensure_group('fcladmins', 19999)
+    ).returncode == 0, 'failed to create group fcladmins'
+
+    # ensure directory /etc/ssh/user_authorized_keys/
+    assert sh(
+        'mkdir -p /etc/ssh/user_authorized_keys'
+    ).returncode == 0, 'failed to create /etc/ssh/user_authorized_keys/'
+
+    # for each user declared in fcl.json
+    for user in users:
+        user_id          = user['id']
+        user_name        = user['name']
+        user_permit_sudo = user['permit-sudo']
+        user_public_keys = user['public-keys']
+
+        # ensure the user exists and is in good state on this machine
+        cmd = _shell_command_to_ensure_user(user_name, user_id)
+        user_created = sh(cmd).returncode == 0
+        assert user_created, 'failed to create user {}'.format(user_name)
+
+        # put user public keys
+        userkeys = '/etc/ssh/user_authorized_keys/{}'.format(user_name)
+        userkeys_tmp = userkeys + '.swap'
+        with open(userkeys_tmp, 'wb') as f:
+            f.write('\n'.join(user_public_keys + ['']).encode())
+            f.flush()
+            os.fsync(f.fileno())
+        os.rename(userkeys_tmp, userkeys)
+
+    # for each existing file under /etc/ssh/user_authorized_keys/
+    for filename in os.listdir('/etc/ssh/user_authorized_keys'):
+        if filename not in (u['name'] for u in users):
+            os.remove('/etc/ssh/user_authorized_keys/{}'.format(filename))
+
+    # ensure sudo permission
+    fcladmins_members = [user['name'] for user in users if user['permit-sudo']]
+    assert sh(
+        'gpasswd --members "' + ','.join(fcladmins_members) + '" fcladmins'
+    ).returncode == 0, 'failed to update fcladmins member list'
+    assert sh(
+        'echo "%fcladmins ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/fcladmins'
+        ' && chown -R 0:0 /etc/sudoers.d'
+        ' && chmod -R 440 /etc/sudoers.d'
+        ' && chmod    755 /etc/sudoers.d'
+    ).returncode == 0, 'failed to update /etc/sudoers.d/fcladmins'
+
+
+    hosts = FCL['hosts']
+
+    # What is the short hostname of this machine?
+    this_hostname = get_this_hostname()
+
+    # Monkey patching... if this host is not declared in fcl.json yet...
+    if this_hostname not in (h['name'] for h in hosts):
+        # What IPv4 addresses does this machine currently have?
+        this_addresses = all_ipv4_addresses()
+        candidates = [a for a in this_addresses if a.startswith('10.3.2.')]
+        private_ip = candidates[0] if len(candidates) == 1 else None
+        # Append the entry for this host
+        hosts.append({
+            'name': this_hostname,
+            'private-ip': private_ip,
+            'public-ip-port': '127.0.0.1:22',
+            'public-keys': all_host_public_keys('127.0.0.1', 22)
+        })
+
+    # Is this host inside the 10.3.2.0/24 LAN?
+    this_in302 = (
+        next(h for h in hosts if h['name'] == this_hostname)
+        )['private-ip'] is not None
+
+    put_file('/etc/hosts', generate_hosts(this_hostname, this_in302))
+    put_file('/etc/ssh/shosts.equiv', generate_shosts_equiv())
+    put_file('/etc/ssh/ssh_config', generate_ssh_config(this_hostname, this_in302))
+    put_file('/etc/ssh/ssh_known_hosts', generate_ssh_known_hosts(this_hostname))
+    put_file('/etc/ssh/sshd_config', generate_sshd_config())
+    assert sh('systemctl restart ssh').returncode == 0, 'failed to restart ssh service'
 
 
 def main_unlock():
