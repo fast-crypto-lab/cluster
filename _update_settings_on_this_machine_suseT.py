@@ -347,7 +347,7 @@ def main_apply_json():
     put_file('/etc/ssh/ssh_config', generate_ssh_config(this_hostname, this_in302))
     put_file('/etc/ssh/ssh_known_hosts', generate_ssh_known_hosts(this_hostname))
     put_file('/etc/ssh/sshd_config', generate_sshd_config())
-    assert sh('systemctl restart ssh').returncode == 0, 'failed to restart ssh service'
+    assert sh('systemctl restart sshd.service').returncode == 0, 'failed to restart ssh service'
 
 
 def main_unlock():
