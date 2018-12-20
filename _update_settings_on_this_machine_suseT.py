@@ -22,8 +22,8 @@ def main(argv):
         error()
         error('Usage:')
         error('\t{} lock'.format(sys.argv[0]))
-        #error('\t{} check-this-host-in-json'.format(sys.argv[0]))
-        #error('\t{} check-json-applicability'.format(sys.argv[0]))
+        error('\t{} check-this-host-in-json'.format(sys.argv[0]))
+        error('\t{} check-json-applicability'.format(sys.argv[0]))
         #error('\t{} apply-json'.format(sys.argv[0]))
         error('\t{} unlock'.format(sys.argv[0]))
         error()
@@ -32,8 +32,8 @@ def main(argv):
         main_lock()
     elif argv[1] == 'check-this-host-in-json':
         main_check_this_host_in_json()
-    #elif argv[1] == 'check-json-applicability':
-    #    main_check_json_applicability()
+    elif argv[1] == 'check-json-applicability':
+        main_check_json_applicability()
     #elif argv[1] == 'apply-json':
     #    main_apply_json()
     elif argv[1] == 'unlock':
@@ -176,48 +176,48 @@ def main_check_this_host_in_json():
             ' according to fcl.json').format(name=name, addr=pu_i, port=pu_p)
 
 
-#def main_check_json_applicability():
-#    assert group_exists_or_is_creatable('fclusers', 10000), (
-#            'cannot create group fclusers (gid=10000)')
-#    assert group_exists_or_is_creatable('fcladmins', 19999), (
-#            'cannot create group fcladmins (gid=19999)')
-#    existing_users_with_uid_in_range = [
-#        u for u in all_users() if
-#        (lambda name, uid, gid, home: (
-#            10000 <= uid <= 19999
-#        ))(*u)
-#    ]
-#    existing_usernames = [u[0] for u in existing_users_with_uid_in_range]
-#    all_usernames_declared_in_json = [u['name'] for u in FCL['users']]
-#    for name, uid, gid, home in existing_users_with_uid_in_range:
-#        assert (name in all_usernames_declared_in_json), (
-#                'user {name}(uid={uid}) exists,'
-#                ' but it is not declared in fcl.json'
-#                ).format(name=name, uid=uid)
-#        assert ((name, uid) in ((u['name'], u['id']) for u in FCL['users'])), (
-#                'user {name} has unexpected uid={uid}'
-#                ).format(name=name, uid=uid)
-#        assert (gid == 10000), (
-#                'user {name}(uid={uid}) has unexpected default group id {gid}'
-#                ).format(name=name, uid=uid, gid=gid)
-#        assert (home == '/home/' + name), (
-#                'user {name}(uid={uid}) has unexpected home directory {home}'
-#                ).format(name=name, uid=uid, home=home)
-#        assert (sh(
-#            'test ! -L /home/{name} -a -d /home/{name}'.format(name=name)
-#        ).returncode == 0), (
-#            'user {name} exist, but /home/{name} is not a directory'
-#        ).format(name=name)
-#    to_be_created_usernames = list(
-#            set(all_usernames_declared_in_json) - set(existing_usernames))
-#    for name in to_be_created_usernames:
-#        assert (sh(
-#            'test ! -L /home/{name} -a ! -e /home/{name}'.format(name=name)
-#        ).returncode == 0), (
-#            'user {name} does not exist, but /home/{name} does'
-#        ).format(name=name)
-#
-#
+def main_check_json_applicability():
+    assert group_exists_or_is_creatable('fclusers', 10000), (
+            'cannot create group fclusers (gid=10000)')
+    assert group_exists_or_is_creatable('fcladmins', 19999), (
+            'cannot create group fcladmins (gid=19999)')
+    existing_users_with_uid_in_range = [
+        u for u in all_users() if
+        (lambda name, uid, gid, home: (
+            10000 <= uid <= 19999
+        ))(*u)
+    ]
+    existing_usernames = [u[0] for u in existing_users_with_uid_in_range]
+    all_usernames_declared_in_json = [u['name'] for u in FCL['users']]
+    for name, uid, gid, home in existing_users_with_uid_in_range:
+        assert (name in all_usernames_declared_in_json), (
+                'user {name}(uid={uid}) exists,'
+                ' but it is not declared in fcl.json'
+                ).format(name=name, uid=uid)
+        assert ((name, uid) in ((u['name'], u['id']) for u in FCL['users'])), (
+                'user {name} has unexpected uid={uid}'
+                ).format(name=name, uid=uid)
+        assert (gid == 10000), (
+                'user {name}(uid={uid}) has unexpected default group id {gid}'
+                ).format(name=name, uid=uid, gid=gid)
+        assert (home == '/home/' + name), (
+                'user {name}(uid={uid}) has unexpected home directory {home}'
+                ).format(name=name, uid=uid, home=home)
+        assert (sh(
+            'test ! -L /home/{name} -a -d /home/{name}'.format(name=name)
+        ).returncode == 0), (
+            'user {name} exist, but /home/{name} is not a directory'
+        ).format(name=name)
+    to_be_created_usernames = list(
+            set(all_usernames_declared_in_json) - set(existing_usernames))
+    for name in to_be_created_usernames:
+        assert (sh(
+            'test ! -L /home/{name} -a ! -e /home/{name}'.format(name=name)
+        ).returncode == 0), (
+            'user {name} does not exist, but /home/{name} does'
+        ).format(name=name)
+
+
 #def _shell_command_to_ensure_group(groupname, groupid):
 #    assert type(groupname) is str
 #    assert re.fullmatch('^[a-z][a-z0-9]{1,30}$', groupname)
