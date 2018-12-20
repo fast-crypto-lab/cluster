@@ -49,11 +49,9 @@ def assert_good_environment():
     # Ensure you are running Python 3.5 (or later)
     assert sys.version_info.major == 3
     assert sys.version_info.minor >= 6
-    # Ensure you are running this on a Ubuntu 18.04 server
-    print('Platform: {0:s}'.format(platform.linux_distribution()[0]))
-    print('Version: {0:s}'.format(platform.linux_distribution()[1]))
-    #assert platform.dist()[0] == 'Ubuntu'
-    #assert platform.dist()[1].startswith('18.04')
+    # Ensure you are running this on a Ubuntu 18.04 server -- canceled
+    #assert platform.dist()[0] == ''
+    #assert platform.dist()[1].startswith('')
 
 
 def load_fcl_json_to_global():
