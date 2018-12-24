@@ -1,1 +1,2 @@
 permit-sudo no
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGweYtwYqb82/hEfDaGIijpS8Aa+3H8eqzWXFDcsteel djb@moremachines

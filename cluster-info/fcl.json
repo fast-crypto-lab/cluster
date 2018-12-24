@@ -422,7 +422,9 @@
       "id": 10008,
       "name": "djb",
       "permit-sudo": false,
-      "public-keys": []
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGweYtwYqb82/hEfDaGIijpS8Aa+3H8eqzWXFDcsteel"
+      ]
     },
     {
       "id": 10009,
