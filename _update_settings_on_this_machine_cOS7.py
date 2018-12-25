@@ -568,7 +568,7 @@ def generate_sshd_config():
         '# YOU SHALL NOT EDIT IT MANUALLY\n',
         '# ALL CHANGES WILL BE OVERWRITTEN\n',
         '\n',
-        '# Ubuntu 16.04 openssh-server defaults\n',
+        '# openssh-server defaults\n',
         'UsePrivilegeSeparation yes\n',
         'ChallengeResponseAuthentication no\n',
         'X11Forwarding yes\n',
