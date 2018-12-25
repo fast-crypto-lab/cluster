@@ -10,11 +10,14 @@ elif $(grep -q '^Ubuntu 18.04' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine18.py'
 elif $(grep -q '^Welcome to openSUSE Tumbleweed' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine_suseT.py'
+elif $(grep -q '^CentOS Linux release 7' /etc/centos-release 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine_cOS7.py'
 else
     >&2 echo 'Error: OS/Distribution not supported. Supported OS:'
     >&2 echo '       Ubuntu 16.04'
     >&2 echo '       Ubuntu 18.04'
     >&2 echo '       openSUSE Tumbleweed'
+    >&2 echo '       CentOS Linux release 7'
     exit 1
 fi
 test "$( id -u )" = 0 || { >&2 echo 'Error: You are not root, please use "sudo" to run the script'; exit 1; }
