@@ -5,7 +5,9 @@ _main_(){
 
 #grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null || { >&2 echo 'Error: This is neither Ubuntu 16.04 nor 18.04'; exit 1; }
 if $(grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine.py'
+    UPDATE_PY='_update_settings_on_this_machine16.py'
+elif $(grep -q '^Ubuntu 14.04' /etc/issue 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine18.py'
 elif $(grep -q '^Ubuntu 18.04' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine18.py'
 elif $(grep -q '^Welcome to openSUSE Tumbleweed' /etc/issue 2> /dev/null) ; then
