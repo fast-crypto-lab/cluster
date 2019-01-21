@@ -7,7 +7,7 @@ _main_(){
 if $(grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine16.py'
 elif $(grep -q '^Ubuntu 14.04' /etc/issue 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine18.py'
+    UPDATE_PY='_update_settings_on_this_machine14.py'
 elif $(grep -q '^Ubuntu 18.04' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine18.py'
 elif $(grep -q '^Welcome to openSUSE Tumbleweed' /etc/issue 2> /dev/null) ; then
