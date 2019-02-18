@@ -1081,7 +1081,7 @@
       "name": "magnidei",
       "permit-sudo": false,
       "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICrDBv9RWfQ0O+erQdCIyvhGGA6VJUllVYOxZee20e89"
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC11jX4et250Sxmoar4+JrZlqCR4ZEvzorCf7aUSyQzY0rEavw/HkU3gKeaatFdBgxSZeGwnmHEOeI91nthNj81h3lftWB9uNzYFz64N4/ka84896pCh2hB6NOi/cJpmXYpUdy+tbYybOSONAy7CEqQZFgUAYJCw4TNquNdpoozbaB+17WERQECBvNuPKy4ciZsOPA1z0/QK+aXfRtAUSb1yzsIPLvTH46YakxTT2plFihyHOlpSE2LLhcvK7LN/zexAXK2tZ4Juhf7T2XL+iN3/9lTjMpICh3bz6YtLQ2kEA0pN0/zIerWo+rxOLkFtQCMb1cvU1ybtNcdSjWGlUHX"
       ]
     },
     {
@@ -1098,6 +1098,14 @@
       "permit-sudo": false,
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsVjqVoaFn2AGz0zldccMW799hz1S+icczE/Ot+auTmh2SnSMkwezt4cMWv4wCf4dJFFssHlvwe1EtBWisIal/pBqiIPOeOpNiz+/IbES3GjMiq8fQY1ZMTJkrAT3PBSGsDjrAUMiVbomd+3MeTEcpoC9RHkC740A/Ngam6Y1twDVehze52H2Cex/94ec6IoWaJq2AjOtPyEvXPsaVYEgOkXsN+0lOJORC/q/hkPgmlGVucp+xrsdYrkPzvi6p8HlZbK8UQQnj0qd2qKYWppFL+Qdz7qd5QR+CfhfBSb9TuWN/KYCdiyeRDBb5Oq1EMKhwGYW6H2hRXitlnLQg9jo5"
+      ]
+    },
+    {
+      "id": 10109,
+      "name": "jason",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG2lsi0LjJhmEp97PyRkD1B/kCYoqsw4pxMVNJSYWKiTd7cif7lDXB6Y5kjmmfAWRS9zgqgZ15qeGDL6ixa6r7hpSi7lcijVzUnh2EtgmG43KyA1lXzHVvzgFTtkwY2/jT8AUIYvrY8FnMKT+JC78kM9n7tpBXjVOTAwjAZ1N+oJNFbB1fmJdrZmNK9rP6g3VSJbEPtMWIm2DUKDzbGvZCu9z5uGhwyVBowG4qndjCk9wuTlTo4psE6Xr7RAwHIcKcLTxBUXqD/nt4ELkji3lCLFIqmELz1u8xNQJfJvDeePTJIgnE0W3CU9eoSYDMW/DR7nSX8oX1CTyNoc08LTAP"
       ]
     }
   ]
