@@ -574,7 +574,7 @@ def generate_sshd_config():
         'X11Forwarding yes\n',
         'PrintMotd no\n',
         'AcceptEnv LANG LC_*\n',
-        'Subsystem sftp /usr/lib/openssh/sftp-server\n',
+        'Subsystem sftp /usr/libexec/openssh/sftp-server\n',
         'UsePAM yes\n',
         '\n',
         '# About password user authentication\n',
