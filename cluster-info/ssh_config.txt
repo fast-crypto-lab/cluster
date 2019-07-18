@@ -1,6 +1,6 @@
 ########## BEGIN FCL CLUSTER ##########
 
-Host gaia uranus giant0 giant1 giant2 giant3 giant4 giant5 giant6 giant7 angel0 angel1 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 gargoyle0 unicorn0 unicorn1 unicorn2 unicorn3 gargoyle2 gargoyle1 rivy0 rivy1 colossus4 colossus5 warbear0 wyvern0 wyvern1 troll
+Host gaia uranus giant0 giant1 giant2 giant3 giant4 giant5 giant6 giant7 angel0 angel1 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 gargoyle0 unicorn0 unicorn1 gargoyle2 gargoyle1 rivy0 rivy1 colossus4 colossus5 warbear0 wyvern0 wyvern1 troll
     HashKnownHosts no
     CheckHostIP no
 
@@ -151,16 +151,6 @@ Host unicorn1
     HostKeyAlias unicorn1
     HostName 140.109.22.53
     Port 6026
-
-Host unicorn2
-    HostKeyAlias unicorn2
-    HostName 140.109.22.53
-    Port 6027
-
-Host unicorn3
-    HostKeyAlias unicorn3
-    HostName 140.109.22.53
-    Port 6028
 
 Host gargoyle2
     HostKeyAlias gargoyle2

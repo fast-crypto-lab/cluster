@@ -261,26 +261,6 @@
       ]
     },
     {
-      "name": "unicorn2",
-      "private-ip": "10.3.2.83",
-      "public-ip-port": "140.109.22.53:6027",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHmfmutfDi40NoilfrF3p+veEHr1h6EWgqugj+3ZDbav",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN5Le2YT5mE7dhLbhDCimW1X7p5k9E1WpsLL8sX280zDfSDtqNhf4wSdX/29UUhM0tMEZRquNv4KgAAqkqaofFI=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGaLL24JD7kvxdf0zullMkqRAKszmT62rTAxanLUkQv5lDyXL4KczYrRkBCCdq5aUO1HOvn8zJasnOOTP/NXrYQ9LAeL+45DfTdjqBL5pp2U6mpNLFCezYnM57tOvu13FGbWeTwimJdxeWNntT5Y+t8CxiPXr24FLxEDXcQ2A/sxIGEtP7n1aNh4kQFgBFBayA4BiRZ5Mtvr4CPAgEfAnI2ha14XQvMGjpshNnSn3M1VwuynEwlc4mcEZ4ZQBKspzhh44QZG5pRzN1WIXgJCbf2gE9X6HeZrXy3hEuCA2bfM+iCzRJ3vGW27iNsgSWhgcExUTRep8i54p7hgzIH6pH"
-      ]
-    },
-    {
-      "name": "unicorn3",
-      "private-ip": "10.3.2.84",
-      "public-ip-port": "140.109.22.53:6028",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJFJW1wE39Ll7cvKN0KCOhanY5xFTJDa4n4lDspYr9oX",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPMML9ZFiUb45YKyif6JF5xVOFeS5Zo6AAFD/CWvKFuu6hUNIhvrVGgsNwMOg3CzqX3Eyk3FC1JoDlAfz8t8jSY=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBCIHaKdb5z/F8FhYfvZnCqw1b6CjrYpR4hCr9OK3GD9V8sdE4PGqal0vYj2/pSoMnhCc3oRgMz1Rf9H891D4oc7oZ6o7DyVfOD2Us+DjkKg70YdU8gvI/S0BZqmMoylhHLAw+/Ldikm808WEpkzHJB1DPUfAK0+bIdp21Gs/1nJHRjQVZSlxpOwW3+5j4kgILTzfhfc7u9mECcuxnsqAeWIGh3F+H8g1OsLa4bwFP4NIM2iJaqpmBtAs6JkfwGIw/Qg/Gjq6365QnsMphcHNt9RK15eX5BRvDkGa9ngLljW9FfrV67mj4xybmEU0qDx5xD9KjMtYJVbxPx6YRrqJ1"
-      ]
-    },
-    {
       "name": "gargoyle2",
       "private-ip": "10.3.2.85",
       "public-ip-port": "140.109.22.53:6029",
@@ -1114,6 +1094,14 @@
       "permit-sudo": false,
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/rXD8Lc7xu9fCk4Iu78yL4eY9JrDks6bx40dDmWGtqLTYACD+B7W7cNBmgXbdO3lVPNkbDzu4wLoFDB6Q7P8GKnhiWgeycuBN78jaTrkiAFGF3w1i31DSCvOWSag7iqEyKyLobluK+BD03gEXJqfa009uFlYBpd0uTJx5P7aWZifnZhEfHRarFwSC7HmnqnEzVLDu6H5PCUtY7uAL147cCzPAfM49mw4gb/z7w1pZCRAAGYvNhtcFUHi7v5/H/k8BO4VqKrKwmls3o/5t4Q78E0/9w6j8Q1zAP9p+G9rXbFULPG5AsmIiQ0D9MDtWp47cStiMoWw7VOXX+0ge9atL"
+      ]
+    },
+    {
+      "id": 10111,
+      "name": "christine",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6vN+bfm6G8JHLdJAKn36i0JnDNbNnWuYSYrxCs0MaGrVeRGrhoIuesxZbF6GYajswmjJWoIgQTxgqqClPA+wMZCMedMD7coZgoo3EmIA3J5Lgol+BAK0iKhLssHkrGjY/KPV6NR2usg2+btqsEi5014xMoEcJ4jujR+s7w9oRLd21uE5z1iktWq15LyD1kgXcN+Iy58nWWrVRs9/ro3uxopGq3BXkifUeNmAlOzL5i0YFbKDy4wlqPkVkAQtp17QXJzcmy26mZFBUMWth9mz0pVCFFrfVdbWGMOeUSEI5qJ8+vzjtfdyeBZopK83Quibp7XhZEJNy5xmK/tSg7t4X"
       ]
     }
   ]
