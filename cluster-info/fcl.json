@@ -1103,6 +1103,14 @@
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6vN+bfm6G8JHLdJAKn36i0JnDNbNnWuYSYrxCs0MaGrVeRGrhoIuesxZbF6GYajswmjJWoIgQTxgqqClPA+wMZCMedMD7coZgoo3EmIA3J5Lgol+BAK0iKhLssHkrGjY/KPV6NR2usg2+btqsEi5014xMoEcJ4jujR+s7w9oRLd21uE5z1iktWq15LyD1kgXcN+Iy58nWWrVRs9/ro3uxopGq3BXkifUeNmAlOzL5i0YFbKDy4wlqPkVkAQtp17QXJzcmy26mZFBUMWth9mz0pVCFFrfVdbWGMOeUSEI5qJ8+vzjtfdyeBZopK83Quibp7XhZEJNy5xmK/tSg7t4X"
       ]
+    },
+    {
+      "id": 10112,
+      "name": "dean3154",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdDgfBQrHOPFnxL7SwDULTe2AR3XoyFQNbgScqho+7ThFRItLlNensD2oUq6wBpttARvhbGhagJdcIAnWIvpZYct85hTumvViOpx9UzOv3CAjg8MYYs48ifvgRsxKQ/GSplXz/dHmUt/tLh76oJQ2dNg/0mWPQw9KBXW44jqf/gzn8QQEoGvrRSDBF0e1hR+AFhLZvWm2qZsifMzC+dHmfuERM99aLqPvl/njzWbQhbCz7Ff+72IEv5MY29uszvTXT27sbl1Zmt+Z3gZ8M/VawGr0RNc0wEj6OBjuaBg+xeiLy1iZ1NGf1GniD8ABqm/WLQ4neQTp4CaKZhgLNSFvJ"
+      ]
     }
   ]
 }
