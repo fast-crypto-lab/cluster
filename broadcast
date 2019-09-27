@@ -240,7 +240,7 @@ def main():
     all_procs = [proc(build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, REMOTE_BASH_COMMAND)) for hostname in hostnames]
 
     from math import ceil
-    timeout_seconds = ceil(1.5 * len(FCL['users']))
+    timeout_seconds = ceil(2.0 * len(FCL['users']))
 
     print('Waiting {} ssh processes to complete for at most {} seconds...'.format(len(all_procs), timeout_seconds))
     wait_all_procs(all_procs, timeout_seconds, show_progress=True)
