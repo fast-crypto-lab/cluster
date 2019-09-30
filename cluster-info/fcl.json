@@ -1129,6 +1129,14 @@
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDES9oLQ8yfkYCgaV5a0CftInXDgVXsgs8oDLtZD51Z6"
       ]
+    },
+    {
+      "id": 10114,
+      "name": "yulun",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIARdXBL7zwcmKRmzKaJjR3W+fgmM7du2XKdAHbb0905D"
+      ]
     }
   ]
 }
