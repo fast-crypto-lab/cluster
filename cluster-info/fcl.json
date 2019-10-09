@@ -261,6 +261,16 @@
       ]
     },
     {
+      "name": "behemoth1",
+      "private-ip": "10.3.2.83",
+      "public-ip-port": "140.109.22.53:6027",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKr7+CPylQnq8pjkpOXWfyKVATqOS2TEEj58j8Fbf9BT",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMni5xaNoOQHUWlwWTitflvDoGV7LzW5hCmImj6ynRpKREuWh5maYrIo0WkkiebiaJ15g3hURoiB7c/QOmyB01E=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCWt4lu3JtwgXqdrnWjMndD7uFiK5bauHb3Z+sTYZlLHbmxdB5RicRozZAugCsWZQrygWDVA0+KEU5T1Urj1MNincBXKAoXQ36UwYtv45LJzL2p/drGl0cbdRiymf7uYIKVeHHZ75/AnNfwgdfT7f5ZEebneqV5cY2X6KmJf1z5b4bmxQK546LihMEoBz4PiUeAEdFo37XUIIXPkzfUazi3p+1Li+U9zUvpG9uZePFVYv+3fADgQY6ddaz6DRqtWbAM0drtOzbgPe9ImdQElxFRx/JQmYA3/v/Ig9zdtn4/zKV8uwne6F3ZvxIb1h62rWsrLzeomj6QDLms10a3zDD"
+      ]
+    },
+    {
       "name": "gargoyle2",
       "private-ip": "10.3.2.85",
       "public-ip-port": "140.109.22.53:6029",
@@ -1103,6 +1113,30 @@
       "permit-sudo": false,
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6vN+bfm6G8JHLdJAKn36i0JnDNbNnWuYSYrxCs0MaGrVeRGrhoIuesxZbF6GYajswmjJWoIgQTxgqqClPA+wMZCMedMD7coZgoo3EmIA3J5Lgol+BAK0iKhLssHkrGjY/KPV6NR2usg2+btqsEi5014xMoEcJ4jujR+s7w9oRLd21uE5z1iktWq15LyD1kgXcN+Iy58nWWrVRs9/ro3uxopGq3BXkifUeNmAlOzL5i0YFbKDy4wlqPkVkAQtp17QXJzcmy26mZFBUMWth9mz0pVCFFrfVdbWGMOeUSEI5qJ8+vzjtfdyeBZopK83Quibp7XhZEJNy5xmK/tSg7t4X"
+      ]
+    },
+    {
+      "id": 10112,
+      "name": "dean3154",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6KHBfjGa6DQ0+E8tpmSQreExoWNJqJbVocN/gQHCaZV6aL4LVH7hQKggB4h1r6lQLlxwy8n7EtgW10o2SmDACgXm//9DiDeP5L5OhvIHpfiASmc93iYtzvUF6vG+uVKuVZ0WVrfGxBpURW4N2i3GEpL7ucUPApZPBIZrZwKeBwYcY4ToCaX8/djA1kYSZeV3ILtOd9QjxU0VxOBsgdszKpAph5VIL/WqG8HLnEE9GPpdlFOe2vC58I7TjcWbXyOheDTRruzafMnkPduU0VpV0RotVg4AuI4gNQUpjK72szEOSQ2VteNmTxkX6K9JJSqsZx9O1NMNj7PcmPzTUHKXD"
+      ]
+    },
+    {
+      "id": 10113,
+      "name": "oalieno",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDES9oLQ8yfkYCgaV5a0CftInXDgVXsgs8oDLtZD51Z6"
+      ]
+    },
+    {
+      "id": 10114,
+      "name": "yulun",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIARdXBL7zwcmKRmzKaJjR3W+fgmM7du2XKdAHbb0905D"
       ]
     }
   ]
