@@ -1109,7 +1109,8 @@
       "name": "ptrcmd",
       "permit-sudo": false,
       "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJAVg81fHE7FVTb0U3tF4K+2VHkgUfZ+dJlO+8Ssfegq"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJAVg81fHE7FVTb0U3tF4K+2VHkgUfZ+dJlO+8Ssfegq",
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJjLgI1WluTt94EHPjJGDR7dh/1ABZ1ccINx4r4JiNgE"
       ]
     },
     {
