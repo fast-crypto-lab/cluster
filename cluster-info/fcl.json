@@ -1171,6 +1171,14 @@
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIARdXBL7zwcmKRmzKaJjR3W+fgmM7du2XKdAHbb0905D"
       ]
+    },
+    {
+      "id": 10115,
+      "name": "alli71f",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAPEnQVkdebM3TQuUfh5EcBj4Wo3JbycoJFM3zBn8cvM"
+      ]
     }
   ]
 }
