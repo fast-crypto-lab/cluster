@@ -1181,6 +1181,14 @@
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAPEnQVkdebM3TQuUfh5EcBj4Wo3JbycoJFM3zBn8cvM"
       ]
+    },
+    {
+      "id": 10116,
+      "name": "minghan",
+      "permit-sudo": true,
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDwqEOc9X3LXtHBI1WwGLIH9MMDb5t3qTLtzWKmqvOC7"
+      ]
     }
   ]
 }
