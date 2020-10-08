@@ -2,7 +2,7 @@
 
 import json
 import os
-import platform
+import distro
 import re
 import sys
 
@@ -50,8 +50,8 @@ def assert_good_environment():
     assert sys.version_info.major == 3
     assert sys.version_info.minor >= 8
     # Ensure you are running this on a Ubuntu 20.04 server
-    assert platform.dist()[0] == 'Ubuntu'
-    assert platform.dist()[1].startswith('20.04')
+    assert distro.linux_distribution()[0] == 'Ubuntu'
+    assert distro.linux_distribution()[1].startswith('20.04')
 
 
 def load_fcl_json_to_global():
