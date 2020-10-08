@@ -10,6 +10,8 @@ elif $(grep -q '^Ubuntu 14.04' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine14.py'
 elif $(grep -q '^Ubuntu 18.04' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine18.py'
+elif $(grep -q '^Ubuntu 20.04' /etc/issue 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine20.py'
 elif $(grep -q '^Welcome to openSUSE Tumbleweed' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine_suseT.py'
 elif $(grep -q '^CentOS Linux release 7' /etc/centos-release 2> /dev/null) ; then
