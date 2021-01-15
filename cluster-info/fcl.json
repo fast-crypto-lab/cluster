@@ -371,6 +371,16 @@
       ]
     },
     {
+      "name": "rivy2",
+      "private-ip": "10.3.2.94",
+      "public-ip-port": "140.109.22.53:6038",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEU17uh1ON3/vLmJqcKGUhGcxM2xt0KyGBcu8YUDcK1u",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE03Nh3YB3yl0QrdxyIUYhZLA/9oHiPpegx3XS1Yafd1VbU9WSwLQ2NvA3HPuBTV5P385FXUGgZCuDKPorkDdi8=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC88QNGwt8UFBzIWRG+ymHqugRryhE0KG8fexfHaYYiQ31U7yld+3V8Qxborsgoe8bnPduhIUHkUjSxEls/+lHyv3uXbUMkmqECUDSANLE7dwTPUi8bc63RhJNPr8/suKoviiC5Ko6LPMJqzMqUd9zOqwzA79r3le+ZlrZitIP9A8xpVpPuYE9uzar7r5i/k3D3VnvYe/uTge06tyucrkFLER4mWyEEXm48oe1iBcPmH5IJChRsPfBiqXoEux1FqoBZjD/XKjvV5CGGKQxlQEWghg2rIaOMo1bCgqGg2uw0p6UTwjdN8H/7L9E+EOZAHrJoqWHxcOj8I6RPufnckgE8hAYQIDrv4PGD+TNOUMdjLtF0buZ9sdgiE2a3yEevrxsQAuJOAwU6fWCVXaTrlTZyBVXKjqAP6iE5sUb3FsO2lobLDmwYJNgAGcIaIwYceLzHYqD3XE1y2lVigOEdRhzVu0v38UPr5eCkTZ6VpztfUdffvfQKZzl/mEp1uFNqj/s="
+      ]
+    },
+    {
       "name": "warbear0",
       "private-ip": "10.3.2.96",
       "public-ip-port": "140.109.22.53:6040",
