@@ -412,7 +412,7 @@
     },
     {
       "name": "troll",
-      "private-ip": "10.3.2.52",
+      "private-ip": "10.3.2.87",
       "public-ip-port": "140.109.22.52:22",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE/TEB94rJK/dnktPSPyQ3tJcLhzAcZsDqF9cjSLLqjf",
