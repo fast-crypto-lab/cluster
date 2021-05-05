@@ -475,6 +475,9 @@ def generate_hosts(this_hostname, this_in302):
     ]) + [
         '\n',
         '# CIC License Servers\n',
+        '140.126.24.16   lshc\n',
+        '140.110.140.29  lstc\n',
+        '140.110.117.10  lstn\n',
         '140.126.24.10   lscic\n',
         '140.112.20.58   lsntu\n',
         '140.115.71.66   lsncu\n',
