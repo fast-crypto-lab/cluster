@@ -1261,6 +1261,14 @@
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDY1oMcX1MkdO2AmVCz52ceqtA6GGdugEx+mVHlNWoRg0FuXUBtKJNWC6EyWh3KH8dsTiK0LGa5zo9X18MXsE/Bnm4LdyFHkbCtMUN8LgyrbiZpfYZjEU6vpnjiKkupT6bWjr0VjP4DN2es2c2gthIm2/uzY5OSdD/3VSy07X9aukazXN1T2sZ+eynDqEd4yGLG0l87M8xCvThVz2prwtq9brZkSMHz9HUTCMgZivZNk7Az2lxZEE3TeSJwLu6v4Y3rb5J+vTfC+/t3EiA/mXrcRqMFQElIE1gxvruG9LTZGU5LP7EPdfHl4+V9ofdkWiYFSD1PMNCp1rHWmiVYdW32gd4EfeeXz2/7pyhLy9OuO2XQhnhFFcPp+D7PbnZi6FzF0eLN+tSgJ8vHpYAsBLdcdE2mtqXATpkj6d2caDHvZQ7phq2xUOmem8Qp4tbfFNndhBqbT5YY+m4Wf8fRYcpQxYWUZIFLC+lqadWkVRM7yDj5xUTnritX+dbq0nvtzCU="
       ]
+    },
+    {
+      "id": 10122,
+      "name": "vincent",
+      "permit-sudo": false,
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH2vsjTz27Q1s9+nQYb11d7xo9Y+j9QW5aNVNIGe8x96"
+      ]
     }
   ]
 }
