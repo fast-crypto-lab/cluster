@@ -1,106 +1,6 @@
 {
   "hosts": [
     {
-      "name": "gaia",
-      "private-ip": "10.3.2.56",
-      "public-ip-port": "140.109.22.53:6000",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEiDQa9qwAiroZexuQE0Oy40r2Exgerqoc2tOMb9vYYs",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMIZXWi/gBjCP/Da8U4dLU8ocXoIhPr8gYUcxlrwoB5tQuqZrUlZBfHy/8LVeQ++ivwwXLL5yini9UB8znP2GqE=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMdGEYgTRa262R8lxUMB4ymOQlvj31UeOvObEyg2U9UZLs0r+H53a9Yf2X/YEMjyrYvoQlOjgg1hD/E6rtmbP+QhFf+n4M2wx/M9h0L5rEQ69E6LaU2NZWaky8Q0YAwXiG93O9w6o1CRN80IoA/oHBLfK6lYoZn3DkJHms6uSDV4fMg7jiWCzMhJFtp9z3+/bbJPd5gH3hRwrlG6eJCWzWJW2Xlqz63xDJA6YB5Fm01hp4IwbSRJwFTC4XG0wigi+RNP1JCX9mQff44qNqP4sksRwoSTWwoP5jTzQ9WsJO0J4g7UJkcFkitkJHv3lhXyNGEpoIzPHMrRgDOAPui+pP"
-      ]
-    },
-    {
-      "name": "uranus",
-      "private-ip": "10.3.2.57",
-      "public-ip-port": "140.109.22.53:6001",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICtFok0va2ULsdF75CUuHKOE2XkF0yYPgr2Jx/4FogcA",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOczSbZGMgX2lTxU86rfzcJOok343lMwoIEibbvqqTzZhtLYQReKmUfZW4Hv0DZcsiq7Fm0P0snbFDBIljk+m0w=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDD+vVOlWPSUP95gj0PwPi9qnUr/ZW+RLHHp7aMqlBYx6vJIuyUlGuNDxsJ8sywuT/8z5LDBcK3vwlIw3C0EJF00GLVRKuKu46opaaZSMaCADK3+JnPVf35Kcw6Yo6CwaUffJXmuUKZ/PZSpcWNwVwvctTTDY4N68yz0dzkkdV9rjEWxcGD2MSGQS60mRdrbL5rDvsu8Vv1F6sgUeLJhLq5btIsn3MPmynycopWLBzHE5aRNFRAdZamXkv4E7QZjt/T+eIUyMMqdMztnwqmDxLmdDmptDp87Qd9I8M0KoFXz6qMneUO6uIvcS2FKTSLa2SID2eOLw3U9cQq9Wtf1Zj1"
-      ]
-    },
-    {
-      "name": "giant0",
-      "private-ip": "10.3.2.58",
-      "public-ip-port": "140.109.22.53:6002",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMW4OW/EmFdQJh3o6CgcJx/ubfSKnfsN0+CUSZw+qlER",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE8XLdXmKSKYO2p02o8pwas9u3fUdjleBDuzLyXodoMlSXt53/gEW2EoTq32USt6VtVbQHGMXsiWxxj141gnzAM=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDSM5Pxr0F3HkyHMnPzIRvRwh09767HvQwLo6PmzztYCIB/L2RcN1vf2CzCpYQtNQUe1yLGpfrGgcIG9UTIqfr9dP2Qa3Z2VlHzc8MmBmXIflgcXuZ9vVz7/jvXjO/7q3ZuyF/ZhND8SpfSVBKMYKffkiO3TrO8KIpj0R8S46PQqLgKOSwJ0EZDgNMaOg44iHloAOXhxesEhM9BIRKxpVUiqUuocFOiCGOHTjMlsmud2rz1waG+nSzMjnT9MDymuX86Cr3uP+qNtGKdgqTQ8dp47pxFYrUZoNWOK/b4AGXeib8RDekmm2Vqi6nB/H9FchHF1Ufzq+OMwajzN3v1vlUL"
-      ]
-    },
-    {
-      "name": "giant1",
-      "private-ip": "10.3.2.59",
-      "public-ip-port": "140.109.22.53:6003",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILNpZQenunjJV1U+wYx292ZNt88Nzhsv4VX9omZyLIV1",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKCvJ9NjbDGP6iKbzZwYA1iSYRxSzr6S1RRfnnkTAPkFnSsNMx+EHNeBSLbpkhBe+qsUfGTWW9NI/VpviHGOoXE=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6zFKNcK30Eqgo2WOg8eh5hJR17ESVa1D1MIcmKuqzaifvApKgzFxWCT7YbZPQ62XYaQud64TRa7fxVjMOq++MEoaicZe8hsc4QuoWM44YVQRDZ8DuEPgvZr9L8uQcSiEZB1uL7atS4NoT83Y9ed75xeoUmckHD1PnpUeoKcQW8+sQX/1qa45dYk7yI/egzb5RDrBoapsQPew8ROQ7WbPegGZ3BZ6kSJdAta7AqNTDGCmMmnWVCuc84f0Qlvl+CzTXessxUPqiL13MvjQAU375LcrFZFt0MMDwyrcwfOW0FZW/SME5hym9EAoEieSvUepjY5FT7K3Cv0umX0vGhajH"
-      ]
-    },
-    {
-      "name": "giant2",
-      "private-ip": "10.3.2.60",
-      "public-ip-port": "140.109.22.53:6004",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM1oxVFN3SMoEVYhUbezqsaJJxBeteuS2wG1vOIlobeV",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIYLcTz5MFiHvlTI9hkoxzDWQfvG4qpwSDyrX+Uh4ksYgjRAOT3PyO0oBm5u6LB5zxW7fkuV/Rib1EiYgCrXLxY=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAuBAADIWGY3Ver98M4MRIODM0pTxyvKp+Eyu1ZzTfnsU+dxnWVC2pfqa+CDvS7fHcIvhYpc2kRl8nzy+Wcv4zviVTKwZ0dO8fTmB0kJ7SRTpcLeX+0u0tJvpgVhHYHgUj6XIdv+UAwLQkrFpbRKVN8XQC1eLbe0xYG1W1T0RmcgZARK/MCSYj0rFNT3pfVKt1tQn2MgatG18Q+88cfL5G8SP49Onjb2UDhZv2Rte52dDLOlYKnZOgBCY+bjrcD1wuDe9RHX+dny/pHK9WoqduXdI5OqSJsUa1SI5oV8FzEDJkWUvlob3DrazmzpklfZWqD1L2ivDB1wRdVdXluBjH"
-      ]
-    },
-    {
-      "name": "giant3",
-      "private-ip": "10.3.2.61",
-      "public-ip-port": "140.109.22.53:6005",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJmhm3G7Dhmt33yzAnu+j7Jq2BjaxwBFAym99PfckYny",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLmJxdnqh8+AVDWAjTi9335tEalce/5bZ+3mA5ode2naph3D0Rl8JelHuDDd+pOotKL7iVDDdSxU7/BcXvf28yo=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDawggEDWsMEh226Y1608DUCWzWsmdrtTDV9rbnNbyD/p13FgjIlkKcwZU0aQlnajuTf+MN7p+QJbwEvd6pYRBQ5iMKSzosoe3sOkHYfyRiDDvgFWH3kMmHavmgSVKPStaxv+MeliqxMrPo4h2EBeF7hcRy9rw4m6zQZB550zwaXhocntY6IrXa9Pk5XEqAwV2i+d7tAhgPm9kuSutc8xiO+nwoe3GO22lVkKuIrtGcOUpnCz5rlDUvVnlR4+m6VdoK0QEMID/iz3upCp8ahFag1dfQJCiXf2XqEC4XhUkYXq6TU/wANKTussgFrXlKVFSnYB3FTFye98lrRw5U0WKr"
-      ]
-    },
-    {
-      "name": "giant4",
-      "private-ip": "10.3.2.62",
-      "public-ip-port": "140.109.22.53:6006",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILVB01p7OxMn7iqCLEZEIr8pOB1bxN5Q+4Vg7WkryA5y",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMP7iI9ArCEHmCCrD1fC8unvJ01c6EAHT2HHyK+6dSRucpctU/GcbfE4oPvls+aYkcqsP4XFLpt8ZAlBaMQqudE=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDZLmHrRxpzLNcspFi2EqHiCAG8wFi5tH2nr+U8N4EKblQMe+FCWGT+lrnpxrAaYEoDHGDvvTL6rFTMiP7PbWeuK5jBw9loaXD9+9UAeCkO65NyFtqO8GWv7CtZ1f5YZSt1KlNE71ZzLQi3DQr4QQ6eXMTyFdjkEAOI10RSCmjxL1VWhksKzQBQ5NTXjll7KQIkIwt+YKzmHbVebhPaPv5DGKLzxY0rTMNKrhob60TLqcTnYR/+qXGWcvBSOWz6Es2OhOuLYCh/w6suyaI1/gGllpQ16C60+f7EmYGDuFP+yfL04X7yLxYQgQOcWZozzs2CRd4wY0f+0s9UJLEZUF7"
-      ]
-    },
-    {
-      "name": "giant5",
-      "private-ip": "10.3.2.63",
-      "public-ip-port": "140.109.22.53:6007",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICjVqA8z8uoN/vUr2atF4RmazTJ/L+h6SNJAYwqbics1",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKGJdKJbb3uRn9rN6q3zSoiqmuKgz8xguIxUvYt5bv1mPJcesVKsnkdzqxub5l1Ns4MJkgG/vQh7p50nZ9SszNk=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDb1Ku1hTuosqi2PynsohS0jjEcE6s/HJEsHrnqcymxzStx/im7ycycWpuM0e1WxwY0qYeFg0CEyqWxfrdR6iCQDH/kg2mbMYEqv47g3+Iku2iwCV549mm87tBKQVcYYNpBWBOQeFw5n9mKy4NHwie77+SyOzwiqGd+6ZwEadyHInFGveJFGAT6erGsyWedP6rCPSCu8mE5MZy7S8Rcvg5NMU8vg1m1IFo0x3btvQ4sIm8MJVh96Cj7P2D51P2WrDGlK07P1oGkbKPn0dAKpKzoyKt0F/S8OY9KfJrloWIgR0UGv0PhjdLYSq+qGwWsQLHKZO2vPzOWnKjbLRYDmn/7"
-      ]
-    },
-    {
-      "name": "giant6",
-      "private-ip": "10.3.2.64",
-      "public-ip-port": "140.109.22.53:6008",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJsMDODGCAx1qioMcI/KW5fpgOHSlXtO9j3KLiGHuMM7",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDoAoW9dMCarMqbXqoQ/rh5chAvXRQRPAhEYdZXOgQO5tWr4E+wieYNoLfidOOBvbTQD6QlXmWrJDfOwitvjA4k=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcmafTb0feg3uevg/cpT6AmyldBTfEdAeHHwEfkRYf6VOEIfQg13QvJ2l4nIGzQPePRai5xT6T59KhM21NYw1dOXXD2RmneCgJ2QKaqYR5PQTidWshaZzZQJsmzv4F3cKZ4MKN+Lel4fLoA/NwqEvCnQDXPPRDQJ5rhv92gAHt1rmEyaGwqZzsEanDmR7gPYpRamJdilhKfk1JKrniInMHDDvp3iKgmisl5sVJDLNdu4lDz7UwdziKs2QWlpYZ9IgXyA8XlKt+Wnp8047gxyhlZMCMbgjxHFP3gFWUyk3+DdlI5C75A5JelD/ozJ2SjHljvbXjAMGsaz4c3P+p8FTN"
-      ]
-    },
-    {
-      "name": "giant7",
-      "private-ip": "10.3.2.65",
-      "public-ip-port": "140.109.22.53:6009",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII3f9Wyew+7csaCKs3VSSTkuZ55Xe289OAN13vDN1qjY",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM8B/9GqJi+5V1EcUGwXwwdTYcI/pP6c9vLSj/icGTaz5QfII8ccUE9z0RsFD4HJAgG9bppN0BS59L9W0ZHR01k=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv1exRtf/P1BqwV/7tCBT25Ed/ao6Qx/rtv6h380VicfvOVDQfan1t5kyedTLYx14K4KVHavzjC98WHG51XJ7WO5nhkl7UZpJ1DakeKghqnrnvvHPZpcqCNOSTl7WP/scUGra/qLMtBVwini8yEWdSVs3Q9pG8Wlx/2EMHevdag1n/TeX4+zunh9geVN3yPdJE6PZVywmfdxQL6L4hoDDrOfoWRogzs3nFylEckWtVYJvm4j+2sR0zBQKkJ0E5kWW/+KinsKuufkzB4zOCWoGqYtqs8SL7enqvhdwGahzeiUunoQI5ixMRdenMHxBtGZufU0rfKSgPZT0BdfaZUh/9"
-      ]
-    },
-    {
       "name": "angel0",
       "private-ip": "10.3.2.66",
       "public-ip-port": "140.109.22.53:6010",
@@ -241,26 +141,6 @@
       ]
     },
     {
-      "name": "gargoyle0",
-      "private-ip": "10.3.2.80",
-      "public-ip-port": "140.109.22.53:6024",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDv2DUiB9P5M3bBi3pq7Svg1Uz0CE7KD6zhTxYzE55+2",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN72AdyGd7REMwUakZZvQMXy/KTCCVzs+CDnz8D7jsGjfj1VPt92IlJ1h3gGYFkZELO+fCsRIASvJVE7CGwq1IE=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCW5va8Si3E7Hn0ka8OwQ8EOBqcDAhHX12ltTY7jfU1Q71FsDjljFs6pMJTZdhfnfzGeOnMz80qj80r2yNcjOiHiGVJueUTx2X+2CSCI3X79Y2+bwpKwJOESKafTIlT/v2d2L9N2iYZdmERlhOPUqmvQCrW3AsbhFkhC0xYMqB2Y+vRZsWtUD83D7JcGf4KC00Oajijdqs97uyamCslx+kaLLy5lBRaBUzoZ5lYy6gV68DlwmmekeK/qLNbk9nONsH2izXDBJIb1695khU5rat4hCLL7tBjrBow0zbVXZ8fLEul6SHKKDlGYIZisklKoR+ZzNBvvvCTduVK9wF0n84l"
-      ]
-    },
-    {
-      "name": "unicorn0",
-      "private-ip": "10.3.2.81",
-      "public-ip-port": "140.109.22.53:6025",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDhfFcRZxmQ4IdMp1wz4V3qfuAGbM7Emb2J+oKWBII1x",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBACfVBWQszgq9F5rzXrLQ8Tjl4b4FtsD76Zu2/9ptMQ6saj+EVCh2921xfcbmd4GoWkZEYRddCLFdyKxZ3kE3Ts=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdjbzKI6v890ML3jkaeLZNpML8EpVpyeC/EQSUWS1g5WHbdlL5sYlGdHMWjnzhJl2zK15XHEJk3OWDqt88y2R0gR8gwgLN7o/XPQI2uP2gAc9YVrSVa662KjEL+eThZDdKJet6nkGTYCjPoKdiMEGnS264UnvmJJk8klFd/PN76h59bro+TImcDHykC+8nu1KdzUT2zEd6Hiqzl48wWQXWUoWgk+xAksp3MGSlUpj5aqTCjDa03vN+x/Lw4NdpoqQErWWUTbqcOI8Y8Ebkwc9x8VCMcuUKE72ArJdsumWrEGl4w7DWZ+thUA6LaqpK5JBwQKVpjsMy++O22ObCVUKL"
-      ]
-    },
-    {
       "name": "unicorn1",
       "private-ip": "10.3.2.82",
       "public-ip-port": "140.109.22.53:6026",
@@ -288,26 +168,6 @@
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPvom/u5YJEZn3vPCUqPHCtNAoyhzDTzfBM4H8PbgEw",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAW2vWYRogPye8PZ0J4FlEA8w/TaNmMvU8ygsg2GK/c5XTgCUl/1qzVFRLrdnlyG5XGu8cMu1gz6KxILsio05Qs=",
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCnqnuEA8iVg87uBgh+8ON10A2LhLTomSUrfDcZI4cOJN3aLn2RaVb3aMQWEk/5+SbcWBZJ3F1NuRYEEvBj35GvSppB8aWDBoFyPRkRINn61lLbWBJVZ4Sxkrghz+eGelf7oLTT2HjUaSTiVUb9716J31GVOgSDpk8xsvp7RCZBArQYf6aLmeG8e4lma4ZdiOCN0+s95uxCWPdfp+qW6BzU/zWEhpYVNUsxyDjB3IDt7jNQQwPc6PPEEHQRiZCmSTax2+7CQPm+MDcnmldSdhQDxWG32PEHvmB2M686mwpl1EA2jKBmqIWpgcADQpBmHVi6xvNKzdhhSnsXQBW/TPup"
-      ]
-    },
-    {
-      "name": "gargoyle2",
-      "private-ip": "10.3.2.85",
-      "public-ip-port": "140.109.22.53:6029",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKl9YVm56255ZImcmsgliW9c8dpLwUG4A1EBb9TYdBYl",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEm7QaEnYpYGJ5FL8NwbQhdF2fHUsotE0fce49Ua7DxAfcUboUQjT7SxxIZgDo14yFDUbBlTdj+liYGU8NQ5LAs=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyi++Lb9FT+SZxkJ+w8pHLJvv12pxwqtamCEJeJy3hOSs2r8EQVrb/hYp1ot4rk0gdWSN8f9+V4vxg7IU1YwSNnp2PHoXRsxrTP143JpFVgCwAYVwUjRHlW5KwvMIV/5leRYbkhrLQ1cjYyfkS3iR0Xrn/yiURLNkGbMZlK+hbOh0zeCaV25PeHUztbGFQtGbjm0hW7BwgfsZVcAsJrsvrnAoyGuIwzdQCHAkRldR/dXdPs0vFJvmKNLWsv0vgOT1tPcLPe+oczUwHnTiEid+Ho+YIt4q6Fyl6jg7ZhtX8Hig/+p4E7qxvmr+de1W9KGC8zQas3qFaoTqSG286tZ09"
-      ]
-    },
-    {
-      "name": "gargoyle1",
-      "private-ip": "10.3.2.86",
-      "public-ip-port": "140.109.22.53:6030",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB6WOtvv9jtYvhEn4xnmfM1I1Hm5K6jOLDYaRcbDzGGX",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLR9Y06TUmUGFDhJ9iJLjUqnGM+INLngqvQufkl+DXqZUwiPMqf06mg9ympRS01x3aRFth48xFwW6UZuGBFswrI=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQEaDVtvL0TtXcCkWdKAxyjBjufSuFaWawTqHAZX6c6qh9ucLSsk9R9rUw8g69KW0EIaeEIUHwWnyVoZe/sgGPu9/BbQk4Gtk+YmC79tP0LuNgmwnOrMOuP1U9bgDVs/DUvmQrEv57Jt4OrNZI32+e7dS9xzr7kAytoMcUatlntRr3xdW/VG4jqCvXBlaNXOuSbEVxqydemhkx0uITGManGJ72WdGoYR8OmeVrg4TUoJg08jj/LcZycrJIydrL3rESx60WbXR4YD00oomRhcUBY83jMyelqe4PRaXR+E/dVoxTG15fiwpuz2XO88kdB3Mm53KKA+XZOPY/Ckk2xvP1"
       ]
     },
     {
@@ -378,16 +238,6 @@
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEU17uh1ON3/vLmJqcKGUhGcxM2xt0KyGBcu8YUDcK1u",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE03Nh3YB3yl0QrdxyIUYhZLA/9oHiPpegx3XS1Yafd1VbU9WSwLQ2NvA3HPuBTV5P385FXUGgZCuDKPorkDdi8=",
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC88QNGwt8UFBzIWRG+ymHqugRryhE0KG8fexfHaYYiQ31U7yld+3V8Qxborsgoe8bnPduhIUHkUjSxEls/+lHyv3uXbUMkmqECUDSANLE7dwTPUi8bc63RhJNPr8/suKoviiC5Ko6LPMJqzMqUd9zOqwzA79r3le+ZlrZitIP9A8xpVpPuYE9uzar7r5i/k3D3VnvYe/uTge06tyucrkFLER4mWyEEXm48oe1iBcPmH5IJChRsPfBiqXoEux1FqoBZjD/XKjvV5CGGKQxlQEWghg2rIaOMo1bCgqGg2uw0p6UTwjdN8H/7L9E+EOZAHrJoqWHxcOj8I6RPufnckgE8hAYQIDrv4PGD+TNOUMdjLtF0buZ9sdgiE2a3yEevrxsQAuJOAwU6fWCVXaTrlTZyBVXKjqAP6iE5sUb3FsO2lobLDmwYJNgAGcIaIwYceLzHYqD3XE1y2lVigOEdRhzVu0v38UPr5eCkTZ6VpztfUdffvfQKZzl/mEp1uFNqj/s="
-      ]
-    },
-    {
-      "name": "warbear0",
-      "private-ip": "10.3.2.96",
-      "public-ip-port": "140.109.22.53:6040",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICgPHqdYY0Yy+qj113+0s8voHbFBAEMKR9fq1ejl+VhS",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAE4HhgFcwkfgNrtSHcYnbBATDeeGpMw5MAS9nbsdjxOAkrFB5cGmp1UJhoAw4hOI/+Fo71ntmk6U3AuVeTi4Sc=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDH3jpPLHSWMY3FfUHK2333VsyMLvy/mAKDbt0b3yqlxe2BPCOw5OLlG+O98iISxa/M/5QO40CKIkGUSQHyXe9Ro+qFjntSd8AbTqQLpUoQLb+T6tin8x0OD44L0y1UA+e7q8ZJYHntgKdTV+iUYQ6k8JDFmFkdXSG6lYlToWUspFhsUT+71qPQ3BmhIZq+g/PTLDamuWymUG3F6WkZCARcSt5Mkg7thyZzZMlz1y1Aje9xxs95M4OrK6A2KY7bb3NmsG+erUjhZJX/o3l7Lh6e/OTOCLTkOIdpk2N4EFcE1ndgqRY/7jzpWhebTn5gvBmjEG6brmokNVUfBGsngVhL"
       ]
     },
     {

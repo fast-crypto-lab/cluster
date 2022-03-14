@@ -1,6 +1,6 @@
 ########## BEGIN FCL CLUSTER ##########
 
-Host gaia uranus giant0 giant1 giant2 giant3 giant4 giant5 giant6 giant7 angel0 angel1 angel5 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 gargoyle0 unicorn0 unicorn1 behemoth1 angel4 gargoyle2 gargoyle1 rivy0 rivy1 colossus4 colossus5 colossus6 colossus7 rivy2 warbear0 warbear1 wyvern0 wyvern1 troll
+Host angel0 angel1 angel5 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 unicorn1 behemoth1 angel4 rivy0 rivy1 colossus4 colossus5 colossus6 colossus7 rivy2 warbear1 wyvern0 wyvern1 troll
     HashKnownHosts no
     CheckHostIP no
 
@@ -21,56 +21,6 @@ Host gaia uranus giant0 giant1 giant2 giant3 giant4 giant5 giant6 giant7 angel0 
     ###################################################
     #StrictHostKeyChecking yes
     #UserKnownHostsFile ~/.ssh/fcl_known_hosts
-
-Host gaia
-    HostKeyAlias gaia
-    HostName 140.109.22.53
-    Port 6000
-
-Host uranus
-    HostKeyAlias uranus
-    HostName 140.109.22.53
-    Port 6001
-
-Host giant0
-    HostKeyAlias giant0
-    HostName 140.109.22.53
-    Port 6002
-
-Host giant1
-    HostKeyAlias giant1
-    HostName 140.109.22.53
-    Port 6003
-
-Host giant2
-    HostKeyAlias giant2
-    HostName 140.109.22.53
-    Port 6004
-
-Host giant3
-    HostKeyAlias giant3
-    HostName 140.109.22.53
-    Port 6005
-
-Host giant4
-    HostKeyAlias giant4
-    HostName 140.109.22.53
-    Port 6006
-
-Host giant5
-    HostKeyAlias giant5
-    HostName 140.109.22.53
-    Port 6007
-
-Host giant6
-    HostKeyAlias giant6
-    HostName 140.109.22.53
-    Port 6008
-
-Host giant7
-    HostKeyAlias giant7
-    HostName 140.109.22.53
-    Port 6009
 
 Host angel0
     HostKeyAlias angel0
@@ -142,16 +92,6 @@ Host hydra2
     HostName 140.109.22.53
     Port 6023
 
-Host gargoyle0
-    HostKeyAlias gargoyle0
-    HostName 140.109.22.53
-    Port 6024
-
-Host unicorn0
-    HostKeyAlias unicorn0
-    HostName 140.109.22.53
-    Port 6025
-
 Host unicorn1
     HostKeyAlias unicorn1
     HostName 140.109.22.53
@@ -166,16 +106,6 @@ Host angel4
     HostKeyAlias angel4
     HostName 140.109.22.53
     Port 6028
-
-Host gargoyle2
-    HostKeyAlias gargoyle2
-    HostName 140.109.22.53
-    Port 6029
-
-Host gargoyle1
-    HostKeyAlias gargoyle1
-    HostName 140.109.22.53
-    Port 6030
 
 Host rivy0
     HostKeyAlias rivy0
@@ -211,11 +141,6 @@ Host rivy2
     HostKeyAlias rivy2
     HostName 140.109.22.53
     Port 6038
-
-Host warbear0
-    HostKeyAlias warbear0
-    HostName 140.109.22.53
-    Port 6040
 
 Host warbear1
     HostKeyAlias warbear1
