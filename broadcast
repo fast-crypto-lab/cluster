@@ -225,8 +225,8 @@ def main():
 
     print('Trying to connect to all hosts and run "sudo -n true"...')
     all_procs = [proc(build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, TEST_SUDO_COMMAND)) for hostname in hostnames]
-    print('Waiting {} ssh processes to complete for at most 12 seconds...'.format(len(all_procs)))
-    wait_all_procs(all_procs, 12, show_progress=True)
+    print('Waiting {} ssh processes to complete for at most 16 seconds...'.format(len(all_procs)))
+    wait_all_procs(all_procs, 16, show_progress=True)
     result_codes = [p.returncode for p in all_procs]
     print()
 
