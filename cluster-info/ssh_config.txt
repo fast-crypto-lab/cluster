@@ -1,6 +1,6 @@
 ########## BEGIN FCL CLUSTER ##########
 
-Host angel0 angel1 angel5 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 unicorn1 behemoth1 angel4 rivy0 rivy1 colossus4 colossus5 colossus6 colossus7 rivy2 warbear1 wyvern0 wyvern1 troll
+Host warbear1 troll angel0 angel1 angel5 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 unicorn1 behemoth1 angel4 rivy0 rivy1 colossus4 colossus5 colossus6 colossus7 rivy2 wyvern0 wyvern1
     HashKnownHosts no
     CheckHostIP no
 
@@ -22,130 +22,135 @@ Host angel0 angel1 angel5 angel3 colossus0 colossus1 colossus2 colossus3 dragon0
     #StrictHostKeyChecking yes
     #UserKnownHostsFile ~/.ssh/fcl_known_hosts
 
-Host angel0
-    HostKeyAlias angel0
-    HostName 140.109.22.53
-    Port 6010
-
-Host angel1
-    HostKeyAlias angel1
-    HostName 140.109.22.53
-    Port 6011
-
-Host angel5
-    HostKeyAlias angel5
-    HostName 140.109.22.53
-    Port 6012
-
-Host angel3
-    HostKeyAlias angel3
-    HostName 140.109.22.53
-    Port 6013
-
-Host colossus0
-    HostKeyAlias colossus0
-    HostName 140.109.22.53
-    Port 6014
-
-Host colossus1
-    HostKeyAlias colossus1
-    HostName 140.109.22.53
-    Port 6015
-
-Host colossus2
-    HostKeyAlias colossus2
-    HostName 140.109.22.53
-    Port 6016
-
-Host colossus3
-    HostKeyAlias colossus3
-    HostName 140.109.22.53
-    Port 6017
-
-Host dragon0
-    HostKeyAlias dragon0
-    HostName 140.109.22.53
-    Port 6018
-
-Host dragon1
-    HostKeyAlias dragon1
-    HostName 140.109.22.53
-    Port 6019
-
-Host dragon2
-    HostKeyAlias dragon2
-    HostName 140.109.22.53
-    Port 6020
-
-Host dragon3
-    HostKeyAlias dragon3
-    HostName 140.109.22.53
-    Port 6021
-
-Host hydra1
-    HostKeyAlias hydra1
-    HostName 140.109.22.53
-    Port 6022
-
-Host hydra2
-    HostKeyAlias hydra2
-    HostName 140.109.22.53
-    Port 6023
-
-Host unicorn1
-    HostKeyAlias unicorn1
-    HostName 140.109.22.53
-    Port 6026
-
-Host behemoth1
-    HostKeyAlias behemoth1
-    HostName 140.109.22.53
-    Port 6027
-
-Host angel4
-    HostKeyAlias angel4
-    HostName 140.109.22.53
-    Port 6028
-
-Host rivy0
-    HostKeyAlias rivy0
-    HostName 140.109.22.53
-    Port 6032
-
-Host rivy1
-    HostKeyAlias rivy1
-    HostName 140.109.22.53
-    Port 6033
-
-Host colossus4
-    HostKeyAlias colossus4
-    HostName 140.109.22.53
-    Port 6034
-
-Host colossus5
-    HostKeyAlias colossus5
-    HostName 140.109.22.53
-    Port 6035
-
-Host colossus6
-    HostKeyAlias colossus6
-    HostName 140.109.22.53
-    Port 6036
-
-Host colossus7
-    HostKeyAlias colossus7
-    HostName 140.109.22.53
-    Port 6037
-
-Host rivy2
-    HostKeyAlias rivy2
-    HostName 140.109.22.53
-    Port 6038
-
 Host warbear1
     HostKeyAlias warbear1
     HostName 61.221.167.107
     Port 28
+
+Host troll
+    HostKeyAlias troll
+    HostName 140.109.17.87
+    Port 22
+
+Host angel0
+    HostKeyAlias angel0
+    HostName 140.109.17.88
+    Port 6010
+
+Host angel1
+    HostKeyAlias angel1
+    HostName 140.109.17.88
+    Port 6011
+
+Host angel5
+    HostKeyAlias angel5
+    HostName 140.109.17.88
+    Port 6012
+
+Host angel3
+    HostKeyAlias angel3
+    HostName 140.109.17.88
+    Port 6013
+
+Host colossus0
+    HostKeyAlias colossus0
+    HostName 140.109.17.88
+    Port 6014
+
+Host colossus1
+    HostKeyAlias colossus1
+    HostName 140.109.17.88
+    Port 6015
+
+Host colossus2
+    HostKeyAlias colossus2
+    HostName 140.109.17.88
+    Port 6016
+
+Host colossus3
+    HostKeyAlias colossus3
+    HostName 140.109.17.88
+    Port 6017
+
+Host dragon0
+    HostKeyAlias dragon0
+    HostName 140.109.17.88
+    Port 6018
+
+Host dragon1
+    HostKeyAlias dragon1
+    HostName 140.109.17.88
+    Port 6019
+
+Host dragon2
+    HostKeyAlias dragon2
+    HostName 140.109.17.88
+    Port 6020
+
+Host dragon3
+    HostKeyAlias dragon3
+    HostName 140.109.17.88
+    Port 6021
+
+Host hydra1
+    HostKeyAlias hydra1
+    HostName 140.109.17.88
+    Port 6022
+
+Host hydra2
+    HostKeyAlias hydra2
+    HostName 140.109.17.88
+    Port 6023
+
+Host unicorn1
+    HostKeyAlias unicorn1
+    HostName 140.109.17.88
+    Port 6026
+
+Host behemoth1
+    HostKeyAlias behemoth1
+    HostName 140.109.17.88
+    Port 6027
+
+Host angel4
+    HostKeyAlias angel4
+    HostName 140.109.17.88
+    Port 6028
+
+Host rivy0
+    HostKeyAlias rivy0
+    HostName 140.109.17.88
+    Port 6032
+
+Host rivy1
+    HostKeyAlias rivy1
+    HostName 140.109.17.88
+    Port 6033
+
+Host colossus4
+    HostKeyAlias colossus4
+    HostName 140.109.17.88
+    Port 6034
+
+Host colossus5
+    HostKeyAlias colossus5
+    HostName 140.109.17.88
+    Port 6035
+
+Host colossus6
+    HostKeyAlias colossus6
+    HostName 140.109.17.88
+    Port 6036
+
+Host colossus7
+    HostKeyAlias colossus7
+    HostName 140.109.17.88
+    Port 6037
+
+Host rivy2
+    HostKeyAlias rivy2
+    HostName 140.109.17.88
+    Port 6038
 
 Host wyvern0
     HostKeyAlias wyvern0
@@ -155,11 +160,6 @@ Host wyvern0
 Host wyvern1
     HostKeyAlias wyvern1
     HostName 140.109.22.39
-    Port 22
-
-Host troll
-    HostKeyAlias troll
-    HostName 140.109.22.52
     Port 22
 
 ########## END FCL CLUSTER ##########

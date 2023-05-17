@@ -1,9 +1,29 @@
 {
   "hosts": [
     {
+      "name": "warbear1",
+      "private-ip": null,
+      "public-ip-port": "61.221.167.107:28",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIADZZSRzoksCT56Ewjy3LVQ9OUwDuSw6HKpN9qJqQBS5",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAtS5FWH2bQ2U9LOt3IMCDjQqQZzSMS5P0OJqDBPlMZUgwsIa4SfGKNEzaPc9eVaxOT9ASc9Z06vbTHsRycyC/k=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCb297M650zY3s2xt4mJ1vsjK4wUCiWFpyWCGD8uIrAqVnwq6FY3bqPPz1GnCnq/XNQtImbe7fSDvp9tugm7ATvm1eHCe6B41a6+FOc1FM4sg2tm/6deTLvjFi2BsmYJqEs58xmJrlP8JPwjjhQ9HIY3gU9M5PLU452uwP4VoDqto6E2XuQMfakbX8Q6dXBYMK84hVpguBO5kbGs4nm0wkWGzi6UaASqnCyG3rW41vkte3bDtXoOPwgckqXaz2aEX596yuKJgCMjsmM7eVhimf1L6Qj60pNiiIIQFD1y9zkRpBW+ucCJ/ZFLSFTPFC5t7Dx1N8j6yIVwCb9sEFdTKzwZKtqx2m+AqFMjscAWBeGdRM4MPYoq4hyqbja0z3zRDS/gpusIN7KxdO+LZIdAOhkfQhYz4CGtB71MJWBRcabgd9EXKXejWD4Af/Ahxjdr/wOKDBkKq08sP/58J29oTazBnHwyygAM9O0Qiltpra3HEicf4h7gcaN/PvhOiUTwU="
+      ]
+    },
+    {
+      "name": "troll",
+      "private-ip": "10.3.2.87",
+      "public-ip-port": "140.109.17.87:22",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE/TEB94rJK/dnktPSPyQ3tJcLhzAcZsDqF9cjSLLqjf",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMSZSQcfK5le2W9dqnpIeJmfg3mPyEA4i2ki/+6FXt7aLEuveFuAKVFQ2q9EZHqZTcBvZr9lCC8/Xk5DwpI5M+w=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAdcnuXW5kZg/nXfHF+mIQRAWOBw/4e3WgtKcZJzzFh5UivKCEZa5KNRT5C9C/QYK3KyQ40ZdX4LSh7cWYA2lhaPZfeFwVUr/q1+bIaYnO347PqTGF0/OspMc45AUnBM33uV9jwBJqiHBlonYZoed+OftfwDegIS1KmoH95/0Pb5IucCq3KJ9/Zq9NSly2JLg/g5xqB94Tpo/9gNvL3VWkKCntm1qsgq80FItZQgQC9g+ZqOKuBcdQGTItAU91bgOo80tzMbBXkZsaS8ysqbNqLkhDWiHMe5NJye9zNTsNpHG0938BKZKD0Gf85EmkVzVRAFQkFtiFTfL9abmIX8hZXyUIKeFQftbZZrM0goVRalj8wP0hHf5S+GzYGeDGyAHhKFcOpDGNeRdVAGNgSRvyvqUKnzVSUIoE1H6A6CxTAkQotY97mbY43pGc8RSek4hK7xmFe0Wa7/HaqqrA7teX20f0Ni17sRpzPK3A82EXaENoZnx2gSjTKSM4+bj1ods="
+      ]
+    },
+    {
       "name": "angel0",
       "private-ip": "10.3.2.66",
-      "public-ip-port": "140.109.22.53:6010",
+      "public-ip-port": "140.109.17.88:6010",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILx9Aw16K2xJDkWKOHt4DiEgvrNnavJN49f2PJ0yzyeA",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOzloOMb/Tmxza1KVk0TM5T8SoIw51k54UTa8NnKuEsPguebbIoAw+u6C+GhTwtRX5HRhjkmzm1Il4wCCYuUzws=",
@@ -13,7 +33,7 @@
     {
       "name": "angel1",
       "private-ip": "10.3.2.67",
-      "public-ip-port": "140.109.22.53:6011",
+      "public-ip-port": "140.109.17.88:6011",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ8wo9EiJ0f6ncH8IpXM7LI7tSbEbECdneg9oH9cTub9",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA+RJT0mU6ND1KuAXX77u7egSMHH1WVKC/7zBvuBrccIFR2FkNVDLSHA3zcPTP5Pt7xtV6BXjzbmqaS59OorOIQ=",
@@ -23,7 +43,7 @@
     {
       "name": "angel5",
       "private-ip": "10.3.2.68",
-      "public-ip-port": "140.109.22.53:6012",
+      "public-ip-port": "140.109.17.88:6012",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORMwuhvrrknCvDL36mJTQxYggsORH4ln4RTKgJia3IA",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHaApAxV9rRODnrXb/RhiM9qZdide0TkLcMb8ubpTIlym9kI7MF/+8X1hsewO49L2RiQS+Svw5EGuHSqCT65DYs=",
@@ -33,7 +53,7 @@
     {
       "name": "angel3",
       "private-ip": "10.3.2.69",
-      "public-ip-port": "140.109.22.53:6013",
+      "public-ip-port": "140.109.17.88:6013",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILr5qhzzW9l6dlQgpTKAczsNqisefwg2+ZBdjPQLYsXy",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE35quvW/j/q6Np2mRa2RcVXqrWbhJrkdg2Wi3H/DlO3OwezAOOEXtvze9DIXh9BcBDIgFhrxmLOI83yEF+2o+o=",
@@ -43,7 +63,7 @@
     {
       "name": "colossus0",
       "private-ip": "10.3.2.70",
-      "public-ip-port": "140.109.22.53:6014",
+      "public-ip-port": "140.109.17.88:6014",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN2NImG6QW5Mm0Lg949IewYW7rMc5RT/Y+z6rrbgIiDP",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEOXTtH71hl6aJ79yRQW/wVqHHhtrrnTN/h0SRBLkMIfnmBgY1rkxRfrGsP8Wfftx2exPI54Z/qIqWqrwEGMqGc=",
@@ -53,7 +73,7 @@
     {
       "name": "colossus1",
       "private-ip": "10.3.2.71",
-      "public-ip-port": "140.109.22.53:6015",
+      "public-ip-port": "140.109.17.88:6015",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ/AOi1GnOHpemO1a8SPwn4ZKTut9snHe4QcQKpYE8fp",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFIQE+jaMO0RrXsdtvDTbQHXDDqCtki4TgRTYB47QVcS5dgW0bGSMq0B07DH52pB6t8n6b/QcuFSY9lEffTvKMQ=",
@@ -63,7 +83,7 @@
     {
       "name": "colossus2",
       "private-ip": "10.3.2.72",
-      "public-ip-port": "140.109.22.53:6016",
+      "public-ip-port": "140.109.17.88:6016",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIALnpalo/vywWIGRWQwwnhP4HEhmcxvbZeXHNUH9L4IQ",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGgdMHdqDNSfgx7aZbCqxClVOHqrMiQrMWqTYC5hKOIcAw5oGoMLi39wwlIEZX08FUIM0agFCu7hlYqKqdWEu2E=",
@@ -73,7 +93,7 @@
     {
       "name": "colossus3",
       "private-ip": "10.3.2.73",
-      "public-ip-port": "140.109.22.53:6017",
+      "public-ip-port": "140.109.17.88:6017",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKoBJ7X03HOc7dFV8ohBnLyAIAouhBkeSFQOFA6f3n3c",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPU8hxTYPc+IMBai4umLwHH0z1KXa9NPIpYUVTMBGQFrzkSSJ1S83LjpWZpCRYizMJmZIzLYXYX58yone+yXfrI=",
@@ -83,7 +103,7 @@
     {
       "name": "dragon0",
       "private-ip": "10.3.2.74",
-      "public-ip-port": "140.109.22.53:6018",
+      "public-ip-port": "140.109.17.88:6018",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDj6+Ni7mLW+kv+Ivop0tEFusI99JC/0zkXqwqEkf1KC",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJsUChMAXBlR0n6cCLmR9R+301w1gHbCd3ZqsttMrN+cg+rlxdUdLbqFQ3N0QYZkwiylRrsOVdCAPmYIeiaJg10=",
@@ -93,7 +113,7 @@
     {
       "name": "dragon1",
       "private-ip": "10.3.2.75",
-      "public-ip-port": "140.109.22.53:6019",
+      "public-ip-port": "140.109.17.88:6019",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDjHxD/towGEAuDfiKYE+y4byPTXYBmW3pKEleXjG1ox",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA+/QzWG/BPPZbOyn9B5+D5TnXqZrk6v13WpSabhznbUfvz/CbOXxpLDEYCUwhtHyjrP5yqB1RlfyTKFzJnxmtk=",
@@ -103,7 +123,7 @@
     {
       "name": "dragon2",
       "private-ip": "10.3.2.76",
-      "public-ip-port": "140.109.22.53:6020",
+      "public-ip-port": "140.109.17.88:6020",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFlfeIvLOFfc5SHa7/DEubO4Edts33Y86QdpWNqGmhC1",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBChpFc6nFNptq72em+MtZvbZn7uSV0aB3d+b7PdDohNhhIoP5tHRVivmcFwTV34vekdj2vx4vYAHFBPxbpwAbu4=",
@@ -113,7 +133,7 @@
     {
       "name": "dragon3",
       "private-ip": "10.3.2.77",
-      "public-ip-port": "140.109.22.53:6021",
+      "public-ip-port": "140.109.17.88:6021",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN1Vga0ulXFbFOoR4KKvxg79Tpd8l34Y/PgsOOgMziXy",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOQwxjWO5eqDMVCrdAr1PDWDVVTaD/1n7VeGxohKXwOMiAze8uqSpubhDLt0nd3BQQ9XEL87Rf8siQisgj2UQsE=",
@@ -123,7 +143,7 @@
     {
       "name": "hydra1",
       "private-ip": "10.3.2.78",
-      "public-ip-port": "140.109.22.53:6022",
+      "public-ip-port": "140.109.17.88:6022",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICU4XK6z8XvMkGNhvi2AMguIBBeBLeJfgAQ4xxLk6OMa",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMFvY08t7NoQENRhDFxgJrIPkMvNgMfewoFBeMnxQcwLKT+IM6hv82UsdFDZfY4sRqXbTTcT35eKpUPd0ipD1Cs=",
@@ -133,7 +153,7 @@
     {
       "name": "hydra2",
       "private-ip": "10.3.2.79",
-      "public-ip-port": "140.109.22.53:6023",
+      "public-ip-port": "140.109.17.88:6023",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILjsrYjNKZHtsqhf9fVK1Epf8+Pjg0wEjtgx3ut6sBgY",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPFatxYRYHJl61VAsR49K3vWwE38CjP9n2kRqeGNHcGWZMBWFORIp6hCQ4pVj5aldPTtFDXWbpLs0Ogbw/KoXtE=",
@@ -143,7 +163,7 @@
     {
       "name": "unicorn1",
       "private-ip": "10.3.2.82",
-      "public-ip-port": "140.109.22.53:6026",
+      "public-ip-port": "140.109.17.88:6026",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM863OVrjGkZP9Dr57FeNFmEvPeMPgkRbMscrUeu5R6G",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMKUXrwUjbM1pzhZVqvDFzRWkukLofB831Q08v+4FkodZ2s6dtdxMWsPWnhI3MPQ1fQ4Zz0EH6Uh7aIAq2pLcoo=",
@@ -153,7 +173,7 @@
     {
       "name": "behemoth1",
       "private-ip": "10.3.2.83",
-      "public-ip-port": "140.109.22.53:6027",
+      "public-ip-port": "140.109.17.88:6027",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKr7+CPylQnq8pjkpOXWfyKVATqOS2TEEj58j8Fbf9BT",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMni5xaNoOQHUWlwWTitflvDoGV7LzW5hCmImj6ynRpKREuWh5maYrIo0WkkiebiaJ15g3hURoiB7c/QOmyB01E=",
@@ -163,7 +183,7 @@
     {
       "name": "angel4",
       "private-ip": "10.3.2.84",
-      "public-ip-port": "140.109.22.53:6028",
+      "public-ip-port": "140.109.17.88:6028",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPvom/u5YJEZn3vPCUqPHCtNAoyhzDTzfBM4H8PbgEw",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAW2vWYRogPye8PZ0J4FlEA8w/TaNmMvU8ygsg2GK/c5XTgCUl/1qzVFRLrdnlyG5XGu8cMu1gz6KxILsio05Qs=",
@@ -173,7 +193,7 @@
     {
       "name": "rivy0",
       "private-ip": "10.3.2.88",
-      "public-ip-port": "140.109.22.53:6032",
+      "public-ip-port": "140.109.17.88:6032",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPeDkRILZ6xE4W4Tg0ZHWeCZAFpdbiYF8ByUcxc8HYGW",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDbooHjrolf/2xdpfYQb31y97v1cFVRb1dNDDP4smz3hkSBUe08u4es1IEvxPhIIFZ7+xer7QN+hIUn5Ve2ev6o=",
@@ -183,7 +203,7 @@
     {
       "name": "rivy1",
       "private-ip": "10.3.2.89",
-      "public-ip-port": "140.109.22.53:6033",
+      "public-ip-port": "140.109.17.88:6033",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINHUDnYwO2w0dRaDme5AXXtBXIgQ+rTiZT0YqKRmhHeR",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEt76JdbhFMnJXNArWGLCdDnUCFN2Xtr7XcGAUmTfLldB2N3oO0gntAz2APwBVC8FuztGzg8pr0QO80qigFNhW4=",
@@ -193,7 +213,7 @@
     {
       "name": "colossus4",
       "private-ip": "10.3.2.90",
-      "public-ip-port": "140.109.22.53:6034",
+      "public-ip-port": "140.109.17.88:6034",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDmx6sKa8z0t4GC0VIZbw9ZFQ+I8kWpgWHm44lUmIfH",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJD3iQozUopDJkWmzYDhydTd90zuR8BB7DqO1fkhxBjsTNAhvn3i+XSS6VoMHpYLT1UWgaZenEaOUiOwXBnVnBo=",
@@ -203,7 +223,7 @@
     {
       "name": "colossus5",
       "private-ip": "10.3.2.91",
-      "public-ip-port": "140.109.22.53:6035",
+      "public-ip-port": "140.109.17.88:6035",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICchCd4e76upRWBZqdXsHuuYvlgYB2N5o11IMpieT5tu",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNpdvM+NAFPfHuI+ggOmCDyBKr2VpKXoba0K6WlA8IUTOJ+Owke6u6tpm6Z/MjYHhG9C9O8WLjy69WZmQ0u86XE=",
@@ -213,7 +233,7 @@
     {
       "name": "colossus6",
       "private-ip": "10.3.2.92",
-      "public-ip-port": "140.109.22.53:6036",
+      "public-ip-port": "140.109.17.88:6036",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIAMIznkv/Dk+pB7TqNDpWsREbdMGNF+sDOB1B0/i8u/",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFGCKyV1VfFNtNLzZjqNVQ77Pof/iTB+Ugj1Fp7juoYLcDdIK/xUqg421Y0Y4lyoSBmysAbZNvEWwgGPIq7GIWs=",
@@ -223,7 +243,7 @@
     {
       "name": "colossus7",
       "private-ip": "10.3.2.93",
-      "public-ip-port": "140.109.22.53:6037",
+      "public-ip-port": "140.109.17.88:6037",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG+WMPxr0Wf53tp1VKdiePT8YSPe9U46cQ8u/pm7yJdZ",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNs02RuxouPlMU/wFkm0Y5MJYZiuIBAotRxpk7LXcA1YQkquekQkDGfHrJi0CRd2rID7q4hOBrh08TcSjLkoBIM=",
@@ -233,21 +253,11 @@
     {
       "name": "rivy2",
       "private-ip": "10.3.2.94",
-      "public-ip-port": "140.109.22.53:6038",
+      "public-ip-port": "140.109.17.88:6038",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEU17uh1ON3/vLmJqcKGUhGcxM2xt0KyGBcu8YUDcK1u",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE03Nh3YB3yl0QrdxyIUYhZLA/9oHiPpegx3XS1Yafd1VbU9WSwLQ2NvA3HPuBTV5P385FXUGgZCuDKPorkDdi8=",
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC88QNGwt8UFBzIWRG+ymHqugRryhE0KG8fexfHaYYiQ31U7yld+3V8Qxborsgoe8bnPduhIUHkUjSxEls/+lHyv3uXbUMkmqECUDSANLE7dwTPUi8bc63RhJNPr8/suKoviiC5Ko6LPMJqzMqUd9zOqwzA79r3le+ZlrZitIP9A8xpVpPuYE9uzar7r5i/k3D3VnvYe/uTge06tyucrkFLER4mWyEEXm48oe1iBcPmH5IJChRsPfBiqXoEux1FqoBZjD/XKjvV5CGGKQxlQEWghg2rIaOMo1bCgqGg2uw0p6UTwjdN8H/7L9E+EOZAHrJoqWHxcOj8I6RPufnckgE8hAYQIDrv4PGD+TNOUMdjLtF0buZ9sdgiE2a3yEevrxsQAuJOAwU6fWCVXaTrlTZyBVXKjqAP6iE5sUb3FsO2lobLDmwYJNgAGcIaIwYceLzHYqD3XE1y2lVigOEdRhzVu0v38UPr5eCkTZ6VpztfUdffvfQKZzl/mEp1uFNqj/s="
-      ]
-    },
-    {
-      "name": "warbear1",
-      "private-ip": null,
-      "public-ip-port": "61.221.167.107:28",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIADZZSRzoksCT56Ewjy3LVQ9OUwDuSw6HKpN9qJqQBS5",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAtS5FWH2bQ2U9LOt3IMCDjQqQZzSMS5P0OJqDBPlMZUgwsIa4SfGKNEzaPc9eVaxOT9ASc9Z06vbTHsRycyC/k=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCb297M650zY3s2xt4mJ1vsjK4wUCiWFpyWCGD8uIrAqVnwq6FY3bqPPz1GnCnq/XNQtImbe7fSDvp9tugm7ATvm1eHCe6B41a6+FOc1FM4sg2tm/6deTLvjFi2BsmYJqEs58xmJrlP8JPwjjhQ9HIY3gU9M5PLU452uwP4VoDqto6E2XuQMfakbX8Q6dXBYMK84hVpguBO5kbGs4nm0wkWGzi6UaASqnCyG3rW41vkte3bDtXoOPwgckqXaz2aEX596yuKJgCMjsmM7eVhimf1L6Qj60pNiiIIQFD1y9zkRpBW+ucCJ/ZFLSFTPFC5t7Dx1N8j6yIVwCb9sEFdTKzwZKtqx2m+AqFMjscAWBeGdRM4MPYoq4hyqbja0z3zRDS/gpusIN7KxdO+LZIdAOhkfQhYz4CGtB71MJWBRcabgd9EXKXejWD4Af/Ahxjdr/wOKDBkKq08sP/58J29oTazBnHwyygAM9O0Qiltpra3HEicf4h7gcaN/PvhOiUTwU="
       ]
     },
     {
@@ -268,16 +278,6 @@
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJzzpZLCk9Wy8O+lTF2toRF6vt0Q0bT7sWU7BAVnfGSP",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGk+sw5rIrGP6EpS/4O7HrRob2j2pspNhbgjL9qWLE9bhPUBtDBsoZJFsHq6JtrDVsbJ3kPfNzRhSoJKpwzGZrM=",
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDh9A0Fji3atTO5/R3CTtrd7UubbiE2qhK2s3zJpT0ORcjqIwHn5uwCldIsdcLAdEXHOKSWpFgIlPJdZSv/ZLBoIVULiLQ5ujFEE76gaQ31dcUE3djfFLuwteddY+s1K5SJr3QyGvtmMkVvqaQiz0O6pNUbryK+okViNUDTwxUnS8SjVsZdZCDIS0MwWQs3ol7SGq/i61g1lv1PwfF1csdZUnbAtrtQIgnQmKJHmfe/cUggQSauhWUZxQVsLo4Xsd8ILPXlrpqKMJzjTxyVhkbvZ9McoqG7LADi63/Jt4JDhpXv7qC+332EHlxB3Gv+rRxik04jxigoHkxEzs1SHkV3"
-      ]
-    },
-    {
-      "name": "troll",
-      "private-ip": "10.3.2.87",
-      "public-ip-port": "140.109.22.52:22",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE/TEB94rJK/dnktPSPyQ3tJcLhzAcZsDqF9cjSLLqjf",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMSZSQcfK5le2W9dqnpIeJmfg3mPyEA4i2ki/+6FXt7aLEuveFuAKVFQ2q9EZHqZTcBvZr9lCC8/Xk5DwpI5M+w=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAdcnuXW5kZg/nXfHF+mIQRAWOBw/4e3WgtKcZJzzFh5UivKCEZa5KNRT5C9C/QYK3KyQ40ZdX4LSh7cWYA2lhaPZfeFwVUr/q1+bIaYnO347PqTGF0/OspMc45AUnBM33uV9jwBJqiHBlonYZoed+OftfwDegIS1KmoH95/0Pb5IucCq3KJ9/Zq9NSly2JLg/g5xqB94Tpo/9gNvL3VWkKCntm1qsgq80FItZQgQC9g+ZqOKuBcdQGTItAU91bgOo80tzMbBXkZsaS8ysqbNqLkhDWiHMe5NJye9zNTsNpHG0938BKZKD0Gf85EmkVzVRAFQkFtiFTfL9abmIX8hZXyUIKeFQftbZZrM0goVRalj8wP0hHf5S+GzYGeDGyAHhKFcOpDGNeRdVAGNgSRvyvqUKnzVSUIoE1H6A6CxTAkQotY97mbY43pGc8RSek4hK7xmFe0Wa7/HaqqrA7teX20f0Ni17sRpzPK3A82EXaENoZnx2gSjTKSM4+bj1ods="
       ]
     }
   ],
