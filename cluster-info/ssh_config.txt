@@ -1,6 +1,6 @@
 ########## BEGIN FCL CLUSTER ##########
 
-Host warbear1 troll angel0 angel1 angel5 angel3 colossus0 colossus1 colossus2 colossus3 dragon0 dragon1 dragon2 dragon3 hydra1 hydra2 unicorn1 behemoth1 angel4 rivy0 rivy1 colossus4 colossus5 colossus6 colossus7 rivy2 wyvern0 wyvern1
+Host troll angel0 angel1 angel5 colossus1 dragon3 hydra1 hydra2 unicorn1 behemoth1 angel4 rivy1 colossus4 colossus5 colossus6 colossus7 rivy2 wyvern0 wyvern1
     HashKnownHosts no
     CheckHostIP no
 
@@ -22,11 +22,6 @@ Host warbear1 troll angel0 angel1 angel5 angel3 colossus0 colossus1 colossus2 co
     #StrictHostKeyChecking yes
     #UserKnownHostsFile ~/.ssh/fcl_known_hosts
 
-Host warbear1
-    HostKeyAlias warbear1
-    HostName 61.221.167.107
-    Port 28
-
 Host troll
     HostKeyAlias troll
     HostName 140.109.17.87
@@ -47,45 +42,10 @@ Host angel5
     HostName 140.109.17.88
     Port 6012
 
-Host angel3
-    HostKeyAlias angel3
-    HostName 140.109.17.88
-    Port 6013
-
-Host colossus0
-    HostKeyAlias colossus0
-    HostName 140.109.17.88
-    Port 6014
-
 Host colossus1
     HostKeyAlias colossus1
     HostName 140.109.17.88
     Port 6015
-
-Host colossus2
-    HostKeyAlias colossus2
-    HostName 140.109.17.88
-    Port 6016
-
-Host colossus3
-    HostKeyAlias colossus3
-    HostName 140.109.17.88
-    Port 6017
-
-Host dragon0
-    HostKeyAlias dragon0
-    HostName 140.109.17.88
-    Port 6018
-
-Host dragon1
-    HostKeyAlias dragon1
-    HostName 140.109.17.88
-    Port 6019
-
-Host dragon2
-    HostKeyAlias dragon2
-    HostName 140.109.17.88
-    Port 6020
 
 Host dragon3
     HostKeyAlias dragon3
@@ -116,11 +76,6 @@ Host angel4
     HostKeyAlias angel4
     HostName 140.109.17.88
     Port 6028
-
-Host rivy0
-    HostKeyAlias rivy0
-    HostName 140.109.17.88
-    Port 6032
 
 Host rivy1
     HostKeyAlias rivy1
