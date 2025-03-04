@@ -1,6 +1,6 @@
 ########## BEGIN FCL CLUSTER ##########
 
-Host troll angel0 angel1 angel5 colossus1 colossus3 dragon3 hydra1 hydra2 unicorn1 behemoth1 angel4 rivy1 colossus4 colossus5 colossus6 colossus7 rivy2 wyvern0 wyvern1
+Host troll angel0 angel1 angel5 colossus1 colossus3 dragon3 hydra1 hydra2 unicorn1 behemoth1 angel4 rivy1 colossus4 colossus5 colossus6 colossus7 wyvern0 wyvern1
     HashKnownHosts no
     CheckHostIP no
 
@@ -106,11 +106,6 @@ Host colossus7
     HostKeyAlias colossus7
     HostName 140.109.17.88
     Port 6037
-
-Host rivy2
-    HostKeyAlias rivy2
-    HostName 140.109.17.88
-    Port 6038
 
 Host wyvern0
     HostKeyAlias wyvern0
