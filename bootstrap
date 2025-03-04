@@ -19,9 +19,11 @@ elif $(grep -q '^Ubuntu 22.04' /etc/issue 2> /dev/null) ; then
 elif $(grep -q '^Welcome to openSUSE Tumbleweed' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine_suseT.py'
 elif $(grep -q '^CentOS Linux release 7' /etc/centos-release 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine_cOS7or8.py'
+    UPDATE_PY='_update_settings_on_this_machine_cOS7or8_aml8.py'
 elif $(grep -q '^CentOS Linux release 8' /etc/centos-release 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine_cOS7or8.py'
+    UPDATE_PY='_update_settings_on_this_machine_cOS7or8_aml8.py'
+elif $(grep -q '^AlmaLinux release 8' /etc/almalinux-release 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine_cOS7or8_aml8.py'
 else
     >&2 echo 'Error: OS/Distribution not supported. Supported OS:'
     >&2 echo '       Ubuntu 14.04'
