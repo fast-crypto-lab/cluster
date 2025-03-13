@@ -21,16 +21,6 @@
       ]
     },
     {
-      "name": "angel1",
-      "private-ip": "10.3.2.67",
-      "public-ip-port": "140.109.17.88:6011",
-      "public-keys": [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ8wo9EiJ0f6ncH8IpXM7LI7tSbEbECdneg9oH9cTub9",
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA+RJT0mU6ND1KuAXX77u7egSMHH1WVKC/7zBvuBrccIFR2FkNVDLSHA3zcPTP5Pt7xtV6BXjzbmqaS59OorOIQ=",
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvcw2zscgjkG86ckXwYh28B/mYknhJuem3mbt8RhZvJXCBfcNc2MBrwTFvtZxjyySC9Lh8h4blReiYTcnRt14ruVXZNFc/xxfDKYM/hiaiA3UI9GEcSSm0yCcMRXFudJ29JEd+CWqXA7S0MKN9h9GrKZGerC78eqsvget7ZHcNXTvOA6mfjuyaoCo1FR3GpqQ1ygypaxj8AaPrkYg6taTKtpB3DQRhwEx81KaY5thAK6lgMaEIEzu2ofLHHTEod5fShkRsD774YzmpZ95ZASRFlem0JRSUEnaR0SgKkFf22oiKO34R97LoE2EaYfEDQGVZOHqBiYNDrrfCvGSn91td"
-      ]
-    },
-    {
       "name": "angel5",
       "private-ip": "10.3.2.68",
       "public-ip-port": "140.109.17.88:6012",
