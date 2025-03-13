@@ -21,6 +21,16 @@
       ]
     },
     {
+      "name": "angel1",
+      "private-ip": "10.3.2.67",
+      "public-ip-port": "140.109.17.88:6011",
+      "public-keys": [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOjxeeGxsf1WAT33v40d6wfCSZtPbYifmRwuFmE2sXI3",
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBI+oDQcA5V+gyx9GW/jgjs6PoQQQtPBsNO3vLL347DzTLIAzFH8pGqZwoIAhuwCTPJBPmuMrfAqxa/9uDGtb53s=",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC4fIYJ/gllw11rK1oCNi0Vq6qRe9P+3SBrEGFtWyLxwr/gFrm9Z4leiqO/MyDvLsiitt1CE+FJcEha9icUVai4IucY+d4pGKZTZ1tmWlszq8PQpW7Hkxxah4AjBDFsw+OV83Qh9wvsbxlMMe+noBVjHrZtId8TayNkWx5gLf2LLU+2E1lpi1/Fa0Ie3F4EEMS+I7pIBeJn9L2jywRzxAZgEztO3+BUL1oHe1isT411LR9e5bOfJpG9yqKmP8re+XhI2ypcTuGCZ8nqT9p2ze/l+32yiFB+w97184DFoD4cdW7OPH+fY4KGqFdk2jOQFDrXT3n5zoZzfAHP5/8VJM6zJZ8Bqwor72u1b6NGaCCUVztHbQby/MoCPvnJBAHPQevr4Wuew0N1OX4Evddvkflw8m7pEqYZ162E8HEhYcd4RSyHExZS0EeHvSrz5BCQz3gGue8bO3xzQC2S77bJIlzBvpOoEPDTqvUu+tglSoRsS/Q1qXOeQ2b5FvSpigZpl8E="
+      ]
+    },
+    {
       "name": "angel5",
       "private-ip": "10.3.2.68",
       "public-ip-port": "140.109.17.88:6012",
