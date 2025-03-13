@@ -48,10 +48,10 @@ def assert_good_environment():
     assert os.getuid() == 0
     # Ensure you are running Python 3.9 (or later)
     assert sys.version_info.major == 3
-    assert sys.version_info.minor >= 9
+    assert sys.version_info.minor >= 12
     # Ensure you are running this on a Ubuntu 22.04 server
     assert distro.linux_distribution()[0] == 'Ubuntu'
-    assert distro.linux_distribution()[1].startswith('22.04')
+    assert distro.linux_distribution()[1].startswith('24.04')
 
 
 def load_fcl_json_to_global():
