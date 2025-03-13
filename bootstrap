@@ -4,18 +4,20 @@ _main_(){
 # ----------------------------------------------------------------------------
 
 #grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null || { >&2 echo 'Error: This is neither Ubuntu 16.04 nor 18.04'; exit 1; }
-if $(grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine16.py'
-elif $(grep -q '^Ubuntu 14.04' /etc/issue 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine14.py'
+if   $(grep -q '^Ubuntu 14.04' /etc/issue 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine_u14.py'
+elif $(grep -q '^Ubuntu 16.04' /etc/issue 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine_u16.py'
 elif $(grep -q '^Ubuntu 18.04' /etc/issue 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine18.py'
+    UPDATE_PY='_update_settings_on_this_machine_u18.py'
 elif $(grep -q '^Ubuntu 20.04' /etc/issue 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine20.py'
+    UPDATE_PY='_update_settings_on_this_machine_u20.py'
 elif $(grep -q '^Ubuntu 21.04' /etc/issue 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine21.py'
+    UPDATE_PY='_update_settings_on_this_machine_u21.py'
 elif $(grep -q '^Ubuntu 22.04' /etc/issue 2> /dev/null) ; then
-    UPDATE_PY='_update_settings_on_this_machine22.py'    
+    UPDATE_PY='_update_settings_on_this_machine_u22.py'
+# elif $(grep -q '^Ubuntu 24.04' /etc/issue 2> /dev/null) ; then
+#     UPDATE_PY='_update_settings_on_this_machine_u24.py'
 elif $(grep -q '^Welcome to openSUSE Tumbleweed' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine_suseT.py'
 elif $(grep -q '^CentOS Linux release 7' /etc/centos-release 2> /dev/null) ; then
@@ -32,9 +34,11 @@ else
     >&2 echo '       Ubuntu 20.04'
     >&2 echo '       Ubuntu 21.04'
     >&2 echo '       Ubuntu 22.04'
+    >&2 echo '       Ubuntu 24.04'
     >&2 echo '       openSUSE Tumbleweed'
     >&2 echo '       CentOS Linux release 7'
     >&2 echo '       CentOS Linux release 8'
+    >&2 echo '       AlmaLinux release 8'
     exit 1
 fi
 test "$( id -u )" = 0 || { >&2 echo 'Error: You are not root, please use "sudo" to run the script'; exit 1; }
