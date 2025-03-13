@@ -16,8 +16,8 @@ elif $(grep -q '^Ubuntu 21.04' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine_u21.py'
 elif $(grep -q '^Ubuntu 22.04' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine_u22.py'
-# elif $(grep -q '^Ubuntu 24.04' /etc/issue 2> /dev/null) ; then
-#     UPDATE_PY='_update_settings_on_this_machine_u24.py'
+elif $(grep -q '^Ubuntu 24.04' /etc/issue 2> /dev/null) ; then
+    UPDATE_PY='_update_settings_on_this_machine_u24.py'
 elif $(grep -q '^Welcome to openSUSE Tumbleweed' /etc/issue 2> /dev/null) ; then
     UPDATE_PY='_update_settings_on_this_machine_suseT.py'
 elif $(grep -q '^CentOS Linux release 7' /etc/centos-release 2> /dev/null) ; then
