@@ -168,7 +168,9 @@ def parse_cmdline_args():
     parser.add_argument('-i', '--identity', metavar='<identity>',
             help='specify the private key for public key authentication instead of ssh defaults')
     parser.add_argument('--ignore', metavar='<ignore>', default='',
-            help='specify a comma-separated list of host names to ignore')
+            help='specify a comma-separated list of host names to ignore. (conflict with select)')
+    parser.add_argument('--select', metavar='<select>', default='',
+            help='specify a comma-separated list of host names to select. (conflict with ignore)')
     return parser.parse_args()
 
 
@@ -205,6 +207,15 @@ def main():
 
     _ignore_str = parsed_opt.ignore
     ignore_list_of_hostnames = (lambda x: [] if len(x) == 1 and x[0] == '' else x)(_ignore_str.split(','))
+
+    _select_str = parsed_opt.select
+    select_list_of_hostnames = (lambda x: [] if len(x) == 1 and x[0] == '' else x)(_select_str.split(','))
+
+    if len(ignore_list_of_hostnames) != 0 and len(select_list_of_hostnames) != 0:
+      print('Command-line argument error:')
+      print('You cannot select hosts and ignore some other hosts at the same time. Use one argument only.')
+      sys.exit(1)      
+
     hostnames = [h['name'] for h in FCL['hosts']]
 
     for ignored_hostname in ignore_list_of_hostnames:
@@ -213,7 +224,16 @@ def main():
             print('You mentioned that you want to ignore the host `{}`, but there is no such host'.format(ignored_hostname))
             sys.exit(1)
 
-    FCL['hosts'] = [h for h in FCL['hosts'] if h['name'] not in ignore_list_of_hostnames]
+    for selected_hostname in select_list_of_hostnames:
+        if selected_hostname not in hostnames:
+            print('Command-line argument error:')
+            print('You mentioned that you want to select the host `{}`, but there is no such host'.format(selected_hostname))
+            sys.exit(1)
+
+    if len(ignore_list_of_hostnames) != 0:
+      FCL['hosts'] = [h for h in FCL['hosts'] if h['name'] not in ignore_list_of_hostnames]
+    elif len(select_list_of_hostnames) != 0:
+      FCL['hosts'] = [h for h in FCL['hosts'] if h['name'] in select_list_of_hostnames]
     hostnames = [h['name'] for h in FCL['hosts']]
 
     print('The username we will use to log in the cluster is: "{}"'.format(username))
