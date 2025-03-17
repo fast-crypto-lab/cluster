@@ -188,6 +188,7 @@ def build_ssh_command(hostname, username, identity, CONFIG, KNOWNH, remote_comma
         args += ['-i', identity]
     args += [hostname]
     args += [remote_command]
+    print('DEBUG: args = {}'.format(args))
     return args
 
 

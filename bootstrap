@@ -42,7 +42,8 @@ else
     exit 1
 fi
 test "$( id -u )" = 0 || { >&2 echo 'Error: You are not root, please use "sudo" to run the script'; exit 1; }
-command -v sshd > /dev/null || { >&2 echo 'Error: The package "openssh-server" is not installed'; exit 1; }
+#command -v sshd > /dev/null || { >&2 echo 'Error: The package "openssh-server" is not installed'; exit 1; }
+command -v sshd || { >&2 echo 'Error: The package "openssh-server" is not installed'; exit 1; }
 command -v git > /dev/null || { >&2 echo 'Error: The package "git" is not installed'; exit 1; }
 
 # ----------------------------------------------------------------------------
