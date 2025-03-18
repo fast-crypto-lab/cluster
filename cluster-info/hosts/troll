@@ -1,4 +1,4 @@
-private-ip 10.3.2.87
+private-ip 10.3.2.254
 public-ip-port 140.109.17.87:22
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE/TEB94rJK/dnktPSPyQ3tJcLhzAcZsDqF9cjSLLqjf
 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMSZSQcfK5le2W9dqnpIeJmfg3mPyEA4i2ki/+6FXt7aLEuveFuAKVFQ2q9EZHqZTcBvZr9lCC8/Xk5DwpI5M+w=
