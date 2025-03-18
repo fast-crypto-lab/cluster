@@ -50,8 +50,10 @@ def assert_good_environment():
     assert sys.version_info.major == 3
     assert sys.version_info.minor >= 9
     # Ensure you are running this on a Ubuntu 22.04 server
-    assert distro.linux_distribution()[0] == 'Ubuntu'
-    assert distro.linux_distribution()[1].startswith('22.04')
+    # assert distro.linux_distribution()[0] == 'Ubuntu'
+    assert distro.name() == 'Ubuntu'
+    # assert distro.linux_distribution()[1].startswith('22.04')
+    assert distro.version() == '22.04'
 
 
 def load_fcl_json_to_global():
