@@ -75,7 +75,7 @@ then
     echo 'Trying to acquire a lock...  DONE'
 else
     >&2 echo 'Error: Failed to acquire a lock, the file /fcl-cluster-maintenance.lock already exists'
-    exit 1
+    exit 2
 fi
 
 # ----------------------------------------------------------------------------
@@ -87,7 +87,7 @@ then
 else
     >&2 echo 'Error: the command `./_update_settings_on_this_machine.py check-this-host-in-json` failed'
     bash -c "./${UPDATE_PY} unlock"
-    exit 2
+    exit 3
 fi
 
 # ----------------------------------------------------------------------------
@@ -99,7 +99,7 @@ then
 else
     >&2 echo 'Error: the command `./_update_settings_on_this_machine.py check-json-applicability` failed'
     bash -c "./${UPDATE_PY} unlock"
-    exit 3
+    exit 4
 fi
 
 # ----------------------------------------------------------------------------
@@ -111,7 +111,7 @@ then
 else
     >&2 echo 'Error: the command `./_update_settings_on_this_machine.py apply-json` failed'
     bash -c "./${UPDATE_PY} unlock"
-    exit 4
+    exit 5
 fi
 
 # ----------------------------------------------------------------------------
