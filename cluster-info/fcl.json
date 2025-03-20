@@ -324,7 +324,7 @@
     {
       "id": 10021,
       "name": "kbj",
-      "permit-sudo": true,
+      "permit-sudo": false,
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAzduWtqtWll7f2UNG+ZjI/D8j9KVuX68iCbEDXvTi7/LNsvU2dC7q4spQ9+ouaPkJn2Ldmrk9CQadeAd+FwWdb+hiTERqKJQeAJrT6gcnqsNYJQYNqCKKSoOjPTXSo5gUUWPuv9s3ZbBgCw8XJSKb0A0bhvt+wVqSlKHf2xL5tBwdxW8oiagU0x0gv7VhesjYzhK+/j3s9AWtfZM9k3Gf/VdKPaXBMIayxPrOR8N9up6P+52bUHA1Ge4L5jrQJC6/7kitynffG4/SpmpQ008JJe8Rz6Sezcowll79q47W9rulms3O/xsiP4y28fEgG7gs9REeEL1rsr7DQlMbgBYhCQ=="
       ]
@@ -687,7 +687,7 @@
     {
       "id": 10079,
       "name": "js",
-      "permit-sudo": true,
+      "permit-sudo": false,
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILyB1gaNTMfu7odcHfzQSGNplAa6mbFWPbLNNFDnPgul"
       ]
@@ -695,7 +695,7 @@
     {
       "id": 10080,
       "name": "thekev",
-      "permit-sudo": true,
+      "permit-sudo": false,
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdHvpdyAPwjPuUXFNEuuvRD8woHRNooLr0wdRXttIVvk9FfL+Mso+7dQOffPws08W3dM7Ziypok56Uk5TWcPDMqAtmpcHV83g/+H75J0bcDKfb67c5D505nPEietH4DYm4lLGspE6PS0eJRdeYVwMP8npkmKIbWkXx/W7VFwbsQdl9VnZB3aN9QrNfFUKtoE1Fni5IkIkUcPHjeFf89heGmrnQ4+Wpgpfj7Dn0jJ+F9rTYAxELqYy0z6xKMxmLFLAGpt3J4VDuWtH3PQMJXMJHr9YrzjIM08Av6tw9tpyYUpX+FGQaemlGs0Y40ZuwDeaM2c0T/B62qZ0fWy0onqRl",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKwA3Vs0oXI4DSRxMJzCkEr+vu0rnvuSq5olOi/8qPkiK1GWIVD8cirYxLraew8Nt57P5LAl2jSBvuckLDlsxTc=",
@@ -818,7 +818,7 @@
     {
       "id": 10098,
       "name": "princeflame7",
-      "permit-sudo": true,
+      "permit-sudo": false,
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMW6s/oB3flEtjlIyp64gPTlaY12yoVQg/Kv07Tt5edOQlJV0u0Nti1fw4exGhGEmirsNAl1Q7J9uBYRyauoZyXK6MTvVPDXOwiY0L3DXiF3tB8dxAHq4d4MXx1Jxr+CO0uDtecDeds7BNo+/neIZsnZRUIRfnOrKOcC16+HnUe8roLA/aBuJjQCa1iIxyV+HFPe9R5bNJ3CmRyNWJM36CMoBtdGFAsMP4q5rVKFNE3sCGGukbFcd8Uwfvxlrst2yK0RbPl+fxbj8tSD8/yuGNQMDdWuR7Em0PDkYgRnDisTCzQUkRDuCdeNos2TTlx/ETdbuElIzg7k3Zk120HFnJ"
       ]
@@ -909,7 +909,7 @@
     {
       "id": 10109,
       "name": "jason",
-      "permit-sudo": true,
+      "permit-sudo": false,
       "public-keys": [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWZC2sEHY8v+kwwmO+hH204CB/H8ISB9354F1iUKHrC4VorUP/QI9DpDud04WXa1kxbdqh7VZESb6V2FuXTljsloNIAXK2dH/UtQKd1SqCv77ZdF7AUx+u3uf4nGXJ1k2TC9EU9/bA66v3wfR6xKRG8UdoHgFHiAcKpoxHs0/72IgLmEkdSeSFattx9CQa246M8yMb7OuDIlhKGNR9WImwKpx6Ghtsl3ULHLpjpZZ/FvXUhBmO4qjsMNHBU82eHp+D0z0sd9GjP26MhYV0kcd+DpuAPYiqM8/crmVLe8h6MOvwFmcXAyapWUZHnulVyR6nI3gV4XqmISmaHUT/Yjl/",
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG2lsi0LjJhmEp97PyRkD1B/kCYoqsw4pxMVNJSYWKiTd7cif7lDXB6Y5kjmmfAWRS9zgqgZ15qeGDL6ixa6r7hpSi7lcijVzUnh2EtgmG43KyA1lXzHVvzgFTtkwY2/jT8AUIYvrY8FnMKT+JC78kM9n7tpBXjVOTAwjAZ1N+oJNFbB1fmJdrZmNK9rP6g3VSJbEPtMWIm2DUKDzbGvZCu9z5uGhwyVBowG4qndjCk9wuTlTo4psE6Xr7RAwHIcKcLTxBUXqD/nt4ELkji3lCLFIqmELz1u8xNQJfJvDeePTJIgnE0W3CU9eoSYDMW/DR7nSX8oX1CTyNoc08LTAP"
@@ -966,7 +966,7 @@
     {
       "id": 10116,
       "name": "minghan",
-      "permit-sudo": true,
+      "permit-sudo": false,
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDwqEOc9X3LXtHBI1WwGLIH9MMDb5t3qTLtzWKmqvOC7"
       ]
