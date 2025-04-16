@@ -104,12 +104,12 @@ Host rivy2
 
 Host wyvern0
     HostKeyAlias wyvern0
-    HostName 140.109.22.38
+    HostName 192.168.27.130
     Port 22
 
 Host wyvern1
     HostKeyAlias wyvern1
-    HostName 140.109.22.39
+    HostName 192.168.27.131
     Port 22
 
 ########## END FCL CLUSTER ##########

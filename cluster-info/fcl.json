@@ -163,7 +163,7 @@
     {
       "name": "wyvern0",
       "private-ip": null,
-      "public-ip-port": "140.109.22.38:22",
+      "public-ip-port": "192.168.27.130:22",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFF8d5HFQ5LLUMqT4OpwrdvCyAkSKoXDN9zlQJW/qAq5",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOOQ4PTaairrbx53udFANo+FooM9WPTSdtr3nMKlvTECug/Z0RFuRwcxNVMIcxJB2StzlUNruQlE012qivpfR9M=",
@@ -173,7 +173,7 @@
     {
       "name": "wyvern1",
       "private-ip": null,
-      "public-ip-port": "140.109.22.39:22",
+      "public-ip-port": "192.168.27.131:22",
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJzzpZLCk9Wy8O+lTF2toRF6vt0Q0bT7sWU7BAVnfGSP",
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGk+sw5rIrGP6EpS/4O7HrRob2j2pspNhbgjL9qWLE9bhPUBtDBsoZJFsHq6JtrDVsbJ3kPfNzRhSoJKpwzGZrM=",
