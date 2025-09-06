@@ -255,7 +255,9 @@
       "id": 10010,
       "name": "blueprint",
       "permit-sudo": false,
-      "public-keys": []
+      "public-keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA3g6QVcwg61WuXnzYmRVfmYktElWQTNQPmaMzxXwZ2R2DbpvLReShDJOuhZgDw3bSrTcu+21NBtjTn3J7s7RtNPBBwupzdbG23WN6JJlgIGUDC33sKcZ5kLe1UgK+DBIpXDTVlKyMr6raZsrjgnwhULSyJkEXicih9jkq0MMPADIqnLJPRsUxwFMdydr845Z3NQ5bs++O6KRh4+TxLd5DxRaoYwgH4iIFtDctAtFhuxeaD0TyMBstd32hotBHDRm19SyghWnBIp6wxpVK0BvHhdUxIaxtbr3ZVVoBKE3bybk+MXuV8iUvkgwGeEpvfT/y8cGYpriDA1rAJX+aspGz+w=="
+      ]
     },
     {
       "id": 10011,
@@ -517,7 +519,8 @@
       "name": "abwang",
       "permit-sudo": true,
       "public-keys": [
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCaX/9/414trFXdbzmVpGiOWnv1gefPJKjw3W/T/a6tkudJAgxDMhXXkm9aT2X9MRaNBrXVf2jqC79uM+uxKafndRTVyg9NYQ9DI5IGlpLDRnOAZuq3pxu3c08ZCWznf3xxn5N4fTB2XLcuzS32gchcjDYtwEC0P75E2osca6c3QCsR1fE63cvmdfEhtLW5tYb7PqA0aUYgxU2bt+fCG2mEYToqQ0DiELStCGaLcyiEtjDYEiGTdtCRnPVHxaoxUYrapXYosMl/MGiNwtZc70eyv4NAmdvHtQX29MEQyLfFMFIo0HmQfrmg441XkgRZj0+bmwJuxxAOuwv1Zo5Ts4lCmrL10yerZfMsHUjLjnjceOmMcDjd9Of9MI5ixkC06tscCv7XDy3icOx70D5qDVXzyo1fUbIlI7vWIXJWLyz/DoAOhWecKI3Dbftq0flVeMWTf8IHoThJDNXwQWgbIAQIBFuEnydHftIKFz2vmYvs/B7zm+zV63t0LSewKkTqjXltSFM3HEP7B62S35k5aOVtRJq9YW/8Ct47dGdVp9vyEdmK8+ojTkZ9VAjSgXpQkWWuQrZfLVe69d9SYQrKA5Cldl1UaP/1xu0x0z9LS8aEyQnQrcomufxGRD1oOC55sctJl250IuRjgocJpPi2aG/0DDEvkZwzn2si89pPsvRXjw=="
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCaX/9/414trFXdbzmVpGiOWnv1gefPJKjw3W/T/a6tkudJAgxDMhXXkm9aT2X9MRaNBrXVf2jqC79uM+uxKafndRTVyg9NYQ9DI5IGlpLDRnOAZuq3pxu3c08ZCWznf3xxn5N4fTB2XLcuzS32gchcjDYtwEC0P75E2osca6c3QCsR1fE63cvmdfEhtLW5tYb7PqA0aUYgxU2bt+fCG2mEYToqQ0DiELStCGaLcyiEtjDYEiGTdtCRnPVHxaoxUYrapXYosMl/MGiNwtZc70eyv4NAmdvHtQX29MEQyLfFMFIo0HmQfrmg441XkgRZj0+bmwJuxxAOuwv1Zo5Ts4lCmrL10yerZfMsHUjLjnjceOmMcDjd9Of9MI5ixkC06tscCv7XDy3icOx70D5qDVXzyo1fUbIlI7vWIXJWLyz/DoAOhWecKI3Dbftq0flVeMWTf8IHoThJDNXwQWgbIAQIBFuEnydHftIKFz2vmYvs/B7zm+zV63t0LSewKkTqjXltSFM3HEP7B62S35k5aOVtRJq9YW/8Ct47dGdVp9vyEdmK8+ojTkZ9VAjSgXpQkWWuQrZfLVe69d9SYQrKA5Cldl1UaP/1xu0x0z9LS8aEyQnQrcomufxGRD1oOC55sctJl250IuRjgocJpPi2aG/0DDEvkZwzn2si89pPsvRXjw==",
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILbFWrycAnUAh1L5kAG4Kxo8CaKt9sLTjI7VwEoi4Okg"
       ]
     },
     {
@@ -619,7 +622,9 @@
       "public-keys": [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPtQ9yxCjuLzuRKRnmHnLZ8i5M4xE6t6FqzTFo5FkDLP",
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtIVr94JiDfMLwHgbZg6Qc+9f1p1iNZO/TtLOVb5OkWVxX9BAr9YeCm5BKcoZyM7F9cWFEBhAROl8lYPE/rOcIu1Usr20zeQgZrsOVaFJAD34l6SUGCtA2IOrHXIHpV3xnXxa92BiFxqfp3x3kstm+ClpXkTRNLDoeVGUcH1wTc9xW9zgQ7cJA4rOaf24j6chaC+Z/WjagEcO8iuqaNvdLJIgRDVFSVvkBcvFhptPoFVjPvlqgcF9lUKInMwCt+juun0eS5Kwa78ntSk3Cpw7hObUKv4nopdtGqcu1AID3XByIM7W3xjpdJy6AAykzU87afOpMEZvbwKbpMAovM//9",
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIApwQG8Sn9YufZcpjzkDpfG2OOyVOJZqHUxrYa2bh0IA"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIApwQG8Sn9YufZcpjzkDpfG2OOyVOJZqHUxrYa2bh0IA",
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOoWrTOOS9to7W3/fw6pQevlIBijiVKwStPf21sa1eQx",
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKFGUPFL//rvATqr7wj4yy4JrUrnv3MH5pEBgdb2pOcu"
       ]
     },
     {
